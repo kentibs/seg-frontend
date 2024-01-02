@@ -168,7 +168,6 @@
   transition: 0.3s;
 }
 
-.active {
-  border-bottom: 2px solid var(--main-color-1);
-  background-color: red;
+.active-tab {
+  border-bottom: 4px solid var(--main-color-1);
 }

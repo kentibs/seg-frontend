@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import styles from "./ImageModal.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import PropTypes from "prop-types";
 
-export const ImageModal = ({ selectedImgUrl, onclose, isOpen, setIsOpen }) => {
+export const ImageModal = ({ selectedImgUrl, isOpen, setIsOpen }) => {
   const [currentImgUrl, setCurrentImgUrl] = useState(selectedImgUrl);
 
   const events = [
@@ -67,4 +68,10 @@ export const ImageModal = ({ selectedImgUrl, onclose, isOpen, setIsOpen }) => {
       </div>
     </>
   );
+};
+
+ImageModal.propTypes = {
+  selectedImgUrl: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 };

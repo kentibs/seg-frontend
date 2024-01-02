@@ -21,9 +21,7 @@ export const Events = () => {
   const conferenceEvents = events.filter(
     (event) => event.category === "conference"
   );
-  const onClose = () => {
-    setIsOpen(false);
-  };
+
   const openModal = (url) => {
     setSelectedImgUrl(() => url);
     setIsOpen(true);
@@ -36,7 +34,6 @@ export const Events = () => {
         <ImageModal
           selectedImgUrl={selectedImgUrl}
           isOpen={isOpen}
-          onClose={onClose}
           setIsOpen={setIsOpen}
         />
         <div className={styles["container"]}>
@@ -47,10 +44,10 @@ export const Events = () => {
             </div>
             <div className={styles["filter-btns"]}>
               <button
+                onClick={() => setActiveTab("all")}
                 className={`${styles["filter-btn"]} ${
                   activeTab === "all" && styles["active-tab"]
                 }`}
-                onClick={() => setActiveTab("all")}
               >
                 All
               </button>
