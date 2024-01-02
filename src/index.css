@@ -148,6 +148,8 @@ FOR DARK MODE
 
 ::selection {
   background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+  background-color: #007fff;
+  background-color: var(--main-color-1);
   color: #fff;
 }
 body {

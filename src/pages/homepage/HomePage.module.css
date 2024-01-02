@@ -100,7 +100,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.3s;
-} 
+}
 .btn:hover {
   background-color: var(--main-color-dark-1);
 }
@@ -145,7 +145,6 @@
   min-height: calc(100% + 120px);
   background-color: var(--main-color-1);
   margin-top: -120px;
-  /* margin-top: -420px;  */
   border-radius: 0 0 80px 80px;
   background-image: linear-gradient(
     124deg,
@@ -156,10 +155,16 @@
 }
 .showcase-image .person {
   position: absolute;
-  width: 75%;
+  width: 100%;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
+}
+.seg-muk-img-title {
+  color: var(--main-color-2);
+  font-size: 4.8rem;
+  margin-left: 10%;
+  /* text-align: center; */
 }
 .square {
   width: 70px;

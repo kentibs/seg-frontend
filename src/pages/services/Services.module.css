@@ -134,7 +134,9 @@
   align-items: flex-start;
   justify-content: space-between;
   box-shadow: var(--shadow-lg);
+  /* transition: 0.5s transform; */
 }
+
 .srv-card .text {
   margin: 0.7rem 0;
   font-size: 0.7rem;
@@ -143,6 +145,14 @@
   color: var(--heading-color);
   font-weight: 500;
   font-size: 1.05rem;
+}
+.srv-card:nth-child(1) {
+  /* transition: 0.5s transform; */
+
+  /* transform: translateY(2.2rem); */
+}
+.srv-card:nth-child(4) {
+  /* transform: translateY(-2.2rem); */
 }
 .srv-card:nth-child(2) {
   transform: translateY(2.2rem);

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { About } from "../about/About";
 import { Services } from "../services/Services";
 import { Events } from "../events/Events";
+import { Committee } from "../committee/Committee";
+import { Contact } from "../contact/Contact";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,7 +50,7 @@ export const HomePage = () => {
               </p>
               <div className={styles["cta"]}>
                 <Link to="" className={styles["btn"]}>
-                  Join us 
+                  Join us
                 </Link>
                 <Link
                   to=""
@@ -60,8 +62,14 @@ export const HomePage = () => {
               </div>
             </div>
             <div className={styles["showcase-image"]}>
-              <img
+              {/* <img
                 src="gift.png"
+                alt="President SEG"
+                className={styles["person"]}
+              /> */}
+              <h1 className={styles["seg-muk-img-title"]}>SEG MUK CHAPTER</h1>
+              <img
+                src="ev3-removebg-preview.png"
                 alt="President SEG"
                 className={styles["person"]}
               />
@@ -81,6 +89,8 @@ export const HomePage = () => {
         <About />
         <Services />
         <Events />
+        <Committee />
+        <Contact />
       </main>
     </div>
   );
