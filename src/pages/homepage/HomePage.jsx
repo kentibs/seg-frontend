@@ -7,6 +7,8 @@ import { Services } from "../services/Services";
 import { Events } from "../events/Events";
 import { Committee } from "../committee/Committee";
 import { Contact } from "../contact/Contact";
+import { Subscription } from "../subscription/Subscription";
+import { Footer } from "../../components/footer/Footer";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -68,6 +70,11 @@ export const HomePage = () => {
                 className={styles["person"]}
               /> */}
               <h1 className={styles["seg-muk-img-title"]}>SEG MUK CHAPTER</h1>
+              {/* <img
+                src="ev3.jpg"
+                alt="President SEG"
+                className={styles["person"]}
+              /> */}
               <img
                 src="ev3-removebg-preview.png"
                 alt="President SEG"
@@ -91,7 +98,9 @@ export const HomePage = () => {
         <Events />
         <Committee />
         <Contact />
+        <Subscription />
       </main>
+      <Footer />
     </div>
   );
 };

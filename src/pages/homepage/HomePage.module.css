@@ -159,6 +159,7 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
+  /* mask-image: linear-gradient(transparent 20%, black 80%); */
 }
 .seg-muk-img-title {
   color: var(--main-color-2);

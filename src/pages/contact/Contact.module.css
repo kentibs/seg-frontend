@@ -117,6 +117,9 @@
   text-transform: capitalize;
   transition: 0.3s;
   border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: var(--main-color-dark-1);
@@ -127,9 +130,6 @@
 textarea.form-input {
   resize: none;
   min-height: 170px;
-}
-
-.square {
 }
 
 .square {
