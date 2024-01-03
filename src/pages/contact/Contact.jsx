@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Contact.module.css";
 export const Contact = () => {
   return (
-    <section className={styles["contact"]}>
+    <section className={styles["contact"]} id="contact">
       <img src="triangle.png" alt="" className={styles["triangle"]} />
       <div className={styles["container"]}>
         <img src="square2.png" alt="" className={styles["square"]} />

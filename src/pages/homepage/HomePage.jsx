@@ -35,7 +35,7 @@ export const HomePage = () => {
     <div>
       <Header scrolled={scrolled} />
       <main>
-        <section className={styles["showcase-area"]}>
+        <section className={styles["showcase-area"]} id="home">
           <img
             src="square1.png"
             alt="square shape"

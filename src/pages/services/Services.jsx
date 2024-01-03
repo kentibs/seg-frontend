@@ -89,7 +89,7 @@ export const Services = () => {
   //   }, [count, targetNumber]);
   return (
     <>
-      <section className={styles["services"]}>
+      <section className={styles["services"]} id="services">
         <img src="triangle.png" alt="" className={styles["triangle"]} />
 
         <div className={styles["container"]}>

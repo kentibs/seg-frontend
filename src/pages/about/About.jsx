@@ -11,7 +11,7 @@ export const About = () => {
   };
   return (
     <>
-      <section className={styles["about"]}>
+      <section className={styles["about"]} id="about">
         <img src="triangle.png" className={styles["triangle"]} alt="" />
         <div className={styles["container"]}>
           <div className={styles["about-grid"]}>

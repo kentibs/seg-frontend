@@ -1,5 +1,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap"); */
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Indigo */
   --color-brand-50: #eef2ff;
@@ -47,7 +51,6 @@
 
   --hue-1: 257;
   --hue-1: 47;
-  --bgk-color: hsl(var(--hue-1), 100%, 97%);
   --main-color-1: hsl(var(--hue-1), 100%, 60%);
 
   --bg-color-50: #63c5da;
@@ -86,16 +89,7 @@
 
   --main-color-2: hsl(var(--hue-2), 100%, 61%);
   --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
-  --bg-color-1: hsl(var(--hue-1), 100%, 97%);
-  /* --bg-color-1: #001c3d; */
 
-  --bg-color-2: #fff;
-  --bg-color-3: hsl(var(--hue-1), 100%, 98%);
-  --bg-color-transparent: rgba(255, 255, 255, 0.6);
-  /* --bg-color-3: #001c3d; */
-  --heading-color: hsl(var(--hue-1), 61%, 24%);
-  --heading-color: #0a1172;
-  --text-color: hsl(var(--hue-1), 17%, 63%);
   --section-padding: 7rem;
 }
 
@@ -153,8 +147,77 @@ FOR DARK MODE
   color: #fff;
 }
 body {
+  --bg-color: hsl(var(--hue-1), 100%, 97%);
+  --bg-color-1: hsl(var(--hue-1), 100%, 95.5%);
+  /* --bg-color-1: #001c3d; */
+
+  --bg-color-2: #fff;
+  --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+  --bg-color-transparent: rgba(255, 255, 255, 0.6);
+  /* --bg-color-3: #001c3d; */
+  --heading-color: hsl(var(--hue-1), 61%, 24%);
+  --heading-color: #0a1172;
+  --text-color: hsl(var(--hue-1), 17%, 63%);
+
   overflow-x: hidden;
   background-color: var(--bg-color);
   font-family: "Inter", sans-serif;
   font-family: "Poppins", sans-serif;
+}
+
+/* --bg-color-3: #001c3d; */
+/* --bg-color-1: #001c3d; */
+body.dark {
+  --bg-color: hsl(var(--hue-1), 19%, 15%);
+
+  --bg-color-1: hsl(var(--hue-1), 21%, 11%);
+
+  --bg-color-2: hsl(var(--hue-1), 23%, 19%);
+  --bg-color-3: hsl(var(--hue-1), 23%, 24%);
+  --bg-color-transparent: hsl(var(--hue-1), 23%, 19%, 0.6);
+  --heading-color: hsl(var(--hue-1), 100%, 95%);
+  /* --heading-color: #0a1172; */
+  --text-color: hsl(var(--hue-1), 14%, 51%);
+}
+
+body.dark {
+  --bg-color: hsl(var(--hue-1), 19%, 15%);
+  --bg-color: hsl(220, 19%, 15%);
+  --bg-color: hsl(230, 19%, 15%);
+  /* --bg-color: hsl(240, 19%, 15%); */
+  /* --bg-color: hsl(225, 19%, 15%); */
+
+  --bg-color-1: hsl(var(--hue-1), 21%, 11%);
+
+  --bg-color-2: hsl(220, 23%, 19%); /* Adjusted for dark blue */
+  --bg-color-3: hsl(220, 23%, 24%); /* Adjusted for dark blue */
+  --bg-color-transparent: hsl(220, 23%, 19%, 0.6); /* Adjusted for dark blue */
+
+  --heading-color: hsl(var(--hue-1), 100%, 95%);
+  --text-color: hsl(var(--hue-1), 14%, 51%);
+}
+
+body.dark .st1 {
+  fill: hsl(var(--hue-1), 18%, 29%);
+}
+body.dark .square {
+  opacity: 0.07;
+}
+body.dark .toggle-btn {
+  background-color: var(--bg-color-3);
+}
+body.dark .toggle-btn:hover {
+  background-color: brightness(110%);
+}
+
+body.dark .nav-link:hover::after,
+.nav-link.active::after {
+  opacity: 0.6;
+}
+
+body.dark .form-input:hover {
+  filter: brightness(110%);
+}
+body.dark p {
+  color: var(--color-grey-200);
 }

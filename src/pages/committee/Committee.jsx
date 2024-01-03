@@ -48,7 +48,7 @@ export const Committee = () => {
   ];
   return (
     <>
-      <section className={styles["committee-container"]}>
+      <section className={styles["committee-container"]} id="committee">
         <div className={styles["header"]}>
           <h3 className={styles["sub-heading"]}>Our Team</h3>
           <h1 className={styles["heading"]}>Committee Members 2024</h1>
