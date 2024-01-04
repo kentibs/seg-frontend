@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 export const Header = ({ scrolled }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [darkOn, setDarkOn] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const changeTheme = () => {
     setDarkOn((prev) => !prev);
@@ -15,6 +16,11 @@ export const Header = ({ scrolled }) => {
       document.body.classList.remove("dark");
       localStorage.setItem("dark", 0);
     }
+  };
+
+  const toggleMenu = () => {
+    setToggle((prev) => !prev);
+    // document.body.classList.toggle("open");
   };
   return (
     <header
@@ -106,6 +112,13 @@ export const Header = ({ scrolled }) => {
               </svg>
             )}
           </div>
+        </div>
+        <div
+          className={`${styles["hamberger"]} ${toggle && styles["toggle-on"]}`}
+          onClick={toggleMenu}
+        >
+          <div className={styles["bar"]}></div>
+          <div className={styles["bar"]}></div>
         </div>
       </nav>
     </header>

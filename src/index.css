@@ -82,7 +82,9 @@ html {
   --bg-color: hsl(var(--hue-1), 100%, 97%);
   --main-color-1: hsl(var(--hue-1), 100%, 60%);
   --main-color-1: #007fff;
+  --main-color-1: #0073cf;
   --main-color-1: #0047ab;
+
   --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
   --main-color-dark-1: #0047ab;
   --main-color-dark-1: #007fff;
@@ -221,3 +223,71 @@ body.dark .form-input:hover {
 body.dark p {
   color: var(--color-grey-200);
 }
+
+/* @media (max-width: 768px) {
+  :root {
+    --section-padding: 4.5rem;
+  }
+
+  .triangle {
+    width: 70px;
+  }
+  .square {
+    width: 55px;
+  }
+  .dots {
+    width: 65px;
+  }
+  .links {
+    display: none;
+  }
+  .hamberger {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 12px;
+    padding: 1rem 0;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  .hamberger .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    position: absolute;
+  }
+  .hamberger .bar:first-child {
+    transition: top 0.2s 0.15s, transform 0.3s;
+    top: 1rem;
+  }
+  .hamberger .bar:last-child {
+    transition: bottom 0.2s 0.15s, transform 0.3s;
+    bottom: 1rem;
+  }
+  .toggle-btn {
+    position: absolute;
+    right: 5%;
+  }
+  .header_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.3s;
+    background-color: var(--bg-color-2);
+  }
+
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 6;
+    opacity: 0;
+  }
+
+} */
