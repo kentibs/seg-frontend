@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./Services.module.css";
-import { useRef } from "react";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import { IoMdDownload } from "react-icons/io";
+import { useEffect, useRef, useState } from "react";
 
 export const Services = () => {
-  //   const [count, setCount] = useState(0);
-  //   const [conferences, setConferences] = useState(0);
-  //   const [years, setYears] = useState(0);
+  const [projects, setProjects] = useState(0);
+  const [competitions, setCompetitions] = useState(0);
+  const [years, setYears] = useState(0);
   const milestonesRef = useRef();
+  const servicesRef = useRef();
+
+  console.log("years", years);
+  console.log("conferences", competitions);
+  console.log("projects", projects);
 
   const downloadPdf = () => {
     const pdfUrl = "/seg.pdf";
@@ -16,80 +23,60 @@ export const Services = () => {
     link.click();
   };
 
-  //   const hasReached = (el) => {
-  //     if (el) {
-  //       let topPosition = el.getBoundingClientRect().top;
-  //       console.log(topPosition);
-  //       if (window.innerHeight >= topPosition + el.offsetHeight) {
-  //         console.log("You've reached the Services section");
-  //         return true;
-  //       } else {
-  //         return false;
-  //       }
-  //     }
-  //     return false;
-  //   };
+  const hasReached = (el) => {
+    if (el) {
+      let topPosition = el.getBoundingClientRect().top;
+      // console.log(topPosition);
+      if (window.innerHeight >= topPosition + el.offsetHeight) {
+        // console.log("You've reached the skills section");
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
+  };
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       console.log("Scroll event triggered");
+  useEffect(() => {
+    const handleScroll = () => {
+      if (hasReached(servicesRef.current)) {
+        startIncrementing();
+      }
+    };
 
-  //       if (hasReached(milestonesRef.current)) {
-  //         const interval = setInterval(() => {
-  //           if (count < 89) {
-  //             setCount((prevCount) => prevCount + 1);
-  //           } else {
-  //             clearInterval(interval);
-  //           }
-  //         }, 10);
-  //         const interval2 = setInterval(() => {
-  //           if (years < 3) {
-  //             setYears((prevCount) => prevCount + 1);
-  //           } else {
-  //             clearInterval(interval2);
-  //           }
-  //         }, 10);
-  //         const interval3 = setInterval(() => {
-  //           if (conferences < 15) {
-  //             setConferences((prevCount) => prevCount + 1);
-  //           } else {
-  //             clearInterval(interval3);
-  //           }
-  //         }, 10);
-  //       }
-  //     };
+    const startIncrementing = () => {
+      const interval = setInterval(() => {
+        setProjects((prevCount) => {
+          if (prevCount < 44) return prevCount + 1;
+          return prevCount;
+        });
 
-  //     window.addEventListener("scroll", handleScroll);
+        setYears((prevCount) => {
+          if (prevCount < 3) return prevCount + 1;
+          return prevCount;
+        });
 
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, [count, conferences, years]);
+        setCompetitions((prevCount) => {
+          if (prevCount < 25) return prevCount + 1;
+          return prevCount;
+        });
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       if (count < targetNumber) {
-  //         setCount((prevCount) => prevCount + 1);
-  //       } else {
-  //         clearInterval(interval);
-  //       }
-  //       if (years < 3) {
-  //         setYears((prevCount) => prevCount + 1);
-  //       } else {
-  //         clearInterval(interval);
-  //       }
-  //       if (conferences < 15) {
-  //         setConferences((prevCount) => prevCount + 1);
-  //       } else {
-  //         clearInterval(interval);
-  //       }
-  //     }, 10);
+        if (projects >= 44 && years >= 3 && competitions >= 15) {
+          clearInterval(interval);
+        }
+      }, 100);
+    };
 
-  //     return () => clearInterval(interval);
-  //   }, [count, targetNumber]);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [projects, years, competitions]);
+
   return (
     <>
-      <section className={styles["services"]} id="services">
+      <section className={styles["services"]} id="services" ref={servicesRef}>
         <img src="triangle.png" alt="" className={styles["triangle"]} />
 
         <div className={styles["container"]}>
@@ -106,22 +93,21 @@ export const Services = () => {
             <div className={styles["milestones"]} ref={milestonesRef}>
               <div className={styles["ml"]}>
                 <h2 className={styles["number"]}>
-                  {/* <span>{years}</span>+ */}
-                  <span>3</span>+
+                  <span>{years}</span>+{/* <span>3</span>+ */}
                 </h2>
                 <h5>Years</h5>
               </div>
               <div className={styles["ml"]}>
                 <h2 className={styles["number"]}>
-                  <span>34</span>+
+                  <span>{projects}</span>+{/* <span>34</span>+ */}
                 </h2>
                 <h5>Projects</h5>
               </div>
               <div className={styles["ml"]}>
                 <h2 className={styles["number"]}>
-                  <span>15</span>+
+                  <span>{competitions}</span>+{/* <span>15</span>+ */}
                 </h2>
-                <h5>Conferences</h5>
+                <h5>Competitions</h5>
               </div>
             </div>
             <div className={styles["cta"]}>
@@ -133,7 +119,8 @@ export const Services = () => {
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Download details
+                <IoMdDownload />
+                &nbsp;Download details
               </Link>
             </div>
           </div>
@@ -152,7 +139,8 @@ export const Services = () => {
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Explore more
+                <span>Explore more</span>&nbsp;
+                <RxDoubleArrowRight />
               </Link>
             </div>
 
@@ -169,7 +157,8 @@ export const Services = () => {
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Explore more
+                <span>Explore more</span>&nbsp;
+                <RxDoubleArrowRight />
               </Link>
             </div>
 
@@ -187,7 +176,8 @@ export const Services = () => {
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Explore more
+                <span>Explore more</span>&nbsp;
+                <RxDoubleArrowRight />
               </Link>
             </div>
 
@@ -205,7 +195,8 @@ export const Services = () => {
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Explore more
+                <span>Explore more</span>&nbsp;
+                <RxDoubleArrowRight />
               </Link>
             </div>
             <img src="square1.png" alt="" className={styles["square"]} />

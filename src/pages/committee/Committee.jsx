@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import { TiArrowSortedDown } from "react-icons/ti";
 import styles from "./Committee.module.css";
 
 export const Committee = () => {
@@ -62,7 +64,7 @@ export const Committee = () => {
                 <h1 className={styles["card-title"]}>{item.title}</h1>
                 <p>{item.description}</p>
                 <Link to="" className={styles["secondary-btn"]}>
-                  Read more
+                  Read more &nbsp; <RxDoubleArrowRight />
                 </Link>
               </div>
             </div>
@@ -73,10 +75,10 @@ export const Committee = () => {
             to=""
             className={`${styles["secondary-btn"]} ${styles["load-more"]}`}
           >
-            Load more
+            Load more &nbsp; <TiArrowSortedDown />
           </Link>
         </span>
       </section>
     </>
   );
-};
+}; 

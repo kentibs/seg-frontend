@@ -14,8 +14,8 @@ export const Contact = () => {
             Communicate with the current SEG committee. <br /> Tell us
             what&apos;s on your mind.
           </p>
-          <Link to="mailto:kopiogift@gmail.com" className={styles["mail"]}>
-            <span>Contact President</span>
+          <Link to="mailto:segmuk@gmail.com" className={styles["mail"]}>
+            <span>Contact us via email</span>
             <svg
               fill="currentColor"
               viewBox="0 0 16 16"

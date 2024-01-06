@@ -8,6 +8,7 @@ import { Events } from "../events/Events";
 import { Committee } from "../committee/Committee";
 import { Contact } from "../contact/Contact";
 import { Subscription } from "../subscription/Subscription";
+import { IoMdDownload } from "react-icons/io";
 import { Footer } from "../../components/footer/Footer";
 
 export const HomePage = () => {
@@ -34,7 +35,7 @@ export const HomePage = () => {
   return (
     <div>
       <Header scrolled={scrolled} />
-      <main>
+      <main className={styles["main_container"]}>
         <section className={styles["showcase-area"]} id="home">
           <img
             src="square1.png"
@@ -59,7 +60,7 @@ export const HomePage = () => {
                   className={styles["secondary-btn"]}
                   onClick={downloadPdf}
                 >
-                  Download description
+                  <IoMdDownload /> &nbsp; Download description
                 </Link>
               </div>
             </div>

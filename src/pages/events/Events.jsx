@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Events.module.css";
 import { useState } from "react";
+import { RxDoubleArrowRight } from "react-icons/rx";
 import { ImageModal } from "../../features/image-modal/ImageModal";
 
 export const Events = () => {
@@ -113,7 +114,7 @@ export const Events = () => {
                   <div className={styles["prt-desc"]}>
                     <h3>{event.title} </h3>
                     <Link to="" className={styles["secondary-btn"]}>
-                      Read more
+                      Read more &nbsp; <RxDoubleArrowRight />
                     </Link>
                   </div>
                 </div>
@@ -124,7 +125,7 @@ export const Events = () => {
                   className={`${styles["prt-card"]} ${styles["category1"]}`}
                   key={index}
                 >
-                  <div className={styles["prt-image"]}>
+                  <div className={styles["prt-image"]}> 
                     <img
                       src={event.imgUrl}
                       alt=""

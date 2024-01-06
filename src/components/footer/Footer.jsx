@@ -10,10 +10,10 @@ export const Footer = () => {
         </Link>
         <p className={styles["text"]}>
           {" "}
-          &copy; Copyright 2024. All rights reserved.
+          &copy; Copyright SEG MUK CHAPTER 2024. All rights reserved.
         </p>
         <ul className={styles["social-media"]}>
-          <li>
+          {/* <li>
             <Link to="" className={styles["social-link"]}>
               <svg fill="none" viewBox="0 0 24 24" height="1em" width="1em">
                 <path
@@ -22,7 +22,7 @@ export const Footer = () => {
                 />
               </svg>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="" className={styles["social-link"]}>
               <svg

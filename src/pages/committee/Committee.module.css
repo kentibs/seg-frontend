@@ -1,6 +1,6 @@
 .committee-container {
-  margin-top: 6rem;
-  padding: 0 6rem;
+  margin-top: 10rem;
+  /* padding: 0 6rem; */
 }
 .secondary-btn {
   position: relative;
@@ -13,6 +13,9 @@
   text-decoration: none;
   border-radius: 0px;
   padding: 0.15px 0;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 .secondary-btn::before {
   content: "";
@@ -96,6 +99,7 @@
 
 .load-more-container {
   /* background-color: green; */
+  margin-top: 4rem;
   width: 100%;
   display: flex;
   align-items: center;

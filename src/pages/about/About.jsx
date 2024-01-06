@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
+import { IoMdDownload } from "react-icons/io";
 
 export const About = () => {
   const downloadPdf = () => {
@@ -501,15 +502,16 @@ export const About = () => {
               studies
             </p>
             <div className={styles["cta"]}>
-              <Link to="mailto:kopiogift@gmail.com" className={styles["btn"]}>
+              <Link to="mailto:segmuk@gmail.com" className={styles["btn"]}>
                 Contact us
               </Link>
               <Link
-                to=""
+                to="" 
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >
-                Download details
+                <IoMdDownload />
+                &nbsp;Download details
               </Link>
             </div>
           </div>

@@ -2,14 +2,19 @@
   /* position: relative; */
   width: 100%;
   /* max-width: 195rem; */
-  padding: 0 1.5rem;
-  margin: 0 auto;
+  /* padding: 0 1.5rem; */
+  /* margin: 0 auto; */
   display: grid;
   grid-template-columns: 1.07fr 1fr;
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
   /* background-color: pink; */
 }
+
+.services {
+  margin-top: 6rem;
+}
+
 .sub-heading {
   color: var(--heading-color);
   text-transform: uppercase;
@@ -71,6 +76,9 @@
   text-decoration: none;
   border-radius: 0px;
   padding: 0.15px 0;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 .secondary-btn::before {
   content: "";

@@ -149,6 +149,9 @@ FOR DARK MODE
   color: #fff;
 }
 body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   --bg-color: hsl(var(--hue-1), 100%, 97%);
   --bg-color-1: hsl(var(--hue-1), 100%, 95.5%);
   /* --bg-color-1: #001c3d; */
@@ -169,11 +172,11 @@ body {
 
 /* --bg-color-3: #001c3d; */
 /* --bg-color-1: #001c3d; */
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
 body.dark {
   --bg-color: hsl(var(--hue-1), 19%, 15%);

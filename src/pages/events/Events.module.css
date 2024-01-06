@@ -8,6 +8,9 @@
   /* grid-template-columns: 1.07fr 1fr; */
   align-items: center;
 }
+.events {
+  margin-top: 10rem;
+}
 
 .sub-heading {
   color: var(--heading-color);
@@ -44,6 +47,8 @@
   padding: 0.07rem 0.1rem;
   font-size: 0.78rem;
   border-bottom-width: 2px;
+  display: flex;
+  align-items: center;
 }
 .secondary-btn::before {
   content: "";
