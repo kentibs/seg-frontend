@@ -177,6 +177,31 @@
   border-bottom: 4px solid var(--main-color-1);
 }
 
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+  /* Styles for medium screens go here */
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
+}
+
 /* @media (max-width: 1000px) {
   .sub-heading {
     font-size: 0.75rem;

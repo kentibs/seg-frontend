@@ -65,6 +65,7 @@ export const HomePage = () => {
               </div>
             </div>
             <div className={styles["showcase-image"]}>
+              <img src="muk-tower.jpg" className={styles["muk-img"]} />
               {/* <img
                 src="gift.png"
                 alt="President SEG"

@@ -11,6 +11,10 @@ footer {
   margin-bottom: 3rem;
 }
 
+.seg-logo {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

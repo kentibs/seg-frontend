@@ -18,6 +18,7 @@
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
 }
+
 .nav-link {
   text-decoration: none;
   position: relative;
@@ -67,7 +68,7 @@
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
-  margin-right: 1.3rem;
+  margin-right: 0rem;
 }
 .toggle-btn:hover {
   filter: brightness(97%);
@@ -113,6 +114,173 @@ header .logo {
 .header_container.scrolled .logo {
   height: 80px;
   line-height: 80px;
+}
+
+/* Default styles for all screens */
+
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+  .link_container {
+    display: none;
+  }
+
+  .hamberger {
+    display: block;
+  }
+  .toggle-btn {
+    display: none;
+  }
+  :root {
+    --section-padding: 4.5rem;
+  }
+
+  .triangle {
+    width: 70px;
+  }
+  .square {
+    width: 55px;
+  }
+  .dots {
+    width: 65px;
+  }
+
+  .hamberger {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 12px;
+    padding: 1rem 0;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  .hamberger .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    position: absolute;
+  }
+
+  .hamberger .bar:first-child {
+    transition: top 0.2s 0.15s, transform 0.3s;
+    top: 1rem;
+  }
+  .hamberger .bar:last-child {
+    transition: bottom 0.2s 0.15s, transform 0.3s;
+    bottom: 1rem;
+  }
+
+  .header_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.3s;
+    background-color: var(--bg-color-2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .toggle-on.hamberger .bar:first-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: top 0.2s, transform 0.3s 0.1s;
+  }
+  .toggle-on.hamberger .bar:last-child {
+    bottom: 50%;
+    transform: translateY(50%) rotate(45deg);
+    transition: bottom 0.2s, transform 0.3s 0.1s;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    padding: 0 3rem;
+    height: 5rem;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: "Aquire", sans-serif;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    letter-spacing: 3px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  header .logo {
+    height: 100px;
+    /* line-height: 120px; */
+  }
+  .header_container.scrolled .logo {
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .toggled-btn {
+    color: var(--heading-color);
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--bg-color-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 0rem;
+  }
+  .toggled-btn:hover {
+    filter: brightness(97%);
+  }
+  .toggle-link_container {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-color-2);
+    margin-top: 19rem;
+    left: 0;
+    border-top: 1px solid var(--color-grey-300);
+  }
+
+  .toggle-link_container.scrolled {
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    /* margin-top: 0; */
+  }
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
 }
 
 /* @media (max-width: 1000px) {

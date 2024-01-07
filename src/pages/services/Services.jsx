@@ -69,7 +69,7 @@ export const Services = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
+    return () => { 
       window.removeEventListener("scroll", handleScroll);
     };
   }, [projects, years, competitions]);
