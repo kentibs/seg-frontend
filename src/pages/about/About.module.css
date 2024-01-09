@@ -257,7 +257,18 @@
 
 /* Medium screens (768px) and below */
 @media only screen and (max-width: 768px) {
-  /* Styles for medium screens go here */
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    /* padding: 0 1.5rem; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    column-gap: 9rem;
+    row-gap: 5rem;
+  }
 }
 
 /* Small screens (640px) and below */

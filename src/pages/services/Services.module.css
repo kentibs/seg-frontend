@@ -239,7 +239,14 @@
 
 /* Medium screens (768px) and below */
 @media only screen and (max-width: 768px) {
-  /* Styles for medium screens go here */
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    row-gap: 5rem;
+    /* background-color: pink; */
+  }
 }
 
 /* Small screens (640px) and below */

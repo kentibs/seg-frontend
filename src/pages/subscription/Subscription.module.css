@@ -127,6 +127,87 @@
   opacity: 0.3;
 }
 
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+  /* Styles for medium screens go here */
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
+}
+
+@media (max-width: 768px) {
+  .sub-box {
+    background-color: var(--bg-color-2);
+    padding: 5rem;
+    width: 100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 4rem;
+    align-items: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .sub-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .square {
+    position: absolute;
+    left: 59%;
+    bottom: -3%;
+    transform: translate(0, -50%) scale(0.95);
+    position: absolute;
+    width: 70px;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* One card per row on screens up to 480px wide */
+  }
+}
+
 /* @media (max-width: 1000px) {
   .sub-heading {
     font-size: 0.75rem;

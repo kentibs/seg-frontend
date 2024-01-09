@@ -17,7 +17,7 @@ footer {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
   /* background-color: green; */
@@ -53,4 +53,83 @@ footer {
   letter-spacing: 3px;
   transition: 0.3s;
   text-decoration: none;
+}
+
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem 3rem;
+    /* gap: 1rem; */
+  }
+  .logo {
+    /* margin-left: 1.5rem; */
+    font-family: "Aquire", sans-serif;
+    /* font-family: "Abril Fatface", "Aquire", sans-serif; */
+    font-size: 1rem;
+    color: var(--heading-color);
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  .text {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    text-align: center;
+  }
+  .social-media {
+    display: flex;
+    width: auto;
+    gap: 5px;
+    list-style: none;
+  }
+  .social-link {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 0.2rem;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* Two cards per row on screens up to 768px wide */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* One card per row on screens up to 480px wide */
+  }
 }

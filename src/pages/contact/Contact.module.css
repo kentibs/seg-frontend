@@ -186,7 +186,52 @@ textarea.form-input {
 
 /* Medium screens (768px) and below */
 @media only screen and (max-width: 768px) {
-  /* Styles for medium screens go here */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+  .form-input {
+    display: inline-block;
+    padding: 0.6rem 0.6rem;
+    background-color: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    font-family: inherit;
+    border-radius: 17px;
+    width: 90%;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    outline: none;
+    transition: 0.3s;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    width: 70%;
+  }
+  .square {
+    position: absolute;
+    left: 17%;
+    bottom: -10%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    opacity: 0.1;
+  }
 }
 
 /* Small screens (640px) and below */
