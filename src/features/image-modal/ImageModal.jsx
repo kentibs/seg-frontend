@@ -75,3 +75,4 @@ export const ImageModal = ({ selectedImgUrl, isOpen, setIsOpen }) => {
 //   isOpen: PropTypes.bool.isRequired,
 //   setIsOpen: PropTypes.func.isRequired,
 // };
+ 

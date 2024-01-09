@@ -55,7 +55,7 @@ export const Committee = () => {
           <h3 className={styles["sub-heading"]}>Our Team</h3>
           <h1 className={styles["heading"]}>Committee Members 2024</h1>
         </div>
-        <div className={styles["card-container"]}>
+        <div className={styles["card-container"]}> 
           {committeeMembers.map((item, index) => (
             <div className={styles["card"]} key={index}>
               <img src={item.imgUrl} alt="" className={styles["card-img"]} />

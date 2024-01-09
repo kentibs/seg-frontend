@@ -194,6 +194,9 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+.card-desc p {
+  opacity: 0.8;
+}
 .square {
   width: 95px;
   opacity: 0.18;
@@ -251,11 +254,24 @@
 
 /* Small screens (640px) and below */
 @media only screen and (max-width: 640px) {
+  .services-grid {
+    display: none;
+  }
+  .services .triangle {
+    width: 95px;
+    opacity: 0.18;
+    top: 120%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%, -100%);
+  }
   /* Styles for small screens go here */
 }
 
 /* Very small screens (480px) and below */
 @media only screen and (max-width: 480px) {
+  .services {
+  }
   /* Styles for very small screens go here */
 }
 

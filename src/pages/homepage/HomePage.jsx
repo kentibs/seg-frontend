@@ -45,7 +45,8 @@ export const HomePage = () => {
           <div className={styles["container"]}>
             <div className={styles["showcase-info"]}>
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
-              <h1 className={styles["heading"]}>SEG Muk Chapter</h1>
+              {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
+              <span className={styles["heading"]}>SEG Muk Chapter</span>
               <p className={styles["text"]}>
                 We are SEG: Society of Exploration Geophysicists, A student
                 chapter at Makerere University Department of Geology and
@@ -64,6 +65,7 @@ export const HomePage = () => {
                 </Link>
               </div>
             </div>
+
             <div className={styles["showcase-image"]}>
               <img src="muk-tower.jpg" className={styles["muk-img"]} />
               {/* <img
