@@ -503,7 +503,7 @@ export const About = () => {
             </p>
             <div className={styles["cta"]}>
               <Link to="mailto:segmuk@gmail.com" className={styles["btn"]}>
-                Contact us
+                Contact us 
               </Link>
               <Link
                 to="" 

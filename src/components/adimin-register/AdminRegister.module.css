@@ -1,0 +1,159 @@
+.register_container {
+}
+.header_container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 0;
+}
+.log {
+  font-weight: 500;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  max-height: 10rem;
+  overflow-y: scroll;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input_field {
+  padding: 0.5rem;
+  /* background-color: var(--color-grey-200); */
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  /* border-bottom: 2px solid var(--color-grey-300); */
+  /* border-bottom: 3px solid var(--color-grey-400); */
+  /* border-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-top-right-radius: 5px; */
+  /* border-bottom: 2px solid var(--main-color-2); */
+  outline: none;
+  font-size: 18px;
+}
+.input_field:focus {
+  border-bottom: 3px solid var(--bg-color-300);
+  border-bottom: 2px solid var(--main-color-2);
+  /* border-radius: 5px; */
+  /* background-color: var(--color-grey-200); */
+}
+
+.container-password {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.container-confirm-password {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.login-eye-icon {
+  color: hsl(0, 0%, 0%);
+  color: var(--color-grey-500);
+  position: absolute;
+  right: 8%;
+  top: 62%;
+  padding-right: 2px;
+}
+.login-confirm-eye-icon {
+  color: hsl(0, 0%, 0%);
+  color: var(--color-grey-500);
+  position: absolute;
+  right: 8%;
+  top: 62%;
+  padding-right: 2px;
+}
+.register_btn {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--bg-color-300);
+  background-color: var(--main-color-1);
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-grey-50);
+  transition: 0.3s;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register_btn:hover {
+  background-color: #0073cf;
+}
+.forgot_label {
+  color: var(--bg-color-100);
+  color: var(--main-color-1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.forgot_label:hover {
+  color: #0073cf;
+}
+.welcome {
+  font-size: 30px;
+}
+
+.select-dropdown,
+.select-dropdown * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+.select-dropdown {
+  position: relative;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+}
+.select-dropdown select {
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 100%;
+  padding: 8px 24px 8px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select-dropdown select:active,
+.select-dropdown select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.select-dropdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.bottom-msg-container {
+  margin-top: 1rem;
+}
+
+.tick-mark {
+  color: green;
+}
+.cross-mark {
+  color: red;
+}

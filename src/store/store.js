@@ -4,12 +4,10 @@ import errorMsgSlice from "./reducers/errorMsg";
 import authSlice from "./reducers/auth";
 import tokenSlice from "./reducers/token";
 import tabSlice from "./reducers/tabs";
-import audioSlice from "./reducers/audio";
-import stepSlice from "./reducers/step";
 import specialSlice from "./reducers/specialToken";
 import histTabSlice from "./reducers/histTabs";
-import mainTabSlice from "./reducers/mainTabs";
-import predSlice from "./reducers/pred";
+import loginContentSlice from "./reducers/loginContent";
+import notificationSlice from "./reducers/notification";
 
 const store = configureStore({
   reducer: {
@@ -18,12 +16,10 @@ const store = configureStore({
     auth: authSlice.reducer,
     token: tokenSlice.reducer,
     tabs: tabSlice.reducer,
-    audio: audioSlice.reducer,
-    step: stepSlice.reducer,
     special: specialSlice.reducer,
     histTabs: histTabSlice.reducer,
-    mainTabs: mainTabSlice.reducer,
-    pred: predSlice.reducer,
+    loginContent: loginContentSlice.reducer,
+    notification: notificationSlice.reducer,
   },
 });
 

@@ -153,7 +153,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 82.5%;
+  /* font-size: 82.5%; */
 
   --bg-color: hsl(var(--hue-1), 100%, 97%);
   --bg-color-1: hsl(var(--hue-1), 100%, 95.5%);

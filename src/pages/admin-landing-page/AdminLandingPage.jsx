@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../components/header/Header";
-import styles from "./HomePage.module.css";
+import styles from "./AdminLandingPage.module.css";
 import { Link } from "react-router-dom";
 import { About } from "../about/About";
 import { Services } from "../services/Services";
@@ -13,9 +13,9 @@ import { Footer } from "../../components/footer/Footer";
 import LoginModal from "../../features/login_model/LoginModel";
 import { Login } from "../../components/login/Login";
 import { useSelector } from "react-redux";
-import { Register } from "../../components/register/Register";
+import { AdminRegister } from "../../components/adimin-register/AdminRegister";
 
-export const HomePage = () => {
+export const AdminLandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const activeLoginContent = useSelector(
@@ -77,7 +77,7 @@ export const HomePage = () => {
                   onClose={() => closeLoginModalHandler()}
                 >
                   {activeLoginContent === "login" && <Login />}
-                  {activeLoginContent === "register" && <Register />}
+                  {activeLoginContent === "register" && <AdminRegister />}
                 </LoginModal>
                 <Link
                   to=""
@@ -131,4 +131,3 @@ export const HomePage = () => {
     </div>
   );
 };
-// to="mailto:kopiogift@gmail.com"
