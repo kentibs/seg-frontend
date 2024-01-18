@@ -25,7 +25,7 @@ export const sideBarData = [
     up: <IoIosArrowUp />,
     children: [
       { linkName: "super-committee", label: "Database" },
-      { linkName: "super-committee", label: "Post" },
+      { linkName: "super-post", label: "Post" },
     ],
   },
   {
@@ -36,7 +36,7 @@ export const sideBarData = [
     up: <IoIosArrowUp />,
     children: [
       { linkName: "manage-admins", label: "Admins" },
-      { linkName: "manage-admins", label: "Users" },
+      { linkName: "super-users", label: "Users" },
     ],
   },
   {

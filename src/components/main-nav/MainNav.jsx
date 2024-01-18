@@ -1,12 +1,14 @@
 import styles from "./MainNav.module.css";
 import { sideBarData } from "../../data/side-bar-data";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const StyledNavLink = styled(Link)`
   padding: 10px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* font-weight: 800; */
   /* background-color: red; */
 
@@ -15,10 +17,10 @@ const StyledNavLink = styled(Link)`
     display: flex;
     align-items: center;
     gap: 5px;
-    font-weight: 800;
+    /* font-weight: 800; */
     color: var(--color-grey-600);
     font-size: 0.3;
-    font-weight: 500;
+    /* font-weight: 500; */
     text-decoration: none;
     transition: all 0.3s;
     /* padding: 1.2rem 2.4rem; */
@@ -52,13 +54,21 @@ const StyledNavLink = styled(Link)`
 const UpSpan = styled.span`
   /* background-color: blue; */
   svg {
-    margin-right: 0;
+    /* margin-right: 0; */
     width: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 const CategorySpan = styled.span`
   /* background-color: red; */
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  /* justify-content: center; */
+  font-weight: 200;
 `;
 const ChildrenContainer = styled.div`
   /* background-color: red; */
@@ -69,7 +79,7 @@ const ChildrenContainer = styled.div`
   font-size: 14px;
   font-weight: 500;
 `;
-const ChildStyledNavLink = styled(Link)`
+const ChildStyledNavLink = styled(NavLink)`
   padding: 4px;
   display: flex;
   margin-left: 17px;
@@ -139,8 +149,9 @@ export const MainNav = () => {
               to={item?.linkName}
               onClick={() => categoryClickHandler(item.category)}
             >
-              {item.icon}
               <CategorySpan>
+                <span className={styles["sidebar-icon"]}>{item.icon} </span>
+
                 <span>{item.category}</span>
               </CategorySpan>
               <UpSpan>
@@ -149,6 +160,7 @@ export const MainNav = () => {
                   : item?.up}
               </UpSpan>
             </StyledNavLink>
+
             {isActiveCategory(item.category, activeCategory) && (
               <ChildrenContainer>
                 {item?.children?.map((item) => (

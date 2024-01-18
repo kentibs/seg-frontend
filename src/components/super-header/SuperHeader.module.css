@@ -1,21 +1,30 @@
 .header-container {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1rem;
   margin-top: 0;
   top: 0;
   margin-right: 0;
-  gap: 37rem;
+  gap: 10rem;
   background-color: var(--color-grey-0);
-  background-color: var(--bg-color-300);
-  background-color: var(--main-color-1);
-  color: var(--color-grey-100);
+  box-shadow: var(--shadow-lg);
+  /* background-color: var(--bg-color-300); */
+  /* background-color: var(--main-color-1); */
+  color: var(--color-grey-500);
+  font-size: 0.8rem;
   height: 80px;
+  height: 5rem;
   border-bottom: 1px solid var(--color-grey-100);
 }
 .user-container {
   display: flex;
-  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-left: 1px solid var(--color-grey-300);
+  padding: 0 1rem;
 }
 .img-container {
   border-radius: 50%;
@@ -25,5 +34,92 @@
 .user-role {
   color: #007fff;
   /* color: #0073cf; */
-  color: var(--main-color-2);
+  color: var(--main-color-1);
+  font-weight: 100;
+}
+.user-icon-svg {
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.queen-badge {
+  color: var(--main-color-1);
+}
+.search-icon-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-input {
+  max-width: 30rem;
+  height: 2rem;
+  font-family: "inter" sans-serif;
+  padding: 0 0.3rem;
+  font-size: 0.95rem;
+  outline: none;
+  /* border-radius: 5px; */
+  border: 0;
+}
+.search-input:focus {
+  /* background-color: var(--color-grey-200); */
+  border-bottom: 1px solid var(--color-grey-500);
+  border-bottom: 1px solid var(--main-color-2);
+}
+.search-icon {
+  position: absolute;
+  color: green;
+  color: var(--main-color-1);
+  left: 11rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  /* margin-right: 20px; */
+  position: relative;
+}
+
+.icons-container {
+  display: flex;
+}
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.icon:hover {
+  color: var(--main-color-1);
+}
+
+.counter {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -4px;
+}
+
+.user-icon-dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
 }

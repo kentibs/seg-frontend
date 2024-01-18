@@ -1,5 +1,5 @@
 .card {
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   position: fixed;
   z-index: 10000;
   right: 1%;
@@ -8,7 +8,7 @@
   align-items: center;
   border-radius: 0.4rem;
   animation: moveInRight 0.5s ease-out;
-  min-width: 30rem;
+  min-width: 20rem;
 }
 .content__container {
   display: flex;
@@ -28,8 +28,8 @@
 }
 
 .icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   fill: hsl(0, 0%, 100%);
 }
 @keyframes moveInRight {

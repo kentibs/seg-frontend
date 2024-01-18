@@ -32,7 +32,7 @@ export const Notifications = (props) => {
     <Card styles={`${styles["card"]} ${styles[bgColor]}`}>
       <span className={styles["close"]} onClick={props.onClose}>
         <IconContext.Provider
-          value={{ size: "2rem", color: "hsl(0, 0%, 100%)" }}
+          value={{ size: "1.5rem", color: "hsl(0, 0%, 100%)" }}
         >
           <FaWindowClose />
         </IconContext.Provider>
@@ -40,14 +40,14 @@ export const Notifications = (props) => {
       <div className={styles["icon__container"]}>
         <span className={styles["icon"]}>
           <IconContext.Provider
-            value={{ size: "2rem", color: "hsl(0, 0%, 100%)" }}
+            value={{ size: "1.5rem", color: "hsl(0, 0%, 100%)" }}
           >
             {icon()}
           </IconContext.Provider>
         </span>
       </div>
       <div className={styles["content__container"]}>
-        <span style={{ fontSize: "1.4rem" }}> {props.message}</span>
+        <span style={{ fontSize: "0.9rem" }}> {props.message}</span>
       </div>
     </Card>
   );

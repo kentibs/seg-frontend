@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Contact } from "./pages/contact/Contact";
 import { HomePage } from "./pages/homepage/HomePage";
@@ -23,6 +23,8 @@ import { Messages } from "./pages/messages/Messages";
 import { SuperCompetitions } from "./pages/competitions/SuperCompetitions";
 import { SuperUpdates } from "./pages/updates/SuperUpdates";
 import { SuperSettings } from "./pages/super-settings/SuperSettings";
+import { SuperUsers } from "./pages/super-users/SuperUsers";
+import { SuperPost } from "./pages/super-post/SuperPost";
 // import { baseUrl } from "./utils/utils";
 
 export default function App() {
@@ -38,50 +40,46 @@ export default function App() {
   const dispatch = useDispatch();
   console.log("NOTIFICATION", notification);
 
-  // const navigationTypeReload =
-  // performance.getEntriesByType("navigation")[0].type === "reload";
+  function getCurrentTime() {
+    const currentDate = new Date();
+    const hours = currentDate.getHours().toString().padStart(2, "0");
+    const minutes = currentDate.getMinutes().toString().padStart(2, "0");
+    const seconds = currentDate.getSeconds().toString().padStart(2, "0");
 
-  // const userDataFromStorage = JSON.parse(localStorage.getItem("userData"));
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    return formattedTime;
+  }
+  // http://localhost:8080/
+  // useEffect(() => {
+  //   async function signin() {
+  //     console.log("Loading refresh...");
+  //     const response = await fetch(
+  //       `https://seg-backend.onrender.com/api/v1/users/signin`,
+  //       {
+  //         method: "POST",
+  //         body: JSON.stringify({
+  //           email: "kennedymuhumuza283@gmail.com",
+  //           password: "kennedy",
+  //         }),
+  //         headers: {
+  //           "Content-type": "application/json",
+  //         },
+  //       }
+  //     );
+  //     const data = await response.json();
 
-  // if (navigationTypeReload && userDataFromStorage) {
-  //   console.log("reloaded");
-  //   if (!user || !token) {
-  //     console.log("!user || !token reloaded");
-  //     const { token, user } = userDataFromStorage;
-  //     console.log("user:", user);
-  //     dispatch(authenticate(user, token));
-  //     console.log("dispatched");
-  //   } else {
-  //     return;
+  //     console.log("REFRESH RESPONSE", response);
+  //     const currentTime = getCurrentTime();
+  //     console.log(`Time then was: ${currentTime}`);
+  //     console.log("refresh data", data);
   //   }
-  // }
-  useEffect(() => {
-    async function signin() {
-      const response = await fetch(
-        `https://seg-backend.onrender.com/api/v1/users/signin`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email: "kennedymuhumuza283@gmail.com",
-            password: "kennedy",
-          }),
-          headers: {
-            "Content-type": "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-
-      console.log("REFRESH RESPONSE", response);
-      console.log("refresh data", data);
-    }
-    signin();
-    const intervalId = setInterval(() => {
-      signin();
-      console.log("hello");
-    }, 120000);
-    return () => clearInterval(intervalId);
-  }, []);
+  //   signin();
+  //   const intervalId = setInterval(() => {
+  //     signin();
+  //     console.log("hello");
+  //   }, 240000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   useEffect(() => {
     const tryLogin = async () => {
@@ -110,7 +108,7 @@ export default function App() {
   };
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       <BrowserRouter>
         <Routes>
           {!isLoggedIn && (
@@ -242,6 +240,8 @@ export default function App() {
                 <Route path="super-dashboard" element={<SuperDashBoard />} />
                 <Route path="manage-admins" element={<ManageAdmins />} />
                 <Route path="manage-events" element={<ManageEvents />} />
+                <Route path="super-users" element={<SuperUsers />} />
+                <Route path="super-post" element={<SuperPost />} />
                 <Route path="super-committee" element={<SuperCommittee />} />
                 <Route path="news-letter" element={<NewsLetter />} />
                 <Route path="messages" element={<Messages />} />

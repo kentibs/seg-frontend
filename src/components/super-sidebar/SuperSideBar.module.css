@@ -1,5 +1,6 @@
 .sidebar-container {
   background-color: var(--color-grey-0);
+
   /* padding: 0rem 0rem; */
 
   border-right: 1px solid var(--color-grey-100);
@@ -9,7 +10,126 @@
   flex-direction: column;
 }
 .bot-svg {
-  align-self: center;
+  /* align-self: center; */
+  margin-left: 2rem;
+  cursor: pointer;
   margin-top: 60%;
   color: var(--main-color-1);
+}
+
+.chat_container {
+  position: absolute;
+}
+.seg-logo {
+  height: 5rem;
+  border-bottom: 1px solid var(--color-grey-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.logo-main {
+  font-family: "Aquire", sans-serif;
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  letter-spacing: 3px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.super-admin {
+  color: var(--main-color-1);
+  font-size: 0.8rem;
+}
+.super-admin-container {
+  border-left: 1px solid var(--color-grey-400);
+  border-left: 1px solid var(--main-color-2);
+  /* background-color: green; */
+  padding: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+/* -----------------------------------------------------------------------------------SIDE BAR----------------------------- */
+
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  /* min-height: 100vh; */
+  background-color: white;
+  overflow-y: auto;
+}
+
+.top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .logo {
+  font-size: 20px;
+  color: #6439ff;
+  color: var(--main-color-1);
+} */
+
+.center {
+  padding-left: 10px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  font-size: 8px;
+  color: #7451f8;
+  color: var(--main-color-1);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.ul-list-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ul-list-container li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--color-grey-500);
+}
+
+.light-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--main-color-1);
+  cursor: pointer;
+  margin: 5px;
+  background-color: #fff;
+}
+
+.dark-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--main-color-1);
+  cursor: pointer;
+  margin: 5px;
+  background-color: #000;
 }

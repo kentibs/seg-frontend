@@ -12,3 +12,8 @@
 
 .styled-nav-link {
 }
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
