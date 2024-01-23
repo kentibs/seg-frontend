@@ -20,7 +20,7 @@ export const Header = ({ scrolled }) => {
 
   const toggleMenu = () => {
     setToggle((prev) => !prev);
-    // document.body.classList.toggle("open");
+    // document.body.classList.toggle("open"); 
   };
   return (
     <header

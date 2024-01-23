@@ -84,12 +84,15 @@
   padding-right: 2px;
 }
 .login-confirm-eye-icon {
-  color: hsl(0, 0%, 0%); 
+  color: hsl(0, 0%, 0%);
   color: var(--color-grey-500);
   position: absolute;
   right: 8%;
   top: 62%;
   padding-right: 2px;
+}
+.loading_container {
+  margin-bottom: 14px;
 }
 .register_btn {
   margin-top: 1rem;

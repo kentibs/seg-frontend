@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Contact } from "./pages/contact/Contact";
 import { HomePage } from "./pages/homepage/HomePage";
@@ -25,6 +25,9 @@ import { SuperUpdates } from "./pages/updates/SuperUpdates";
 import { SuperSettings } from "./pages/super-settings/SuperSettings";
 import { SuperUsers } from "./pages/super-users/SuperUsers";
 import { SuperPost } from "./pages/super-post/SuperPost";
+import { Tokens } from "./pages/tokens/Tokens";
+import { Profile } from "./pages/profile/Profile";
+import { setDarkMode } from "./store/actions/darkMode";
 // import { baseUrl } from "./utils/utils";
 
 export default function App() {
@@ -39,6 +42,8 @@ export default function App() {
 
   const dispatch = useDispatch();
   console.log("NOTIFICATION", notification);
+
+  // const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   function getCurrentTime() {
     const currentDate = new Date();
@@ -84,6 +89,9 @@ export default function App() {
   useEffect(() => {
     const tryLogin = async () => {
       const userData = localStorage.getItem("userData");
+      const modeTheme = localStorage.getItem("modeToggle");
+      const themeParsedData = JSON.parse(modeTheme);
+
       const parsedData = JSON.parse(userData);
       if (!userData) {
         console.log("no data found");
@@ -95,6 +103,7 @@ export default function App() {
         return <Route path="/" element={<HomePage to="/" replace />} />;
       }
       await dispatch(authenticate(user, token));
+      await dispatch(setDarkMode(themeParsedData.darkMode));
     };
     tryLogin();
   }, [dispatch]);
@@ -108,7 +117,7 @@ export default function App() {
   };
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
         <Routes>
           {!isLoggedIn && (
@@ -245,6 +254,8 @@ export default function App() {
                 <Route path="super-committee" element={<SuperCommittee />} />
                 <Route path="news-letter" element={<NewsLetter />} />
                 <Route path="messages" element={<Messages />} />
+                <Route path="tokens" element={<Tokens />} />
+                <Route path="profile" element={<Profile />} />
                 <Route path="super-updates" element={<SuperUpdates />} />
                 <Route path="super-settings" element={<SuperSettings />} />
                 <Route

@@ -73,6 +73,9 @@
   top: 62%;
   padding-right: 2px;
 }
+.loading_container {
+  margin-bottom: 14px;
+}
 .register_btn {
   margin-top: 1rem;
   width: 100%;

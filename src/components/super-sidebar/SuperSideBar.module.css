@@ -1,9 +1,14 @@
 .sidebar-container {
   background-color: var(--color-grey-0);
+  background-color: white;
 
   /* padding: 0rem 0rem; */
 
+  /* border-right: 1px solid var(--color-grey-100); */
+  box-shadow: var(--shadow-lg);
   border-right: 1px solid var(--color-grey-100);
+
+  /* background-color: green; */
 
   grid-row: 1 / -1;
   display: flex;
@@ -55,9 +60,10 @@
 
 .sidebar {
   flex: 1;
-  border-right: 0.5px solid rgb(230, 227, 227);
+  /* border-right: 0.5px solid rgb(230, 227, 227); */
+  /* box-shadow: var(--shadow-lg); */
   /* min-height: 100vh; */
-  background-color: white;
+  /* background-color: white; */
   overflow-y: auto;
 }
 
@@ -87,7 +93,7 @@
 }
 
 .icon {
-  font-size: 8px;
+  /* font-size: 8px; */
   color: #7451f8;
   color: var(--main-color-1);
 }
@@ -104,7 +110,7 @@
   padding: 0;
 }
 
-.ul-list-container li {
+.list-option {
   display: flex;
   align-items: center;
   padding: 5px;
@@ -112,6 +118,29 @@
   cursor: pointer;
   font-size: 0.8rem;
   color: var(--color-grey-500);
+}
+
+.list-option:hover {
+  background-color: var(--color-grey-200);
+  border-radius: 5px;
+}
+.active.list-option:hover {
+  background-color: var(--color-grey-200);
+  border-radius: 5px 0 0 5px;
+}
+
+.list-option:hover span {
+  color: var(--main-color-1);
+}
+
+.active.list-option span {
+  color: var(--main-color-1);
+}
+.ul-list-container li span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #888;
+  margin-left: 10px;
 }
 
 .light-option {
@@ -132,4 +161,38 @@
   cursor: pointer;
   margin: 5px;
   background-color: #000;
+}
+.active {
+  border-right: 2px solid var(--main-color-1);
+}
+
+div.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+div.sidebar::-webkit-scrollbar-track {
+  background-color: var(--color-grey-200);
+}
+
+div.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey-100);
+  border-radius: 5px;
+}
+
+/* ------------------------------------firefox browser--------------------------------------- */
+div.sidebar {
+  scrollbar-color: var(--color-grey-200) var(--color-grey-100);
+  scrollbar-width: thin;
+}
+
+/* You can also style the scrollbar track if needed */
+div.sidebar::-moz-scrollbar-track {
+  background-color: var(--color-grey-100);
+}
+
+/* And style the scrollbar thumb for Firefox */
+div.sidebar::-moz-scrollbar-thumb {
+  /* background-color: var(--main-color-1); */
+  background-color: var(--color-grey-100);
+  border-radius: 5px;
 }

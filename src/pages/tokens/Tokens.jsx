@@ -1,0 +1,214 @@
+import { useState } from "react";
+import styles from "./Tokens.module.css";
+import { generateToken } from "../../store/actions/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { PropagateLoader } from "react-spinners";
+import { useQuery } from "@tanstack/react-query";
+// import { addDays, differenceInDays } from "date-fns";
+import { parse, format } from "date-fns";
+import { baseUrl } from "../../utils/utils";
+
+export const Tokens = () => {
+  // const [associatedEmail, setAssociatedEmail] = useState("");
+  const [associatedRole, setAssociatedRole] = useState("");
+  const [associatedEmail, setAssociatedEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  // const [tokenData, setTokenData] = useState([]);
+
+  // const formattedDate = format(currentDate, "yyyy-MM-dd");
+  // const futureDate = addDays(currentDate, 7);
+  // const daysDifference = differenceInDays(futureDate, currentDate);
+
+  const formatDate = (date) => {
+    if (!date) return "null";
+    const parsedDate = parse(date, "yyyy-MM-dd'T'HH:mm:ss.SSSX", new Date());
+    const formattedDate = format(parsedDate, "MMMM dd, yyyy hh:mm a");
+    return formattedDate;
+  };
+
+  const token = useSelector((state) => state.auth.token);
+  const dispatch = useDispatch();
+
+  const getAllTokens = async () => {
+    console.log("CHECK FOR TOKEN STATE", token);
+    // return async (dispatch) => {
+    const response = await fetch(`${baseUrl}/api/v1/tokens/get-all-tokens`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.message);
+    }
+
+    const res = await response.json();
+
+    console.log("ALL TOKENS FROM BACKEND", res.data.tokens);
+    // const data = await response.json();
+
+    return res.data.tokens;
+  };
+
+  const handleGenerateTokenSubmit = async (event) => {
+    event.preventDefault();
+    if (!associatedEmail || !associatedRole) return;
+    try {
+      setIsLoading(true);
+      await dispatch(generateToken(token, associatedEmail, associatedRole));
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+    }
+  };
+  const {
+    isLoading: queryLoading,
+    data: tokenInfo,
+    error,
+  } = useQuery({ queryKey: ["tokens"], queryFn: getAllTokens });
+  console.log("TOKEN INFO", tokenInfo);
+
+  console.log("react query error message", error);
+
+  // if (error) dispatch(showCardNotification("error", error.message));
+
+  // useEffect(() => {
+  //   console.log("LOADING TOKENS");
+  //   const getAllTokens = async () => {
+  //     console.log("CHECK FOR TOKEN STATE", token);
+  //     // return async (dispatch) => {
+  //     const response = await fetch(`${baseUrl}/api/v1/tokens/get-all-tokens`, {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
+
+  //     if (!response.ok) {
+  //       const error = await response.json();
+  //       throw new Error(error.message);
+  //     }
+
+  //     const res = await response.json();
+
+  //     console.log("ALL TOKENS FROM BACKEND", res.data.tokens);
+  //     setTokenData(res.data.tokens);
+  //   };
+
+  //   getAllTokens();
+  //   console.log("tokens fetched successfully");
+  // }, [tokenData, token]);
+  return (
+    <div className={styles["tokens-container"]}>
+      {" "}
+      <h1 className={styles["generate"]}>GENERATE ADMIN TOKENS</h1>
+      <form
+        className={styles["email_container"]}
+        onSubmit={handleGenerateTokenSubmit}
+      >
+        <div>
+          <input
+            placeholder="Associated email"
+            type="email"
+            className={styles["email-field"]}
+            value={associatedEmail}
+            onChange={(e) => setAssociatedEmail(e.target.value)}
+          />{" "}
+        </div>
+
+        <div className={styles["select-dropdown"]}>
+          <select
+            value={associatedRole}
+            onChange={(event) => setAssociatedRole(event.target.value)}
+            className={styles["select-container"]}
+          >
+            <option value="" disabled hidden>
+              Choose user role
+            </option>
+            <option value="admin">Admin</option>
+            <option value="superadmin">Super admin</option>
+          </select>
+        </div>
+
+        <button
+          type="submit"
+          className={styles["generate-token"]}
+          disabled={isLoading}
+        >
+          GET TOKEN
+        </button>
+      </form>
+      <table className={styles["table_container"]}>
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Associated email</th>
+            <th>Assigned role</th>
+            <th>Expiry time</th>
+            <th>Status</th>
+            {/* <th>Generated by</th> */}
+            <th>Time used</th>
+            <th>Created Time</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {Array.isArray(tokenInfo) &&
+            tokenInfo.map((item) => {
+              return (
+                <tr key={item?.tokenId}>
+                  <td>{item?.token}</td>
+                  <td>{item?.associatedEmail}</td>
+                  <td>{item?.associatedRole}</td>
+                  <td>{formatDate(item?.expiresAt)}</td>
+                  <td>
+                    {item?.used ? (
+                      <p className={styles["used"]}>Used</p>
+                    ) : (
+                      <p className={styles["fresh"]}>Fresh</p>
+                    )}
+                  </td>
+                  {/* <td>{item?.generatedByUserId}</td> */}
+                  <td>{formatDate(item?.usedAt)}</td>
+                  {/* <td>{item?.createdTime}</td> */}
+                  <td>{formatDate(item?.createdAt)}</td>
+                </tr>
+              );
+            })}
+        </tbody>
+      </table>
+      {queryLoading && (
+        <PropagateLoader color="#007fff" className={styles["beatloader"]} />
+      )}
+    </div>
+  );
+};
+
+// import React from 'react';
+// import { parse, format } from 'date-fns';
+
+// const MyDateComponent = () => {
+//   // Example ISO string
+//   const isoString = "2022-01-21T12:30:00.000Z";
+
+//   // Parse ISO string to a Date object
+//   const parsedDate = parse(isoString, 'yyyy-MM-dd\'T\'HH:mm:ss.SSSX', new Date());
+
+//   // Format the Date object to extract time and date separately
+//   const formattedTime = format(parsedDate, 'hh:mm a');
+//   const formattedDate = format(parsedDate, 'MMMM dd, yyyy');
+
+//   return (
+//     <div>
+//       <p>Original ISO String: {isoString}</p>
+//       <p>Extracted Time: {formattedTime}</p>
+//       <p>Extracted Date: {formattedDate}</p>
+//     </div>
+//   );
+// };
+
+// export default MyDateComponent;

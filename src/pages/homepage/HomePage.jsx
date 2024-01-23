@@ -27,7 +27,7 @@ export const HomePage = () => {
   };
 
   const closeLoginModalHandler = () => {
-    setIsLoginOpen(false);
+    setIsLoginOpen(false); 
   };
   const downloadPdf = () => {
     const pdfUrl = "/seg.pdf";

@@ -5,6 +5,10 @@ import { setLoginContent } from "../../store/actions/loginContent";
 import { Eye, EyeSlash } from "react-bootstrap-icons";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
+import { signupAdmin } from "../../store/actions/auth";
+import { useNavigate } from "react-router-dom";
+import { PropagateLoader } from "react-spinners";
+
 // import { useNavigate } from "react-router-dom";
 
 export const AdminRegister = () => {
@@ -20,9 +24,11 @@ export const AdminRegister = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   console.log("selected gender", selectedGender);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -47,6 +53,38 @@ export const AdminRegister = () => {
   //     !password
   //   )
 
+  const handleRegisterSubmit = async (event) => {
+    event.preventDefault();
+    if (
+      !lastName ||
+      !firstName ||
+      !phoneNumber ||
+      !email ||
+      !password ||
+      !confirmPassword ||
+      !selectedGender
+    )
+      return;
+    try {
+      setIsLoading(true);
+      await dispatch(
+        signupAdmin(
+          firstName,
+          lastName,
+          email,
+          selectedGender,
+          phoneNumber,
+          password,
+          signupToken
+        )
+      );
+      setIsLoading(false);
+      navigate("/admin-home-page", { replace: true });
+    } catch (error) {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className={styles["register_container"]}>
       <div className={styles["header_container"]}>
@@ -57,7 +95,7 @@ export const AdminRegister = () => {
           </span>
         </p>
       </div>
-      <form>
+      <form onSubmit={handleRegisterSubmit}>
         <div className={styles["form_container"]}>
           <div className={styles["container"]}>
             <span className={styles["label_container"]}>
@@ -216,10 +254,15 @@ export const AdminRegister = () => {
         <button
           type="submit"
           className={styles["register_btn"]}
-          // disabled={isLoading}
+          disabled={isLoading}
         >
-          SIGNUP
-          {/* {isLoading ? <BeatLoader color="#36d7b7" /> : "SIGNUP"} */}
+          {isLoading ? (
+            <span className={styles["loading_container"]}>
+              <PropagateLoader color="#007fff" />
+            </span>
+          ) : (
+            "REGISTER"
+          )}
         </button>
       </form>
       <p className={styles["bottom-msg-container"]}>
@@ -228,7 +271,7 @@ export const AdminRegister = () => {
           className={styles["forgot_label"]}
           onClick={() => dispatch(setLoginContent("login"))}
         >
-          Login
+          Login 
         </span>
       </p>
     </div>

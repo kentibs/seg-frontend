@@ -1,1 +1,10 @@
-export const baseUrl = "https://seg-backend.onrender.com";
+// export const baseUrl = "https://seg-backend.onrender.com";
+
+let baseUrl;
+if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+  baseUrl = "http://localhost:8080";
+} else {
+  baseUrl = "https://seg-backend.onrender.com";
+}
+
+export { baseUrl };

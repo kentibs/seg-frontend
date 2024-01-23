@@ -8,6 +8,7 @@ import specialSlice from "./reducers/specialToken";
 import histTabSlice from "./reducers/histTabs";
 import loginContentSlice from "./reducers/loginContent";
 import notificationSlice from "./reducers/notification";
+import darkModeSlice from "./reducers/darkMode";
 
 const store = configureStore({
   reducer: {
@@ -20,6 +21,7 @@ const store = configureStore({
     histTabs: histTabSlice.reducer,
     loginContent: loginContentSlice.reducer,
     notification: notificationSlice.reducer,
+    darkMode: darkModeSlice.reducer,
   },
 });
 

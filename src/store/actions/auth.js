@@ -110,6 +110,7 @@ export const signupAdmin = (
       },
     });
 
+    console.log("ADMIN REGISTER RESPONSE", response);
     if (!response.ok) {
       const error = await response.json();
       await dispatch(
@@ -123,7 +124,15 @@ export const signupAdmin = (
       }, [5000]);
       throw new Error(error.message);
     }
+    const data = await response.json();
 
+    await dispatch(
+      authActions.authenticate({
+        token: data.accessToken,
+        user: data.user,
+      })
+    );
+    saveDataToStorage(data.user, data.accessToken);
     await dispatch(
       notificationActions.showCardNotification({
         type: "success",
@@ -160,6 +169,7 @@ export const signup = (
       },
     });
 
+    console.log("USER REGISTER RESPONSE", response);
     if (!response.ok) {
       const error = await response.json();
       await dispatch(
@@ -173,6 +183,16 @@ export const signup = (
       }, [5000]);
       throw new Error(error.message);
     }
+
+    const data = await response.json();
+
+    await dispatch(
+      authActions.authenticate({
+        token: data.accessToken,
+        user: data.user,
+      })
+    );
+    saveDataToStorage(data.user, data.accessToken);
 
     await dispatch(
       notificationActions.showCardNotification({
@@ -397,3 +417,90 @@ export const uploadPhoto = (userId, photo, token) => {
     saveDataToStorage(data.user, data.token);
   };
 };
+// -----------------------------------------------------------TOKENS---------------------------------------
+export const generateToken = (token, associatedEmail, associatedRole) => {
+  return async (dispatch) => {
+    const response = await fetch(
+      `${baseUrl}/api/v1/tokens/generate-signup-token`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          associatedEmail,
+          associatedRole,
+        }),
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      const error = await response.json();
+      dispatch(
+        notificationActions.showCardNotification({
+          type: "error",
+          message: error.message,
+        })
+      );
+      setTimeout(() => {
+        dispatch(notificationActions.hideCardNotification());
+      }, [5000]);
+      throw new Error(error.message);
+    }
+
+    const data = await response.json();
+    console.log("TOKEN DATA FROM BACKEND", data);
+
+    dispatch(
+      notificationActions.showCardNotification({
+        type: "success",
+        message: "Token generated successfully",
+      })
+    );
+    setTimeout(() => {
+      dispatch(notificationActions.hideCardNotification());
+    }, [5000]);
+  };
+};
+
+// export const getAllTokens = async (token) => {
+//   // return async (dispatch) => {
+//   const response = await fetch(`${baseUrl}/api/v1/tokens/get-all-tokens`, {
+//     method: "GET",
+//     headers: {
+//       "Content-type": "application/json",
+//       Authorization: `Bearer ${token}`,
+//     },
+//   });
+
+//   if (!response.ok) {
+//     const error = await response.json();
+
+//     //   dispatch(
+//     //     notificationActions.showCardNotification({
+//     //       type: "error",
+//     //       message: error.message,
+//     //     })
+//     //   );
+//     //   setTimeout(() => {
+//     //     dispatch(notificationActions.hideCardNotification());
+//     //   }, [5000]);
+//     throw new Error(error.message);
+//   }
+
+//   const data = await response.json();
+//   console.log("ALL TOKENS FROM BACKEND", data);
+//   return data;
+
+//   // dispatch(
+//   //   notificationActions.showCardNotification({
+//   //     type: "success",
+//   //     message: "Token fetched successfully",
+//   //   })
+//   // );
+//   // setTimeout(() => {
+//   //   dispatch(notificationActions.hideCardNotification());
+//   // }, [5000]);
+//   // };
+// };
