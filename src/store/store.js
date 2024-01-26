@@ -9,6 +9,8 @@ import histTabSlice from "./reducers/histTabs";
 import loginContentSlice from "./reducers/loginContent";
 import notificationSlice from "./reducers/notification";
 import darkModeSlice from "./reducers/darkMode";
+import sideBarSlice from "./reducers/sideBar";
+import activeListSlice from "./reducers/activeList";
 
 const store = configureStore({
   reducer: {
@@ -22,6 +24,8 @@ const store = configureStore({
     loginContent: loginContentSlice.reducer,
     notification: notificationSlice.reducer,
     darkMode: darkModeSlice.reducer,
+    sideBar: sideBarSlice.reducer,
+    activeList: activeListSlice.reducer,
   },
 });
 

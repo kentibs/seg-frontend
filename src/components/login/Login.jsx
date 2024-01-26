@@ -30,7 +30,7 @@ export const Login = () => {
       setIsLoading(true);
       await dispatch(login(email, password));
       setIsLoading(false);
-      navigate("/super-admin-home-page", { replace: true });
+      navigate("/", { replace: true });
     } catch (error) {
       setIsLoading(false);
     }
@@ -59,7 +59,13 @@ export const Login = () => {
         <div className={styles["password_container"]}>
           <span className={styles["password_label_container"]}>
             <label className={styles["label"]}>Password</label>
-            <label className={styles["forgot_label"]}>Forgot password?</label>
+
+            <label
+              className={styles["forgot_label"]}
+              onClick={() => dispatch(setLoginContent("forgot"))}
+            >
+              Forgot password?
+            </label>
           </span>
           <input
             value={password}

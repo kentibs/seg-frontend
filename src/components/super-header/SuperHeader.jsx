@@ -10,7 +10,10 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { useDispatch } from "react-redux";
 import { setDarkMode } from "../../store/actions/darkMode";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { setActiveList } from "../../store/actions/activeList";
+import { setSideBar } from "../../store/actions/sideBar";
+// import { useState } from "react";
 // import { useState } from "react";
 // import { DarkModeContext } from "../../context/darkModeContext";
 
@@ -20,11 +23,19 @@ export const SuperHeader = ({ scrolled }) => {
   // const [darkOn, setDarkOn] = useState(false);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const sideBarState = useSelector((state) => state.sideBar.sideBar);
 
   const user = useSelector((state) => state.auth.user);
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
-  console.log("REDUX DARKMODE", darkMode);
+  const handleClick = (route, activeListOption) => {
+    // setActive(activeListOption);
+    dispatch(setActiveList(activeListOption));
+    navigate(route);
+  };
+
+  // console.log("REDUX DARKMODE", darkMode);
 
   // const changeTheme = () => {
   //   setDarkOn((prev) => !prev);
@@ -36,10 +47,20 @@ export const SuperHeader = ({ scrolled }) => {
   //     localStorage.setItem("dark", 0);
   //   }
   // };
+  // console.log("sideBarState1", sideBarState);
 
   const changeMode = () => {
     dispatch(setDarkMode(!darkMode));
-    console.log("changed mode", darkMode);
+    // console.log("changed mode", darkMode);
+  };
+
+  const handleSideBarState = () => {
+    // console.log("sideBarState click", sideBarState);
+
+    if (sideBarState === "") dispatch(setSideBar("off"));
+    if (sideBarState === "on") dispatch(setSideBar("off"));
+    if (sideBarState === "off") dispatch(setSideBar("on"));
+    // console.log("sideBarState", sideBarState);
   };
   // const location = useLocation();
 
@@ -99,6 +120,8 @@ export const SuperHeader = ({ scrolled }) => {
       // className={styles["header-container"]}
       className={`${styles["header-container"]} ${
         scrolled ? styles["scrolled"] : ""
+      } ${sideBarState === "off" && styles["sidebar-on"]} ${
+        darkMode && styles["darkmode"]
       }`}
     >
       {/* <span>{title}</span> */}
@@ -149,15 +172,24 @@ export const SuperHeader = ({ scrolled }) => {
           <FullscreenExitOutlinedIcon className={styles["icon"]} />
         </div>
         <div className={styles["item"]}>
-          <NotificationsNoneOutlinedIcon className={styles["icon"]} />
+          <NotificationsNoneOutlinedIcon
+            className={styles["icon"]}
+            onClick={() => handleClick("super-notifications", "notifications")}
+          />
           <div className={styles["counter"]}>1</div>
         </div>
         <div className={styles["item"]}>
-          <ChatBubbleOutlineOutlinedIcon className={styles["icon"]} />
+          <ChatBubbleOutlineOutlinedIcon
+            className={styles["icon"]}
+            onClick={() => handleClick("messages", "messages")}
+          />
           <div className={styles["counter"]}>2</div>
         </div>
         <div className={styles["item"]}>
-          <ListOutlinedIcon className={styles["icon"]} />
+          <ListOutlinedIcon
+            className={styles["icon"]}
+            onClick={handleSideBarState}
+          />
         </div>
         <div className={styles["user-container"]}>
           <span>

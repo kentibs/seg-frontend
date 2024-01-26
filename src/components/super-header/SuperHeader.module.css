@@ -18,6 +18,18 @@
   height: 5rem;
   border-bottom: 1px solid var(--color-grey-100);
 }
+
+.sidebar-on {
+  padding: 2rem 2rem;
+  height: 5rem;
+  /* background-color: green; */
+}
+
+.header-container.darkmode {
+  background-color: var(--color-grey-600);
+  background-color: #080101;
+  color: var(--color-grey-100);
+}
 .header-container.scrolled {
   /* border-bottom: 5px solid var(--color-grey-100); */
   /* border-bottom: 0;  */

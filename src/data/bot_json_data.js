@@ -13,6 +13,15 @@ export const botJsonData = [
     required_words: [],
   },
   {
+    response_type: "tell",
+    user_input: ["tell", "me", "about", "yourself"],
+    bot_response: [
+      "Greetings, puny human! I am botly, your virtual companion. I've got more lines of code than a spider has silk threads. Impressive, isn't it?",
+      "I'm botly, your friendly neighborhood chatbot. My superpowers include answering questions, telling jokes, and making your day a bit brighter.",
+    ],
+    required_words: ["about", "yourself"],
+  },
+  {
     response_type: "question",
     user_input: ["do", "you", "love", "like", "me"],
     bot_response: [

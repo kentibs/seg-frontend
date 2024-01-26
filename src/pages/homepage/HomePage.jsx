@@ -14,6 +14,7 @@ import LoginModal from "../../features/login_model/LoginModel";
 import { Login } from "../../components/login/Login";
 import { useSelector } from "react-redux";
 import { Register } from "../../components/register/Register";
+import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +28,7 @@ export const HomePage = () => {
   };
 
   const closeLoginModalHandler = () => {
-    setIsLoginOpen(false); 
+    setIsLoginOpen(false);
   };
   const downloadPdf = () => {
     const pdfUrl = "/seg.pdf";
@@ -78,6 +79,7 @@ export const HomePage = () => {
                 >
                   {activeLoginContent === "login" && <Login />}
                   {activeLoginContent === "register" && <Register />}
+                  {activeLoginContent === "forgot" && <ForgotPassword />}
                 </LoginModal>
                 <Link
                   to=""

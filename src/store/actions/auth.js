@@ -208,7 +208,7 @@ export const signup = (
 
 export const forgotPassword = (email) => {
   return async (dispatch) => {
-    const response = await fetch(`${baseUrl}/api/users/forgot-password`, {
+    const response = await fetch(`${baseUrl}/api/v1/users/forgot-password`, {
       method: "POST",
       body: JSON.stringify({
         email,

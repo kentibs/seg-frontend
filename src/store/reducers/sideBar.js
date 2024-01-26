@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const theInitialState = {
-  sideBar: "on",
+  sideBar: "",
 };
 
 export const sideBarSlice = createSlice({
@@ -15,5 +15,5 @@ export const sideBarSlice = createSlice({
   },
 });
 
-export const histTabActions = sideBarSlice.actions;
+export const sideBarActions = sideBarSlice.actions;
 export default sideBarSlice;

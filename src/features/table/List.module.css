@@ -10,7 +10,10 @@
   margin-right: 10px;
   object-fit: cover;
 }
-
+.darkmode-table {
+  background-color: var(--color-grey-300);
+  /* background-color: #000; */
+}
 .status {
   padding: 5px;
   border-radius: 5px;

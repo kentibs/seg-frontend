@@ -3,12 +3,22 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 // import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 // import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import styles from "./Widget.module.css";
+import { setActiveList } from "../../store/actions/activeList";
 
 const Widget = ({ type }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleClick = (route, activeListOption) => {
+    // setActive(activeListOption);
+    dispatch(setActiveList(activeListOption));
+    navigate(route);
+  };
+
   let data;
 
   switch (type) {
@@ -18,6 +28,7 @@ const Widget = ({ type }) => {
         isMoney: false,
         link: "See all users",
         linkName: "/super-admin-home-page/super-users",
+        active: "users",
         diff: 20,
         amount: 56,
         icon: (
@@ -37,6 +48,7 @@ const Widget = ({ type }) => {
         isMoney: false,
         link: "View all events",
         linkName: "/super-admin-home-page/super-updates",
+        active: "updates",
         diff: 31,
         amount: 76,
         icon: (
@@ -56,6 +68,7 @@ const Widget = ({ type }) => {
         isMoney: false,
         link: "View recent updates",
         linkName: "/super-admin-home-page/super-updates",
+        active: "updates",
         diff: 18,
         amount: 65,
         icon: (
@@ -76,6 +89,7 @@ const Widget = ({ type }) => {
         isMoney: false,
         link: "See details",
         linkName: "/super-admin-home-page/manage-admins",
+        active: "admins",
         diff: 24,
         amount: 44,
         icon: (
@@ -116,7 +130,7 @@ const Widget = ({ type }) => {
         </span>
         <span
           className={styles["link"]}
-          onClick={() => navigate(data.linkName)}
+          onClick={() => handleClick(data.linkName, data.active)}
         >
           {data.link}
         </span>
