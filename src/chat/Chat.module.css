@@ -146,6 +146,9 @@
   font-size: 1.2rem;
   /* background-color: green; */
 }
+.assistant_option.darkmode {
+  color: #000;
+}
 
 .close-icon {
   position: absolute;
@@ -154,6 +157,9 @@
   top: 0.4rem;
 }
 
+.close-icon.dark {
+  color: #000;
+}
 .input_field {
   outline: none;
 }
@@ -227,6 +233,7 @@ div.chat-messages::-webkit-scrollbar-thumb {
   display: flex;
   left: 0;
 }
+
 .user {
   /* background-color: #000; */
   /* display: flex;
@@ -378,3 +385,7 @@ div.chat-messages::-webkit-scrollbar-thumb {
 }
 
 /* Customize styles further as needed */
+
+.bot-msg.dark {
+  color: #000;
+}

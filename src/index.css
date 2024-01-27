@@ -183,6 +183,7 @@ body {
 
 body.dark {
   --bg-color: hsl(var(--hue-1), 19%, 15%);
+  --bg-color: #000;
 
   --bg-color-1: hsl(var(--hue-1), 21%, 11%);
 
@@ -200,6 +201,7 @@ body.dark {
   --bg-color: hsl(230, 19%, 15%);
   /* --bg-color: hsl(240, 19%, 15%); */
   /* --bg-color: hsl(225, 19%, 15%); */
+  --bg-color: #000;
 
   --bg-color-1: hsl(var(--hue-1), 21%, 11%);
 

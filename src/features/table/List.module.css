@@ -10,9 +10,14 @@
   margin-right: 10px;
   object-fit: cover;
 }
-.darkmode-table {
-  background-color: var(--color-grey-300);
-  /* background-color: #000; */
+
+.tableCell {
+  background-color: var(--color-grey-200);
+}
+.tableCells.darkmode-table {
+  /* background-color: var(--color-grey-300); */
+  background-color: #000;
+  color: var(--color-grey-200);
 }
 .status {
   padding: 5px;

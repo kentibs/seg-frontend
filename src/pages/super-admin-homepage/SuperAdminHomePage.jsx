@@ -51,7 +51,7 @@ export const SuperAdminHomePage = () => {
             <div className={styles["chat_container"]}>
               <Chat setBotActive={setBotActive} />
             </div>
-          )}
+          )} 
           <div className={styles["chat_outermost_container"]}>
             <div
               className={styles["chat_outer_container"]}

@@ -86,7 +86,7 @@ export default function App() {
   //   return () => clearInterval(intervalId);
   // }, []);
 
-  useEffect(() => {
+  useEffect(() => { 
     const tryLogin = async () => {
       const userData = localStorage.getItem("userData");
       const modeTheme = localStorage.getItem("modeToggle");

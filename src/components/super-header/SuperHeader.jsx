@@ -13,6 +13,7 @@ import { setDarkMode } from "../../store/actions/darkMode";
 import { useNavigate } from "react-router-dom";
 import { setActiveList } from "../../store/actions/activeList";
 import { setSideBar } from "../../store/actions/sideBar";
+import { LogoutDropDown } from "../../features/logout_dropdown/LogoutDropDown";
 // import { useState } from "react";
 // import { useState } from "react";
 // import { DarkModeContext } from "../../context/darkModeContext";
@@ -241,7 +242,7 @@ export const SuperHeader = ({ scrolled }) => {
               </svg>
             </span> */}
             <div className={styles["user-icon-dropdown-container"]}>
-              <span className={styles["user-icon-svg"]}>
+              {/* <span className={styles["user-icon-svg"]}>
                 <svg
                   viewBox="0 0 448 512"
                   fill="currentColor"
@@ -250,8 +251,8 @@ export const SuperHeader = ({ scrolled }) => {
                 >
                   <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3h-91.4z" />
                 </svg>
-              </span>
-              <span>
+              </span> */}
+              {/* <span>
                 <svg
                   viewBox="0 0 1024 1024"
                   fill="currentColor"
@@ -260,8 +261,9 @@ export const SuperHeader = ({ scrolled }) => {
                 >
                   <path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z" />
                 </svg>
-              </span>
+              </span> */}
             </div>
+            <LogoutDropDown />
           </span>
           {/* <img src={userIcon} className={styles["img-container"]} /> */}
         </div>

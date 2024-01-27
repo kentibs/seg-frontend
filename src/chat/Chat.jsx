@@ -17,6 +17,7 @@ import { botJsonData } from "../data/bot_json_data";
 // } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 import ai from "/aipic.jpg";
+import { useSelector } from "react-redux";
 
 const Chat = ({ setBotActive }) => {
   const [messages, setMessages] = useState([
@@ -32,6 +33,8 @@ const Chat = ({ setBotActive }) => {
   // const colletionRef = collection(firestore, "seg_bot");
 
   const [active, setActive] = useState("voice");
+
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   // Create a new SpeechSynthesisUtterance object outside the function
   var msg = new SpeechSynthesisUtterance();
@@ -404,11 +407,17 @@ const Chat = ({ setBotActive }) => {
           onClick={() => handleActiveTabChange("voice")}
         > */}
         <span className={styles["tab_option"]}>
-          <span className={styles["assistant_option"]}>SEG Site Assistant</span>
+          <span
+            className={`${styles["assistant_option"]} ${
+              darkMode && styles["darkmode"]
+            }`}
+          >
+            SEG Site Assistant
+          </span>
           <span className={styles["online_option"]}>Online</span>
         </span>
         <span
-          className={styles["close-icon"]}
+          className={`${styles["close-icon"]} ${darkMode && styles["dark"]}`}
           onClick={() => setBotActive(false)}
         >
           <svg
@@ -471,7 +480,11 @@ const Chat = ({ setBotActive }) => {
                           <path d="M8.5 1.866a1 1 0 10-1 0V3h-2A4.5 4.5 0 001 7.5V8a1 1 0 00-1 1v2a1 1 0 001 1v1a2 2 0 002 2h10a2 2 0 002-2v-1a1 1 0 001-1V9a1 1 0 00-1-1v-.5A4.5 4.5 0 0010.5 3h-2V1.866zM14 7.5V13a1 1 0 01-1 1H3a1 1 0 01-1-1V7.5A3.5 3.5 0 015.5 4h5A3.5 3.5 0 0114 7.5z" />
                         </svg> */}
                         <div className={styles["bot-icon"]}>
-                          <span className={styles["bot-msg"]}>
+                          <span
+                            className={`${styles["bot-msg"]} ${
+                              darkMode && styles["dark"]
+                            }`}
+                          >
                             {message?.bot}
                           </span>
                           <span className={styles["time"]}>

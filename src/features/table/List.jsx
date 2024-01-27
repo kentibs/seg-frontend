@@ -84,7 +84,7 @@ export const List = () => {
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >
@@ -97,35 +97,35 @@ export const List = () => {
                 </div>
               </TableCell> */}
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >
                 {row.admin}
               </TableCell>
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >
                 {row.date}
               </TableCell>
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >
                 {row.role}
               </TableCell>
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >
                 {row.generatedBy}
               </TableCell>
               <TableCell
-                className={`${styles["tableCell"]} ${
+                className={`${styles["tableCells"]} ${
                   darkMode && styles["darkmode-table"]
                 }`}
               >

@@ -8,7 +8,7 @@
   position: relative;
   background-color: var(--color-grey-50);
   padding: 2rem 2rem 3rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .bot-svg {
   cursor: pointer;
@@ -29,6 +29,7 @@
 
 .container.darkmode-main {
   background-color: var(--color-grey-600);
+  background-color: #000;
   color: var(--color-grey-0);
 }
 .chat_container {
