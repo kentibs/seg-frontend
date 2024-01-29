@@ -1,20 +1,32 @@
 .tokens-container {
-}
-.email_container {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-  /* margin-left: 3rem; */
-}
-.email-field {
-  padding: 0.8rem;
-  width: 15rem;
-  outline: none;
-  border: 1px solid var(--color-grey-200);
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  /* font-weight: 900; */
 }
+
+.tokens-header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 75%;
+}
+
+.generate-btn {
+  padding: 0.5rem 0.5rem;
+  color: var(--color-grey-0);
+  background-color: var(--main-color-1);
+  border: 0;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.generate-btn:hover {
+  color: var(--color-grey-0);
+  background-color: #007fff;
+  padding: 0.5rem 0.5rem;
+}
+
 .generate-token {
   padding: 0.8rem;
   cursor: pointer;
@@ -51,10 +63,18 @@
   /* border-radius: 4px; */
 }
 .used {
-  color: red;
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
 }
 .fresh {
   color: var(--main-color-1);
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+
+.expired {
+  color: rgb(105, 8, 8);
+  background-color: rgba(128, 0, 0, 0.151);
 }
 .select-dropdown select {
   font-size: 1rem;
@@ -137,6 +157,8 @@ th {
   text-align: left;
   background-color: var(--color-grey-100);
   padding: 0.4rem;
+  /* color: var(--color-grey-600); */
+  font-weight: 600;
 }
 td {
   /* display: flex; */

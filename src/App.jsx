@@ -86,7 +86,7 @@ export default function App() {
   //   return () => clearInterval(intervalId);
   // }, []);
 
-  useEffect(() => { 
+  useEffect(() => {
     const tryLogin = async () => {
       const userData = localStorage.getItem("userData");
       const modeTheme = localStorage.getItem("modeToggle");
@@ -189,7 +189,8 @@ export default function App() {
           {isLoggedIn && user?.role === "user" && (
             <>
               <Route
-                path="/user-home-page"
+                // path="/user-home-page"
+                path="/"
                 element={
                   <>
                     {notification.showCardNotification && (
@@ -210,7 +211,8 @@ export default function App() {
           {isLoggedIn && user?.role === "admin" && (
             <>
               <Route
-                path="/admin-home-page"
+                // path="/admin-home-page"
+                path="/"
                 element={
                   <>
                     {notification.showCardNotification && (
@@ -230,7 +232,8 @@ export default function App() {
           {isLoggedIn && user?.role === "superadmin" && (
             <>
               <Route
-                path="/super-admin-home-page"
+                // path="/super-admin-home-page"
+                path="/"
                 element={
                   <>
                     {notification.showCardNotification && (
@@ -267,6 +270,7 @@ export default function App() {
                   element={<SuperNotifications />}
                 />
               </Route>
+
               <Route path="*" element={<SuperAdminHomePage />} />
             </>
           )}

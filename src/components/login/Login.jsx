@@ -30,7 +30,7 @@ export const Login = () => {
       setIsLoading(true);
       await dispatch(login(email, password));
       setIsLoading(false);
-      navigate("/super-admin-home-page", { replace: true });
+      navigate("/", { replace: true });
     } catch (error) {
       setIsLoading(false);
     }

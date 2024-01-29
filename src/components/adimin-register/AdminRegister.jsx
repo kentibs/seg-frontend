@@ -79,7 +79,7 @@ export const AdminRegister = () => {
         )
       );
       setIsLoading(false);
-      navigate("/admin-home-page", { replace: true });
+      navigate("/", { replace: true });
     } catch (error) {
       setIsLoading(false);
     }
@@ -271,7 +271,7 @@ export const AdminRegister = () => {
           className={styles["forgot_label"]}
           onClick={() => dispatch(setLoginContent("login"))}
         >
-          Login 
+          Login
         </span>
       </p>
     </div>

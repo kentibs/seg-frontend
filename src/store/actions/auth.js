@@ -154,7 +154,7 @@ export const signup = (
   password
 ) => {
   return async (dispatch) => {
-    const response = await fetch(`${baseUrl}/api/v1/users/register`, {
+    const response = await fetch(`${baseUrl}/api/v1/users/signup-user`, {
       method: "POST",
       body: JSON.stringify({
         firstName,
@@ -185,6 +185,7 @@ export const signup = (
     }
 
     const data = await response.json();
+    console.log("USER RES DATA", data);
 
     await dispatch(
       authActions.authenticate({

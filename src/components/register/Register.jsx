@@ -77,7 +77,7 @@ export const Register = () => {
         )
       );
       setIsLoading(false);
-      navigate("/user-home-page", { replace: true });
+      navigate("/", { replace: true });
     } catch (error) {
       setIsLoading(false);
     }

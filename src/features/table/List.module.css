@@ -11,8 +11,14 @@
   object-fit: cover;
 }
 
+.table {
+  /* font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900; */
+}
 .tableCell {
   background-color: var(--color-grey-200);
+  /* font-weight: 900; */
 }
 .tableCells.darkmode-table {
   /* background-color: var(--color-grey-300); */
