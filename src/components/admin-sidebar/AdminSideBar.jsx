@@ -1,7 +1,13 @@
+import styles from "./AdminSideBar.module.css";
+
+// export const AdminSideBar = () => {
+//   return <div className={styles["admin-sidebar-container"]}>AdminSideBar</div>;
+// };
+
 // import { useState } from "react";
 // import { MainNav } from "../main-nav/MainNav";
 // import Chat from "../../chat/Chat";
-import styles from "./SuperSideBar.module.css";
+
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ForumIcon from "@mui/icons-material/Forum";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
@@ -17,7 +23,7 @@ import { logOut } from "../../store/actions/auth";
 import { setActiveList } from "../../store/actions/activeList";
 import { setDarkMode } from "../../store/actions/darkMode";
 
-export const SuperSideBar = () => {
+export const AdminSideBar = () => {
   // const [active, setActive] = useState("");
 
   const navigate = useNavigate();
@@ -70,27 +76,9 @@ export const SuperSideBar = () => {
             </li>
             <p className={styles["title"]}>LISTS</p>
             {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
+
             <li
               className={`${styles["list-option"]} ${
-                active === "admins" && styles["active"]
-              }`}
-              onClick={() => handleClick("manage-admins", "admins")}
-            >
-              {/* <StoreIcon className={styles["icon"]} /> */}
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                height="1.8em"
-                width="1.8em"
-                className={styles["icon"]}
-              >
-                <path fill="none" d="M0 0h24v24H0z" />
-                <path d="M12 14v8H4a8 8 0 018-8zm0-1c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm9 4h1v5h-8v-5h1v-1a3 3 0 016 0v1zm-2 0v-1a1 1 0 00-2 0v1h2z" />
-              </svg> 
-              <span>Admins</span>
-            </li>
-            <li
-              className={`${styles["list-option"]} ${ 
                 active === "users" && styles["active"]
               }`}
               onClick={() => handleClick("super-users", "users")}
@@ -146,29 +134,7 @@ export const SuperSideBar = () => {
               </svg>
               <span>Committee</span>
             </li>
-            <li
-              className={`${styles["list-option"]} ${
-                active === "tokens" && styles["active"]
-              }`}
-              onClick={() => handleClick("tokens", "tokens")}
-            >
-              {/* <LocalShippingIcon className={styles["icon"]} /> */}
-              <svg
-                fill="none"
-                viewBox="0 0 15 15"
-                height="1.8em"
-                width="1.8em"
-                className={styles["icon"]}
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M4.5 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 4.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM10.5 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM9 4.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm-7 6a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zM4.5 9a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6-1a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM9 10.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>Tokens</span>
-            </li>
+
             <p className={styles["title"]}>COMMUNICATION</p>
             <li
               className={`${styles["list-option"]} ${

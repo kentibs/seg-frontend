@@ -1,0 +1,50 @@
+.cellWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.table {
+  /* font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900; */
+}
+.tableCell {
+  background-color: var(--color-grey-200);
+  /* font-weight: 900; */
+}
+.tableCells.darkmode-table {
+  /* background-color: var(--color-grey-300); */
+  background-color: #000;
+  color: var(--color-grey-200);
+}
+.status {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Approved {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+
+.Pending {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+
+.beatloader-container {
+  display: flex;
+  justify-content: center;
+}
+.beatloader {
+  margin-left: 50%;
+  /* margin-bottom: 4rem; */
+}

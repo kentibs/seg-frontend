@@ -2,9 +2,9 @@ import styles from "./Tokens.module.css";
 import { useSelector } from "react-redux";
 import { PropagateLoader } from "react-spinners";
 import { useQuery } from "@tanstack/react-query";
+import { baseUrl } from "../../utils/utils";
 // import { addDays, differenceInDays } from "date-fns";
 import { parse, format } from "date-fns";
-import { baseUrl } from "../../utils/utils";
 import { useState } from "react";
 import SuperModal from "../../features/super_modal/SuperModal";
 import { TokenModel } from "../../features/token_model/TokenModel";
@@ -159,9 +159,10 @@ export const Tokens = () => {
 
         <tbody>
           {Array.isArray(tokenInfo) &&
-            tokenInfo.map((item) => {
+            tokenInfo.map((item, index) => {
               return (
-                <tr key={item?.tokenId}>
+                <tr key={index}>
+                  {/* <tr key={item?.tokenId}> */}
                   <td>{item?.token}</td>
                   <td>{item?.associatedEmail}</td>
                   <td>{item?.associatedRole}</td>

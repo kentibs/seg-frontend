@@ -28,6 +28,9 @@ import { SuperPost } from "./pages/super-post/SuperPost";
 import { Tokens } from "./pages/tokens/Tokens";
 import { Profile } from "./pages/profile/Profile";
 import { setDarkMode } from "./store/actions/darkMode";
+import { UserDashboard } from "./pages/user-dashboard/UserDashboard";
+import { UserCompetitions } from "./pages/user-competitions/UserCompetitions";
+import { UserProducts } from "./pages/products/UserProducts";
 // import { baseUrl } from "./utils/utils";
 
 export default function App() {
@@ -203,7 +206,30 @@ export default function App() {
                     <UserHomePage />
                   </>
                 }
-              />
+              >
+                <Route index element={<SuperDashBoard />} />
+                <Route path="super-dashboard" element={<UserDashboard />} />
+                <Route path="manage-events" element={<ManageEvents />} />
+                <Route
+                  path="user-competitions"
+                  element={<UserCompetitions />}
+                />
+                <Route path="user-products" element={<UserProducts />} />
+                <Route path="super-committee" element={<SuperCommittee />} />
+                <Route path="messages" element={<Messages />} />
+
+                <Route path="profile" element={<Profile />} />
+                <Route path="super-updates" element={<SuperUpdates />} />
+                <Route path="super-settings" element={<SuperSettings />} />
+                <Route
+                  path="super-competitions"
+                  element={<SuperCompetitions />}
+                />
+                <Route
+                  path="super-notifications"
+                  element={<SuperNotifications />}
+                />
+              </Route>
 
               <Route path="*" element={<UserHomePage />} />
             </>
@@ -225,7 +251,28 @@ export default function App() {
                     <AdminHomePage />
                   </>
                 }
-              />
+              >
+                <Route index element={<SuperDashBoard />} />
+                <Route path="super-dashboard" element={<SuperDashBoard />} />
+                <Route path="manage-events" element={<ManageEvents />} />
+                <Route path="super-users" element={<SuperUsers />} />
+                <Route path="super-post" element={<SuperPost />} />
+                <Route path="super-committee" element={<SuperCommittee />} />
+                <Route path="news-letter" element={<NewsLetter />} />
+                <Route path="messages" element={<Messages />} />
+
+                <Route path="profile" element={<Profile />} />
+                <Route path="super-updates" element={<SuperUpdates />} />
+                <Route path="super-settings" element={<SuperSettings />} />
+                <Route
+                  path="super-competitions"
+                  element={<SuperCompetitions />}
+                />
+                <Route
+                  path="super-notifications"
+                  element={<SuperNotifications />}
+                />
+              </Route>
               <Route path="*" element={<AdminHomePage />} />
             </>
           )}

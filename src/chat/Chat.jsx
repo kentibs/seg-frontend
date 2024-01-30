@@ -23,11 +23,11 @@ const Chat = ({ setBotActive }) => {
   const [messages, setMessages] = useState([
     {
       id: uuidv4(),
-      bot: "Hello human! How may I help you today?",
+      bot: "Hello human! I am your ever present AI assistant ready to help you out on anything regarding this site. How may I help you today?",
       user: "",
     },
   ]);
-
+ 
   const [newMessage, setNewMessage] = useState("");
   const messagesRef = useRef();
   // const colletionRef = collection(firestore, "seg_bot");
@@ -149,11 +149,6 @@ const Chat = ({ setBotActive }) => {
   //     console.error("Speech synthesis not supported in this browser.");
   //   }
   // };
-  const initialMessage = {
-    id: uuidv4(),
-    bot: "Hello human! Botly, your one and only friendly assistant at your service. I can do several things like playing music, telling you news updates, tell you the weather in any area you want, quickly surf the internet for you etc. Use me as you please",
-    user: "",
-  };
 
   const getTime = () => {
     const currentTime = new Date();

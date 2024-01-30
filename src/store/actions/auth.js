@@ -465,6 +465,46 @@ export const generateToken = (token, associatedEmail, associatedRole) => {
   };
 };
 
+export const subscribeToNewsLetter = (email) => {
+  return async (dispatch) => {
+    const response = await fetch(`${baseUrl}/api/v1/newsletter/subscribe`, {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+      }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      dispatch(
+        notificationActions.showCardNotification({
+          type: "error",
+          message: error.message,
+        })
+      );
+      setTimeout(() => {
+        dispatch(notificationActions.hideCardNotification());
+      }, [5000]);
+      throw new Error(error.message);
+    }
+
+    const data = await response.json();
+    console.log("NEWS LETTER SUBSCRIPTION", data);
+
+    dispatch(
+      notificationActions.showCardNotification({
+        type: "success",
+        message: data.message,
+      })
+    );
+    setTimeout(() => {
+      dispatch(notificationActions.hideCardNotification());
+    }, [5000]);
+  };
+};
 // export const getAllTokens = async (token) => {
 //   // return async (dispatch) => {
 //   const response = await fetch(`${baseUrl}/api/v1/tokens/get-all-tokens`, {

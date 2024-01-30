@@ -42,6 +42,40 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+    case "competition":
+      data = {
+        title: "LATEST COMPETITIONS",
+        isMoney: false,
+        link: "See all competitions",
+        linkName: "/user-competitions",
+        active: "competition",
+        diff: 20,
+        amount: 56,
+        icon: (
+          <TipsAndUpdatesIcon
+            className={styles["icon"]}
+            style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
+          />
+        ),
+      };
+      break;
+    case "products":
+      data = {
+        title: "LATEST PRODUCTS",
+        isMoney: false,
+        link: "See all products",
+        linkName: "/user-products",
+        active: "products",
+        diff: 20,
+        amount: 56,
+        icon: (
+          <TipsAndUpdatesIcon
+            className={styles["icon"]}
+            style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
+          />
+        ),
+      };
+      break;
     case "order":
       data = {
         title: "EVENTS",

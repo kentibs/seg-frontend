@@ -290,7 +290,7 @@ div.chat-messages::-webkit-scrollbar-thumb {
 }
 .bot-container {
   display: flex;
-  max-width: 90%;
+  max-width: 95%;
 }
 .bot-icon {
   margin-left: 10px;
