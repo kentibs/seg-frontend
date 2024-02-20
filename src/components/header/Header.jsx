@@ -49,6 +49,7 @@ export const Header = ({ scrolled }) => {
                 Home
               </a>
               {/* <Link to="/" className={styles["nav-link"]}>
+              
                 Home
               </Link> */}
             </li>
