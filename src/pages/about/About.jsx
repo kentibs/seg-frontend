@@ -7,7 +7,7 @@ export const About = () => {
     const pdfUrl = "/seg.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "SEG_description.pdf";
+    link.download = "AAPG_description.pdf";
     link.click();
   };
   return (
@@ -497,16 +497,16 @@ export const About = () => {
               Networking, <br /> Inspiring the world
             </h1>
             <p className={styles["text"]}>
-              We are SEG: Society of Exploration Geophysicists, A student
-              chapter at Makerere University Department of Geology and Petroleum
-              studies
+              We are AAPG: American Association of Petroleum Geologists, A
+              student chapter at Makerere University Department of Geology and
+              Petroleum studies
             </p>
             <div className={styles["cta"]}>
-              <Link to="mailto:segmuk@gmail.com" className={styles["btn"]}>
-                Contact us 
+              <Link to="mailto:aapgmuk@gmail.com" className={styles["btn"]}>
+                Contact us
               </Link>
               <Link
-                to="" 
+                to=""
                 className={styles["secondary-btn"]}
                 onClick={downloadPdf}
               >

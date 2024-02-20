@@ -144,6 +144,7 @@
 }
 .assistant_option {
   font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
   /* background-color: green; */
 }
 .assistant_option.darkmode {
@@ -320,11 +321,26 @@ div.chat-messages::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
+/* .tab {
+  position: relative;
+  background-color: var(--main-color-100);
+  background-color: #fff;
+  padding: 1rem 1rem;
+  min-height: 4rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+} */
+
 .chat-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-top: 2px solid var(--color-grey-200);
+  box-shadow: var(--shadow-lg);
 }
 
 .chat-input input {
@@ -333,6 +349,8 @@ div.chat-messages::-webkit-scrollbar-thumb {
   border: 1px solid #ccc;
   border-radius: 7px;
   margin-right: 10px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .bot-svg-container {
@@ -369,19 +387,21 @@ div.chat-messages::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
 }
+
 .send-icon {
   /* color: var(--main-color-1); */
   /* background-color: #000; */
 }
 .chat-input button {
   fill: var(--main-color-1);
-  background-color: var(--color-grey-200);
+  /* background-color: var(--color-grey-200); */
 }
 
 .chat-input button > svg {
   width: 24px;
   height: 24px;
   color: #fff;
+  color: var(--color-grey-400);
 }
 
 /* Customize styles further as needed */

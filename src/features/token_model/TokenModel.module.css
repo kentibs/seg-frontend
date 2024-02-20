@@ -18,7 +18,7 @@
   border-top: 0;
   border-left: 0;
   border-right: 0;
-
+  font-family: "Poppins", sans-serif;
   outline: none;
   font-size: 18px;
   transition: 0.3s;
@@ -52,6 +52,7 @@
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .cancel-btn {
@@ -61,6 +62,7 @@
   border: 1px solid var(--color-grey-300);
   transition: 0.3s;
   cursor: pointer;
+  font-family: "Poppins", sans-serif; 
   color: #000;
 }
 .cancel-btn:hover {
@@ -131,6 +133,6 @@
 }
 .select-container {
   /* color: var(--main-color-1); */
-  font-family: "Poppins", sans-serif;
   font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }

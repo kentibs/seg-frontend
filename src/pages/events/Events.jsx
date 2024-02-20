@@ -40,7 +40,7 @@ export const Events = () => {
         <div className={styles["container"]}>
           <div className={styles["events_header"]}>
             <div className={styles["events_title"]}>
-              <h3 className={styles["sub-heading"]}>SEG Events</h3>
+              <h3 className={styles["sub-heading"]}>AAPG Events</h3>
               <h1 className={styles["heading"]}>Latest events</h1>
             </div>
             <div className={styles["filter-btns"]}>
@@ -113,8 +113,13 @@ export const Events = () => {
                   </div>
                   <div className={styles["prt-desc"]}>
                     <h3>{event.title} </h3>
-                    <Link to="" className={styles["secondary-btn"]}>
-                      Read more &nbsp; <RxDoubleArrowRight />
+
+                    <Link
+                      to=""
+                      className={styles["secondary-btn"]}
+                      onClick={() => openModal(event.imgUrl)}
+                    >
+                      View more &nbsp; <RxDoubleArrowRight />
                     </Link>
                   </div>
                 </div>
@@ -125,7 +130,7 @@ export const Events = () => {
                   className={`${styles["prt-card"]} ${styles["category1"]}`}
                   key={index}
                 >
-                  <div className={styles["prt-image"]}> 
+                  <div className={styles["prt-image"]}>
                     <img
                       src={event.imgUrl}
                       alt=""
@@ -160,8 +165,12 @@ export const Events = () => {
                   </div>
                   <div className={styles["prt-desc"]}>
                     <h3>{event.title} </h3>
-                    <Link to="" className={styles["secondary-btn"]}>
-                      Read more
+                    <Link
+                      to=""
+                      className={styles["secondary-btn"]}
+                      onClick={() => openModal(event.imgUrl)}
+                    >
+                      View more &nbsp; <RxDoubleArrowRight />
                     </Link>
                   </div>
                 </div>
@@ -207,8 +216,12 @@ export const Events = () => {
                   </div>
                   <div className={styles["prt-desc"]}>
                     <h3>{event.title} </h3>
-                    <Link to="" className={styles["secondary-btn"]}>
-                      Read more
+                    <Link
+                      to=""
+                      className={styles["secondary-btn"]}
+                      onClick={() => openModal(event.imgUrl)}
+                    >
+                      View more &nbsp; <RxDoubleArrowRight />
                     </Link>
                   </div>
                 </div>

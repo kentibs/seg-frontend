@@ -22,6 +22,83 @@ export const botJsonData = [
     required_words: ["about", "yourself"],
   },
   {
+    response_type: "chat",
+    user_input: [
+      "are",
+      "you",
+      "talking",
+      "to",
+      "others",
+      "someone",
+      "interacting",
+      "anyone",
+    ],
+    bot_response: [
+      "Currently no. I am only interacting with you although I indeed am able to interact with multiple users at the same time",
+      "Right now am only interacting with you. However, I am very capable of interacting with multiple users at the same time",
+    ],
+    required_words: ["you", "talking"],
+  },
+
+  {
+    response_type: "chat",
+    user_input: [
+      "are",
+      "you",
+      "talking",
+      "to",
+      "others",
+      "someone",
+      "interacting",
+      "anyone",
+      "chatting",
+    ],
+    bot_response: [
+      "Currently no. I am only interacting with you although I indeed am able to interact with multiple users at the same time",
+      "Right now am only interacting with you. However, I am very capable of interacting with multiple users at the same time",
+    ],
+    required_words: ["you", "chatting"],
+  },
+  {
+    response_type: "chat",
+    user_input: [
+      "are",
+      "you",
+      "talking",
+      "to",
+      "others",
+      "someone",
+      "interacting",
+      "anyone",
+      "chatting",
+    ],
+    bot_response: [
+      "Currently no. I am only interacting with you although I indeed am able to interact with multiple users at the same time",
+      "Right now am only interacting with you. However, I am very capable of interacting with multiple users at the same time",
+    ],
+    required_words: ["you", "interacting"],
+  },
+  {
+    response_type: "chat",
+    user_input: [
+      "are",
+      "you",
+      "talking",
+      "to",
+      "others",
+      "someone",
+      "interacting",
+      "anyone",
+      "chatting",
+      "speaking",
+    ],
+    bot_response: [
+      "Currently no. I am only interacting with you although I indeed am able to interact with multiple users at the same time",
+      "Right now am only interacting with you. However, I am very capable of interacting with multiple users at the same time",
+    ],
+    required_words: ["you", "speaking"],
+  },
+  {
     response_type: "question",
     user_input: ["do", "you", "love", "like", "me"],
     bot_response: [

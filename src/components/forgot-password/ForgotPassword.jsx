@@ -30,12 +30,12 @@ export const ForgotPassword = () => {
   return (
     <div className={styles["forgot-password-container"]}>
       <div className={styles["header_container"]}>
-        <p className={styles["welcome-container"]}>
+        <span className={styles["welcome-container"]}>
           <strong className={styles["welcome"]}>Forgot Password?</strong> <br />{" "}
           <span className={styles["log"]}>
             Submit your email so we can solve your issue.{" "}
           </span>
-        </p>
+        </span>
       </div>
       <form
         className={styles["form_container"]}
@@ -68,7 +68,7 @@ export const ForgotPassword = () => {
           )}
         </button>
       </form>
-      <p className={styles["bottom-msg-container"]}>
+      <span className={styles["bottom-msg-container"]}>
         Don&apos;t have an account?{" "}
         <span
           className={styles["forgot_label"]}
@@ -76,7 +76,7 @@ export const ForgotPassword = () => {
         >
           Register
         </span>
-      </p>
+      </span>
     </div>
   );
 };

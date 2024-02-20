@@ -10,7 +10,7 @@ export default function SuperModal({ open, children, onClose }) {
       <div className={styles["modal_overlay"]} onClick={onClose} />
       <div className={styles["modal_content"]}>
         {/* <div className={styles["image-container"]}>
-          <img src="person-modified.png" className={styles["person-image"]} />
+          <img src="person-modified.png" className={styles["person-image"]} /> 
         </div> */}
         <div className={styles["children-container"]}>
           <span className={styles["close-icon"]} onClick={onClose}>

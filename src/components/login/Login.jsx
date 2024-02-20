@@ -39,10 +39,10 @@ export const Login = () => {
   return (
     <div>
       <div className={styles["header_container"]}>
-        <p className={styles["welcome-container"]}>
+        <span className={styles["welcome-container"]}>
           <strong className={styles["welcome"]}>Welcome Back</strong> <br />{" "}
           <span className={styles["log"]}>Log into your account </span>
-        </p>
+        </span>
       </div>
       <form className={styles["form_container"]} onSubmit={handleLogInSubmit}>
         <div className={styles["email_container"]}>
@@ -97,7 +97,7 @@ export const Login = () => {
           )}
         </button>
       </form>
-      <p className={styles["bottom-msg-container"]}>
+      <span className={styles["bottom-msg-container"]}>
         Don&apos;t have an account?{" "}
         <span
           className={styles["forgot_label"]}
@@ -105,7 +105,7 @@ export const Login = () => {
         >
           Register
         </span>
-      </p>
+      </span>
     </div>
   );
 };

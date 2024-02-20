@@ -21,11 +21,16 @@
 
 .listTitle {
   font-weight: 500;
+  /* font-size: 0.8rem; */
   color: gray;
   margin-bottom: 15px;
 }
+.listContainer-events ul {
+  font-size: 0.9rem;
+}
 
 .upcoming-item-container {
+  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -57,7 +62,7 @@
   /* padding: 20px; */
   /* margin: 20px 0; */
   display: flex;
-  gap: 3rem;
+  gap: 2%;
 
   /* background-color: green; */
 }
@@ -70,6 +75,8 @@
 }
 
 .listContainer-events {
+  width: 100%;
+  /* background-color: green; */
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   /* padding: 20px; */

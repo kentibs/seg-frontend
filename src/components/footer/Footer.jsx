@@ -7,13 +7,13 @@ export const Footer = () => {
     <footer>
       <div className={styles["container"]}>
         <Link to="" className={styles["logo"]}>
-          SEG
+          AAPG
         </Link>
         <p className={styles["text"]}>
           {" "}
           &copy; Copyright{" "}
           <a href="#home" className={styles["seg-logo"]}>
-            SEG MUK CHAPTER
+            AAPG MUK CHAPTER
           </a>{" "}
           2024. All rights reserved.
         </p>

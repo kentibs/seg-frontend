@@ -4,6 +4,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { RxDoubleArrowRight } from "react-icons/rx";
+
 // import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 // import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import styles from "./Widget.module.css";
@@ -166,7 +168,7 @@ const Widget = ({ type }) => {
           className={styles["link"]}
           onClick={() => handleClick(data.linkName, data.active)}
         >
-          {data.link}
+          {data.link} <RxDoubleArrowRight />
         </span>
       </div>
       <div className={styles["right"]}>

@@ -79,6 +79,7 @@
   display: flex;
   align-items: center;
   width: fit-content;
+  cursor: pointer;
 }
 .secondary-btn::before {
   content: "";
@@ -154,6 +155,12 @@
   font-weight: 500;
   font-size: 1.05rem;
 }
+
+.card-name {
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
 .srv-card:nth-child(1) {
   /* transition: 0.5s transform; */
 
@@ -214,6 +221,41 @@
 
 /* Large screens (1024px) and below */
 @media only screen and (max-width: 1024px) {
+  .cta {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background-color: var(--main-color-dark-1);
+  }
+  .secondary-btn {
+    position: relative;
+    background-color: transparent;
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid var(--main-color-2);
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 0.15px 0;
+    display: flex;
+    align-items: center;
+    /* width: fit-content; */
+  }
   .milestones {
     display: grid;
     width: 90%;

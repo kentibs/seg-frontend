@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Contact } from "./pages/contact/Contact";
 import { HomePage } from "./pages/homepage/HomePage";
@@ -31,6 +31,7 @@ import { setDarkMode } from "./store/actions/darkMode";
 import { UserDashboard } from "./pages/user-dashboard/UserDashboard";
 import { UserCompetitions } from "./pages/user-competitions/UserCompetitions";
 import { UserProducts } from "./pages/products/UserProducts";
+import { baseUrl } from "./utils/utils";
 // import { baseUrl } from "./utils/utils";
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
   const user = useSelector((state) => state.auth.user);
   const token = useSelector((state) => state.auth.token);
   const notification = useSelector((state) => state.notification);
+  // const navigate = useNavigate();
 
   const queryClient = new QueryClient({
     defaultOptions: { options: { staleTime: 60 * 1000 } },
@@ -58,36 +60,34 @@ export default function App() {
     return formattedTime;
   }
   // http://localhost:8080/
-  // useEffect(() => {
-  //   async function signin() {
-  //     console.log("Loading refresh...");
-  //     const response = await fetch(
-  //       `https://seg-backend.onrender.com/api/v1/users/signin`,
-  //       {
-  //         method: "POST",
-  //         body: JSON.stringify({
-  //           email: "kennedymuhumuza283@gmail.com",
-  //           password: "kennedy",
-  //         }),
-  //         headers: {
-  //           "Content-type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     const data = await response.json();
+  useEffect(() => {
+    async function signin() {
+      console.log("Loading refresh...");
+      const response = await fetch(`${baseUrl}/api/v1/users/signin`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: "kennedymuhumuza283@gmail.com",
+          password: "kennedy",
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
+      const data = await response.json();
 
-  //     console.log("REFRESH RESPONSE", response);
-  //     const currentTime = getCurrentTime();
-  //     console.log(`Time then was: ${currentTime}`);
-  //     console.log("refresh data", data);
-  //   }
-  //   signin();
-  //   const intervalId = setInterval(() => {
-  //     signin();
-  //     console.log("hello");
-  //   }, 240000);
-  //   return () => clearInterval(intervalId);
-  // }, []);
+      console.log("REFRESH RESPONSE", response);
+      const currentTime = getCurrentTime();
+      console.log(`Time then was: ${currentTime}`);
+      console.log("refresh data", data);
+    }
+    signin();
+    const intervalId = setInterval(() => {
+      signin();
+      console.log("hello");
+    }, 120000);
+    // }, 240000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     const tryLogin = async () => {
@@ -98,15 +98,18 @@ export default function App() {
       const parsedData = JSON.parse(userData);
       if (!userData) {
         console.log("no data found");
+        // navigate("/");
         return <Route path="/" element={<HomePage to="/" replace />} />;
       }
       const { user, token } = parsedData;
 
       if (!token || !user) {
+        // navigate("/");
         return <Route path="/" element={<HomePage to="/" replace />} />;
       }
       await dispatch(authenticate(user, token));
-      await dispatch(setDarkMode(themeParsedData.darkMode));
+      if (themeParsedData)
+        await dispatch(setDarkMode(themeParsedData.darkMode));
     };
     tryLogin();
   }, [dispatch]);
@@ -120,8 +123,8 @@ export default function App() {
   };
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       <BrowserRouter>
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         <Routes>
           {!isLoggedIn && (
             <>
@@ -207,7 +210,7 @@ export default function App() {
                   </>
                 }
               >
-                <Route index element={<SuperDashBoard />} />
+                <Route index element={<UserDashboard />} />
                 <Route path="super-dashboard" element={<UserDashboard />} />
                 <Route path="manage-events" element={<ManageEvents />} />
                 <Route

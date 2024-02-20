@@ -49,7 +49,7 @@ export const AdminSideBar = () => {
       }`}
     >
       <div className={styles["seg-logo"]}>
-        <span className={styles["logo-main"]}>SEG</span>
+        <span className={styles["logo-main"]}>AAPG</span>
         <span className={styles["super-admin-container"]}>
           <span className={styles["super-admin"]}>Superadmin</span>
         </span>

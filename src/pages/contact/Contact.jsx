@@ -11,10 +11,10 @@ export const Contact = () => {
           <h3 className={styles["sub-heading"]}>Contact us</h3>
           <h1 className={styles["heading"]}>Contact form</h1>
           <p className={styles["text"]}>
-            Communicate with the current SEG committee. <br /> Tell us
+            Communicate with the current AAPG committee. <br /> Tell us
             what&apos;s on your mind.
           </p>
-          <Link to="mailto:segmuk@gmail.com" className={styles["mail"]}>
+          <Link to="mailto:aapgmuk@gmail.com" className={styles["mail"]}>
             <span>Contact us via email</span>
             <svg
               fill="currentColor"

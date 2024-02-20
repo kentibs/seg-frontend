@@ -1,0 +1,107 @@
+.cellWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.table {
+  /* font-family: "Inter", sans-serif;
+      font-family: "Poppins", sans-serif;
+      font-weight: 900; */
+}
+.tableCell {
+  background-color: var(--color-grey-200);
+  font-family: "Poppins, sans-serif";
+  font-family: "Poppins", sans-serif;
+
+  /* color: green; */
+  /* font-weight: 900; */
+}
+.tableCells.darkmode-table {
+  /* background-color: var(--color-grey-300); */
+  background-color: #000;
+  color: var(--color-grey-200);
+}
+.tableCells {
+  /* display: flex; */
+}
+.status {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Approved {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+
+.Pending {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+
+.used {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+
+.expired {
+  color: rgb(73, 5, 5);
+  background-color: rgba(128, 0, 3, 0.103);
+}
+.fresh {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+.beatloader-container {
+  display: flex;
+  justify-content: center;
+}
+.beatloader {
+  margin-left: 50%;
+  /* margin-bottom: 4rem; */
+}
+
+.action-icon {
+  /* padding: 0.2rem 0.1rem; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid var(--color-grey-200); */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.actions-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-icon {
+  /* padding: 0.1rem 0.1rem; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid rgb(59, 2, 2); */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-actual-icon {
+  color: rgb(59, 2, 2);
+  color: red;
+}
+
+.table-item {
+  font-family: "inter" sans-serif;
+  font-family: "Poppins", sans-serif;
+}

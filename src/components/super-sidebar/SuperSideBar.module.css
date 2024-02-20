@@ -43,6 +43,7 @@
   font-family: "Aquire", sans-serif;
   font-size: 1.2rem;
   color: var(--heading-color);
+  color: var(--main-color-1);
   letter-spacing: 3px;
   transition: 0.3s;
   display: flex;

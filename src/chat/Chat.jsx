@@ -23,11 +23,11 @@ const Chat = ({ setBotActive }) => {
   const [messages, setMessages] = useState([
     {
       id: uuidv4(),
-      bot: "Hello human! I am your ever present AI assistant ready to help you out on anything regarding this site. How may I help you today?",
+      bot: "Hello human! I am your ever present AI assistant ready to help you out on anything regarding this site. Let me know if you need someone to talk to.",
       user: "",
     },
   ]);
- 
+
   const [newMessage, setNewMessage] = useState("");
   const messagesRef = useRef();
   // const colletionRef = collection(firestore, "seg_bot");
@@ -213,6 +213,7 @@ const Chat = ({ setBotActive }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!newMessage) return;
 
     try {
       // const response = await fetch("http://127.0.0.1:8000/botly", {
@@ -407,8 +408,8 @@ const Chat = ({ setBotActive }) => {
               darkMode && styles["darkmode"]
             }`}
           >
-            SEG Site Assistant
-          </span>
+            AAPG Site Assistant
+          </span> 
           <span className={styles["online_option"]}>Online</span>
         </span>
         <span

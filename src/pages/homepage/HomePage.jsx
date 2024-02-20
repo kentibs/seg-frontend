@@ -15,6 +15,7 @@ import { Login } from "../../components/login/Login";
 import { useSelector } from "react-redux";
 import { Register } from "../../components/register/Register";
 import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
+import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,13 +29,13 @@ export const HomePage = () => {
   };
 
   const closeLoginModalHandler = () => {
-    setIsLoginOpen(false); 
+    setIsLoginOpen(false);
   };
   const downloadPdf = () => {
     const pdfUrl = "/seg.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "SEG_description.pdf";
+    link.download = "AAPG_description.pdf";
     link.click();
   };
 
@@ -59,10 +60,10 @@ export const HomePage = () => {
             <div className={styles["showcase-info"]}>
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
               {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
-              <h1 className={styles["heading"]}>SEG Muk Chapter</h1>
+              <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
               <p className={styles["text"]}>
-                We are SEG: Society of Exploration Geophysicists, A student
-                chapter at Makerere University Department of Geology and
+                We are AAPG: American Association of Petroleum Geologists, A
+                student chapter at Makerere University Department of Geology and
                 Petroleum studies
               </p>
               <div className={styles["cta"]}>
@@ -98,7 +99,7 @@ export const HomePage = () => {
                 alt="President SEG"
                 className={styles["person"]}
               /> */}
-              <h1 className={styles["seg-muk-img-title"]}>SEG MUK CHAPTER</h1>
+              <h1 className={styles["seg-muk-img-title"]}>AAPG MUK CHAPTER</h1>
               {/* <img
                 src="ev3.jpg"
                 alt="President SEG"
@@ -126,6 +127,7 @@ export const HomePage = () => {
         <Services />
         <Events />
         <Committee />
+        <FreqAskedQuestions />
         <Contact />
         <Subscription />
       </main>
@@ -133,4 +135,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
 // to="mailto:kopiogift@gmail.com"

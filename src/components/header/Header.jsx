@@ -1,14 +1,20 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
 import PropTypes from "prop-types";
+import { useDispatch, useSelector } from "react-redux";
+import { setHomeDarkMode } from "../../store/actions/homeDarkMode";
 
 export const Header = ({ scrolled }) => {
   const [activeLink, setActiveLink] = useState("home");
-  const [darkOn, setDarkOn] = useState(false);
+  // const [darkOn, setDarkOn] = useState(false);
   const [toggle, setToggle] = useState(false);
 
+  const dispatch = useDispatch();
+  const darkOn = useSelector((state) => state.homeDarkMode.homeDarkMode);
+
   const changeTheme = () => {
-    setDarkOn((prev) => !prev);
+    dispatch(setHomeDarkMode(!darkOn));
+    // setDarkOn((prev) => !prev);
     if (!document.body.classList.contains("dark")) {
       document.body.classList.add("dark");
       localStorage.setItem("dark", 1);
@@ -20,7 +26,7 @@ export const Header = ({ scrolled }) => {
 
   const toggleMenu = () => {
     setToggle((prev) => !prev);
-    // document.body.classList.toggle("open"); 
+    // document.body.classList.toggle("open");
   };
   return (
     <header
@@ -29,7 +35,7 @@ export const Header = ({ scrolled }) => {
       }`}
     >
       <nav className={styles["container"]}>
-        <span className={styles["logo"]}>SEG</span>
+        <span className={styles["logo"]}>AAPG</span>
         <div className={styles["links"]}>
           <ul className={styles["link_container"]}>
             <li>

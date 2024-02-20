@@ -14,6 +14,7 @@ import LoginModal from "../../features/login_model/LoginModel";
 import { Login } from "../../components/login/Login";
 import { useSelector } from "react-redux";
 import { AdminRegister } from "../../components/adimin-register/AdminRegister";
+import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
 
 export const AdminLandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -58,10 +59,10 @@ export const AdminLandingPage = () => {
             <div className={styles["showcase-info"]}>
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
               {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
-              <h1 className={styles["heading"]}>SEG Muk Chapter</h1>
+              <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
               <p className={styles["text"]}>
-                We are SEG: Society of Exploration Geophysicists, A student
-                chapter at Makerere University Department of Geology and
+                We are AAPG: American Association of Petroleum Geologists, A
+                student chapter at Makerere University Department of Geology and
                 Petroleum studies
               </p>
               <div className={styles["cta"]}>
@@ -96,7 +97,7 @@ export const AdminLandingPage = () => {
                 alt="President SEG"
                 className={styles["person"]}
               /> */}
-              <h1 className={styles["seg-muk-img-title"]}>SEG MUK CHAPTER</h1>
+              <h1 className={styles["seg-muk-img-title"]}>AAPG MUK CHAPTER</h1>
               {/* <img
                 src="ev3.jpg"
                 alt="President SEG"
@@ -124,6 +125,7 @@ export const AdminLandingPage = () => {
         <Services />
         <Events />
         <Committee />
+        <FreqAskedQuestions />
         <Contact />
         <Subscription />
       </main>

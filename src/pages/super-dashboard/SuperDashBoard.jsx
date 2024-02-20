@@ -1,10 +1,10 @@
 import { Chart } from "../../features/chart/Chart";
 import { Featured } from "../../features/featured/Featured";
-import { List } from "../../features/table/List";
 import Widget from "../../features/widget/Widget";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 
 import styles from "./SuperDashBoard.module.css";
+import { TokensList } from "../../features/tokens-list/TokensList";
 
 export const SuperDashBoard = () => {
   return (
@@ -25,7 +25,15 @@ export const SuperDashBoard = () => {
           <div className={styles["listContainer-main"]}>
             <div className={styles["listContainer-events"]}>
               <div className={styles["upcoming-item-header"]}>
-                Upcoming events
+                <svg
+                  viewBox="0 0 1024 1024"
+                  fill="currentColor"
+                  height="1.5em"
+                  width="1.5em"
+                >
+                  <path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z" />
+                </svg>
+                <span> Upcoming events</span>
               </div>
               <ul>
                 <li className={styles["upcoming-item-container-list"]}>
@@ -34,7 +42,7 @@ export const SuperDashBoard = () => {
                     <span className={styles["upcoming-item"]}>
                       Jan 24,2024 - 05:30pm - Jan 25,2024 -04:00pm
                     </span>
-                    <span>Launching the SEG Website</span>
+                    <span>Launching the AAPG Website</span>
                   </div>
                 </li>
                 <li className={styles["upcoming-item-container-list"]}>
@@ -62,16 +70,7 @@ export const SuperDashBoard = () => {
                     <span className={styles["upcoming-item"]}>
                       Jan 24,2024 - 05:30pm - Jan 25,2024 -04:00pm
                     </span>
-                    <span>Launching the SEG Magazine</span>
-                  </div>
-                </li>
-                <li className={styles["upcoming-item-container-list"]}>
-                  <span className={styles["purple-colored"]}></span>
-                  <div className={styles["upcoming-item-container"]}>
-                    <span className={styles["upcoming-item"]}>
-                      Jan 24,2024 - 05:30pm - Jan 25,2024 -04:00pm
-                    </span>
-                    <span>Launching the SEG Magazine</span>
+                    <span>Launching the AAPG Magazine</span>
                   </div>
                 </li>
               </ul>
@@ -92,7 +91,7 @@ export const SuperDashBoard = () => {
                     <span className={styles["upcoming-item"]}>
                       Jan 24,2024 - 05:30pm
                     </span>
-                    <span>Launching the SEG Website</span>
+                    <span>Launching the AAPG Website</span>
                   </div>
                 </li>
                 <li className={styles["upcoming-item-container-list"]}>
@@ -120,7 +119,7 @@ export const SuperDashBoard = () => {
                     <span className={styles["upcoming-item"]}>
                       Jan 24,2024 - 05:30pm
                     </span>
-                    <span>Launching the SEG Magazine</span>
+                    <span>Launching the AAPG Magazine</span>
                   </div>
                 </li>
                 <li className={styles["upcoming-item-container-list"]}>
@@ -129,7 +128,7 @@ export const SuperDashBoard = () => {
                     <span className={styles["upcoming-item"]}>
                       Jan 24,2024 - 05:30pm
                     </span>
-                    <span>Launching the SEG Magazine</span>
+                    <span>Launching the AAPG Magazine</span>
                   </div>
                 </li>
               </ul>
@@ -202,9 +201,9 @@ export const SuperDashBoard = () => {
       </div>
       <div className={styles["listContainer"]}>
         <div className={styles["listTitle"]}>Latest Admin Updates</div>
-        <List />
+        {/* <List /> */}
+        <TokensList />
       </div>
     </div>
   );
 };
- 

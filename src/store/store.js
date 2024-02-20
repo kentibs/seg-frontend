@@ -11,6 +11,8 @@ import notificationSlice from "./reducers/notification";
 import darkModeSlice from "./reducers/darkMode";
 import sideBarSlice from "./reducers/sideBar";
 import activeListSlice from "./reducers/activeList";
+import activeFreqSlice from "./reducers/freq";
+import homeDarkModeSlice from "./reducers/homeDarkMode";
 
 const store = configureStore({
   reducer: {
@@ -26,6 +28,8 @@ const store = configureStore({
     darkMode: darkModeSlice.reducer,
     sideBar: sideBarSlice.reducer,
     activeList: activeListSlice.reducer,
+    activeFreq: activeFreqSlice.reducer,
+    homeDarkMode: homeDarkModeSlice.reducer,
   },
 });
 

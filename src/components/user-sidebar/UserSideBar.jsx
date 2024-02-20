@@ -53,7 +53,7 @@ export const UserSideBar = () => {
       }`}
     >
       <div className={styles["seg-logo"]}>
-        <span className={styles["logo-main"]}>SEG</span>
+        <span className={styles["logo-main"]}>AAPG</span>
         <span className={styles["super-admin-container"]}>
           <span className={styles["super-admin"]}>Superadmin</span>
         </span>
@@ -69,8 +69,18 @@ export const UserSideBar = () => {
               }`}
               onClick={() => handleClick("super-dashboard", "dashboard")}
             >
-              <DashboardIcon className={styles["icon"]} />
-              <span>Dashboard</span>
+              {/* <DashboardIcon className={styles["icon"]} /> */}
+              <svg
+                viewBox="0 0 512 512"
+                fill="currentColor"
+                height="1.8em"
+                width="1.8em"
+                className={styles["icon"]}
+              >
+                <path d="M261.56 101.28a8 8 0 00-11.06 0L66.4 277.15a8 8 0 00-2.47 5.79L63.9 448a32 32 0 0032 32H192a16 16 0 0016-16V328a8 8 0 018-8h80a8 8 0 018 8v136a16 16 0 0016 16h96.06a32 32 0 0032-32V282.94a8 8 0 00-2.47-5.79z" />
+                <path d="M490.91 244.15l-74.8-71.56V64a16 16 0 00-16-16h-48a16 16 0 00-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0043 267.56L250.5 69.28a8 8 0 0111.06 0l207.52 198.28a16 16 0 0022.59-.44c6.14-6.36 5.63-16.86-.76-22.97z" />
+              </svg>
+              <span>Home</span>
             </li>
             <p className={styles["title"]}>LISTS</p>
             {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
@@ -82,21 +92,15 @@ export const UserSideBar = () => {
               onClick={() => handleClick("user-competitions", "competition")}
             >
               {/* <PersonOutlineIcon className={styles["icon"]} /> */}
+
               <svg
-                fill="none"
-                viewBox="0 0 15 15"
-                height="1.5em"
-                width="1.5em"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                height="1.6em"
+                width="1.6em"
                 className={styles["icon"]}
               >
-                <path
-                  fill="currentColor"
-                  d="M5.5 0a3.499 3.499 0 100 6.996A3.499 3.499 0 105.5 0zM3.5 8.994a3.5 3.5 0 00-3.5 3.5v2.497h11v-2.497a3.5 3.5 0 00-3.5-3.5h-4zM12.5 10H12v5h3v-2.5a2.5 2.5 0 00-2.5-2.5z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M11.5 4a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
-                />
+                <path d="M2.5.5A.5.5 0 013 0h10a.5.5 0 01.5.5c0 .538-.012 1.05-.034 1.536a3 3 0 11-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 01-.3.9H3a.5.5 0 01-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 11-1.132-5.89A33.076 33.076 0 012.5.5zm.099 2.54a2 2 0 00.72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 00.72-3.935c-.133 1.59-.388 2.885-.72 3.935z" />
               </svg>
               <span>Competitions</span>
             </li>
@@ -107,7 +111,7 @@ export const UserSideBar = () => {
               }`}
               onClick={() => handleClick("user-products", "products")}
             >
-              <svg
+              {/* <svg
                 fill="none"
                 viewBox="0 0 15 15"
                 height="1.5em"
@@ -122,6 +126,15 @@ export const UserSideBar = () => {
                   fill="currentColor"
                   d="M11.5 4a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
                 />
+              </svg> */}
+              <svg
+                viewBox="0 0 576 512"
+                fill="currentColor"
+                height="1.7em"
+                width="1.7em"
+                className={styles["icon"]}
+              >
+                <path d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24h52.1l60.3 316.5c2.2 11.3 12.1 19.5 23.6 19.5h328c13.3 0 24-10.7 24-24s-10.7-24-24-24H179.9l-9.1-48h317c14.3 0 26.9-9.5 30.8-23.3l54-192C578.3 52.3 563 32 541.8 32H122l-2.4-12.5C117.4 8.2 107.5 0 96 0H24zm152 512c26.5 0 48-21.5 48-48s-21.5-48-48-48-48 21.5-48 48 21.5 48 48 48zm336-48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48z" />
               </svg>
               <span>Products</span>
             </li>
