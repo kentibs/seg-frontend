@@ -160,7 +160,7 @@
   width: 100%;
   margin-top: 1rem;
   /* gap: 0; */
-  animation: flyin 0.7s ease-out;
+  animation: flyin 1s ease-out;
 }
 
 .learn-more-msg {
