@@ -44,6 +44,7 @@
   color: #0073cf;
 }
 .input_field {
+  font-family: "Poppins", sans-serif;
   padding: 0.5rem;
   /* background-color: var(--color-grey-200); */
   border-top: 0;
@@ -81,6 +82,7 @@
   color: var(--color-grey-50);
   transition: 0.3s;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 .loading_container {
   margin-bottom: 14px;
@@ -99,7 +101,9 @@
   background-color: #0073cf;
 }
 .bottom-msg-container {
-  margin-top: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1024px) {

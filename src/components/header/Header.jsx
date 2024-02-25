@@ -82,11 +82,33 @@ export const Header = ({ scrolled }) => {
               <a
                 href="#lifestyle"
                 className={`${styles["nav-link"]} ${
+                  activeLink === "lifestyle" && styles["active"]
+                }`}
+                onClick={() => setActiveLink("lifestyle")}
+              >
+                Lifestyle
+              </a>
+            </li>
+            <li>
+              <a
+                href="#events"
+                className={`${styles["nav-link"]} ${
                   activeLink === "events" && styles["active"]
                 }`}
                 onClick={() => setActiveLink("events")}
               >
-                Lifestyle
+                Events
+              </a>
+            </li>
+            <li>
+              <a
+                href="#committee"
+                className={`${styles["nav-link"]} ${
+                  activeLink === "committee" && styles["active"]
+                }`}
+                onClick={() => setActiveLink("committee")}
+              >
+                Committee
               </a>
             </li>
             <li>

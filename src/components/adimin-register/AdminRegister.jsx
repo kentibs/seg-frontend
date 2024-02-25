@@ -88,12 +88,12 @@ export const AdminRegister = () => {
   return (
     <div className={styles["register_container"]}>
       <div className={styles["header_container"]}>
-        <p>
+        <span>
           <strong className={styles["welcome"]}>Welcome!</strong> <br />{" "}
           <span className={styles["log"]}>
             Let&apos;s create your Admin account{" "}
           </span>
-        </p>
+        </span>
       </div>
       <form onSubmit={handleRegisterSubmit}>
         <div className={styles["form_container"]}>
@@ -265,7 +265,7 @@ export const AdminRegister = () => {
           )}
         </button>
       </form>
-      <p className={styles["bottom-msg-container"]}>
+      <span className={styles["bottom-msg-container"]}>
         Already have an account?{" "}
         <span
           className={styles["forgot_label"]}
@@ -273,7 +273,7 @@ export const AdminRegister = () => {
         >
           Login
         </span>
-      </p>
+      </span>
     </div>
   );
 };

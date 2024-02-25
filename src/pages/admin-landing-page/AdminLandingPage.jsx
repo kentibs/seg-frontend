@@ -15,10 +15,40 @@ import { Login } from "../../components/login/Login";
 import { useSelector } from "react-redux";
 import { AdminRegister } from "../../components/adimin-register/AdminRegister";
 import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
+import { Lifestyle } from "../lifestyle/Lifestyle";
+import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
 
 export const AdminLandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const [activeImage, setActiveImage] = useState("group-photo.jpg");
+
+  const images = [
+    "group-photo.jpg",
+    "ladies-group-photo.jpg",
+    "ladies-soft-skills.jpg",
+    "women-in-energy.jpg",
+    "sports3.jpg",
+    "ladiesCapacity.jpg",
+  ];
+
+  const handleDotClick = (card) => {
+    setActiveImage(() => card);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const currentIndex = images.indexOf(activeImage);
+
+      const nextIndex = (currentIndex + 1) % images.length;
+
+      setActiveImage(images[nextIndex]);
+    }, 2000);
+
+    return () => clearInterval(timer);
+  }, [activeImage, images]);
+
   const activeLoginContent = useSelector(
     (state) => state.loginContent.activeLoginContent
   );
@@ -79,6 +109,7 @@ export const AdminLandingPage = () => {
                 >
                   {activeLoginContent === "login" && <Login />}
                   {activeLoginContent === "register" && <AdminRegister />}
+                  {activeLoginContent === "forgot" && <ForgotPassword />}
                 </LoginModal>
                 <Link
                   to=""
@@ -90,39 +121,74 @@ export const AdminLandingPage = () => {
               </div>
             </div>
 
-            <div className={styles["showcase-image"]}>
-              <img src="muk-tower.jpg" className={styles["muk-img"]} />
-              {/* <img
-                src="gift.png"
-                alt="President SEG"
-                className={styles["person"]}
-              /> */}
-              <h1 className={styles["seg-muk-img-title"]}>AAPG MUK CHAPTER</h1>
-              {/* <img
-                src="ev3.jpg"
-                alt="President SEG"
-                className={styles["person"]}
-              /> */}
+            <div className={styles["group-photo-container"]}>
               <img
-                src="ev3-removebg-preview.png"
+                src={activeImage}
                 alt="President SEG"
                 className={styles["person"]}
               />
-              <img
+              <a href="#lifestyle" className={styles["learn-more-msg"]}>
+                Learn more...
+              </a>
+
+              <div className={styles["progress_dots_container"]}>
+                <div className={styles["progress_dots"]}>
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "group-photo.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("group-photo.jpg")}
+                  ></span>
+
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "ladies-group-photo.jpg" &&
+                      styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("ladies-group-photo.jpg")}
+                  ></span>
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "ladies-soft-skills.jpg" &&
+                      styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("ladies-soft-skills.jpg")}
+                  ></span>
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "women-in-energy.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("women-in-energy.jpg")}
+                  ></span>
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "sports3.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("sports3.jpg")}
+                  ></span>
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "ladiesCapacity.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("ladiesCapacity.jpg")}
+                  ></span>
+                </div>
+              </div>
+            </div>
+            {/* <img
                 src="circle1.png"
                 alt="circle dots"
                 className={styles["circle"]}
-              />
-              <img
-                src="dots.png"
-                alt="circle dots"
-                className={styles["dots"]}
-              />
-            </div>
+              /> */}
+            <img src="dots.png" alt="circle dots" className={styles["dots"]} />
+            {/* </div> */}
+            {/* <img src="/oil-drop.png" className={styles["drop-bg"]} /> */}
+            <img src="/Oil_well_icon.png" className={styles["oil-bg"]} />
           </div>
         </section>
         <About />
         <Services />
+        <Lifestyle />
         <Events />
         <Committee />
         <FreqAskedQuestions />

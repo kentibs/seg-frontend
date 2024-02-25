@@ -23,6 +23,7 @@
   gap: 0.5rem;
 }
 .input_field {
+  font-family: "Poppins", sans-serif;
   padding: 0.5rem;
   /* background-color: var(--color-grey-200); */
   border-top: 0;
@@ -35,7 +36,7 @@
   /* border-top-right-radius: 5px; */
   /* border-bottom: 2px solid var(--main-color-2); */
   outline: none;
-  font-size: 18px;
+  font-size: 1rem;
 }
 .input_field:focus {
   border-bottom: 3px solid var(--bg-color-300);
@@ -91,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .register_btn:hover {
@@ -101,12 +103,14 @@
   color: var(--main-color-1);
   cursor: pointer;
   transition: 0.2s;
+  font-family: "Poppins", sans-serif;
 }
 .forgot_label:hover {
   color: #0073cf;
 }
 .welcome {
   font-size: 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 .select-dropdown,

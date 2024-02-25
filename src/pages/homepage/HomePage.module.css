@@ -11,18 +11,20 @@
   width: 100%;
   max-width: 75rem;
   margin: 0 auto;
+  height: auto;
   /* background-color: green; */
 }
 
 .oil-bg {
-  opacity: 0.2;
+  opacity: 0.1;
   position: absolute;
-  width: 5rem;
+  width: 8rem;
   height: auto;
-  left: 30%;
-  top: 97%;
+  left: 20%;
+  top: 6%;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  /* background-color: red; */
+  /* z-index: 100; */
 }
 
 .drop-bg {
@@ -153,13 +155,13 @@
 .group-photo-container {
   position: relative;
   display: flex;
+  /* height: auto; */
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
   /* background-color: var(--main-color-2); */
   width: 100%;
   margin-top: 1rem;
-  /* gap: 0; */
   animation: flyin 1s ease-out;
 }
 
