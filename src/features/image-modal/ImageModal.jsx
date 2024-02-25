@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 // import PropTypes from "prop-types";
 
 export const ImageModal = ({ selectedImgUrl, isOpen, setIsOpen }) => {
-  const [currentImgUrl, setCurrentImgUrl] = useState(selectedImgUrl);
+  const [currentImgUrl, setCurrentImgUrl] = useState(selectedImgUrl); 
 
   const events = [
     { imgUrl: "ev1.jpg", category: "diner", title: "Certificate Awards" },

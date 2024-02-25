@@ -35,7 +35,10 @@ export const Header = ({ scrolled }) => {
       }`}
     >
       <nav className={styles["container"]}>
-        <span className={styles["logo"]}>AAPG</span>
+        <span className={styles["logo"]}>
+          <img src="/muk-logo.jpg" alt="aapg" className={styles["muk-img"]} />
+          <img src="/aapg-logo.jpg" alt="" className={styles["aapg-img"]} />
+        </span>
         <div className={styles["links"]}>
           <ul className={styles["link_container"]}>
             <li>

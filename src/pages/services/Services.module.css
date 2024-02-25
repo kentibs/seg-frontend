@@ -189,8 +189,21 @@
 }
 .services .triangle {
   width: 95px;
+  width: 5rem;
   opacity: 0.18;
-  top: 100%;
+  top: 115%;
+  left: 30%;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  /* filter: grayscale(100%) sepia(100%) hue-rotate(180deg) brightness(0.5)
+    saturate(200%); */
+}
+
+.oil-platform {
+  width: 95px;
+  width: 5rem;
+  opacity: 0.18;
+  top: 160%;
   left: 30%;
   position: absolute;
   transform: translate(-50%, -100%);
@@ -306,6 +319,9 @@
     left: 30%;
     position: absolute;
     transform: translate(-50%, -100%);
+  }
+  .oil-platform {
+    display: none;
   }
   /* Styles for small screens go here */
 }

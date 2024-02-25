@@ -225,7 +225,7 @@ export const Committee = () => {
           ))}
         </div>
         {visibleItems < committeeMembers.length ? (
-          <span
+          <span 
             className={styles["load-more-container"]}
             onClick={handleLoadMore}
           >

@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { Register } from "../../components/register/Register";
 import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
 import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
+import { Lifestyle } from "../lifestyle/Lifestyle";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,11 +52,11 @@ export const HomePage = () => {
       <Header scrolled={scrolled} />
       <main className={styles["main_container"]}>
         <section className={styles["showcase-area"]} id="home">
-          <img
+          {/* <img
             src="square1.png"
             alt="square shape"
             className={styles["square"]}
-          />
+          /> */}
           <div className={styles["container"]}>
             <div className={styles["showcase-info"]}>
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
@@ -110,21 +111,24 @@ export const HomePage = () => {
                 alt="President SEG"
                 className={styles["person"]}
               />
-              <img
+              {/* <img
                 src="circle1.png"
                 alt="circle dots"
                 className={styles["circle"]}
-              />
+              /> */}
               <img
                 src="dots.png"
                 alt="circle dots"
                 className={styles["dots"]}
               />
             </div>
+            {/* <img src="/oil-drop.png" className={styles["drop-bg"]} /> */}
+            <img src="/Oil_well_icon.png" className={styles["oil-bg"]} />
           </div>
         </section>
         <About />
         <Services />
+        <Lifestyle />
         <Events />
         <Committee />
         <FreqAskedQuestions />

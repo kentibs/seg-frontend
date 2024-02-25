@@ -14,6 +14,28 @@
   /* background-color: green; */
 }
 
+.oil-bg {
+  opacity: 0.2;
+  position: absolute;
+  width: 5rem;
+  height: auto;
+  left: 30%;
+  top: 97%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.drop-bg {
+  opacity: 0.2;
+  position: absolute;
+  width: 5rem;
+  height: auto;
+  left: 80%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
 .showcase-area {
   padding: 120px 0rem;
   width: 100%;
