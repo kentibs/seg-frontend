@@ -4,7 +4,6 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
 import ReadMoreCommittee from "../../features/read-more-committee/ReadMoreCommittee";
-import { v4 as uuidv4 } from "uuid";
 import styles from "./Committee.module.css";
 // import ReadMoreModal from "../../features/read-more-modal/ReadMoreModal";
 
@@ -225,7 +224,7 @@ export const Committee = () => {
           ))}
         </div>
         {visibleItems < committeeMembers.length ? (
-          <span 
+          <span
             className={styles["load-more-container"]}
             onClick={handleLoadMore}
           >

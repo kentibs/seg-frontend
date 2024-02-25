@@ -80,13 +80,13 @@ export const Header = ({ scrolled }) => {
             </li>
             <li>
               <a
-                href="#events"
+                href="#lifestyle"
                 className={`${styles["nav-link"]} ${
                   activeLink === "events" && styles["active"]
                 }`}
                 onClick={() => setActiveLink("events")}
               >
-                Events
+                Lifestyle
               </a>
             </li>
             <li>

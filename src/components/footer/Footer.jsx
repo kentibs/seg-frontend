@@ -13,7 +13,7 @@ export const Footer = () => {
           {" "}
           &copy; Copyright{" "}
           <a href="#home" className={styles["seg-logo"]}>
-            AAPG MUK CHAPTER
+            AAPG MUK CHAPTER 
           </a>{" "}
           2024. All rights reserved.
         </p>
