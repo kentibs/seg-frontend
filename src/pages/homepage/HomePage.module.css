@@ -141,6 +141,15 @@
   border-radius: 0.5rem;
 }
 
+@keyframes flyin {
+  from {
+    margin-top: -320px;
+  }
+  to {
+    margin-top: 1rem;
+  }
+}
+
 .group-photo-container {
   position: relative;
   display: flex;
@@ -149,7 +158,9 @@
   /* justify-content: center; */
   /* background-color: var(--main-color-2); */
   width: 100%;
-  gap: 0;
+  margin-top: 1rem;
+  /* gap: 0; */
+  animation: flyin 0.7s ease-out;
 }
 
 .learn-more-msg {
@@ -245,15 +256,6 @@
 
 .secondary-btn:hover::before {
   width: 100%;
-}
-
-@keyframes flyin {
-  from {
-    margin-top: -320px;
-  }
-  to {
-    margin-top: -120px;
-  }
 }
 
 .showcase-image {
