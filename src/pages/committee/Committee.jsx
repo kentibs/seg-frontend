@@ -22,44 +22,73 @@ export const Committee = () => {
     setVisibleItems(6);
   };
 
+  // sentences.slice(0, maxSentences).join('. ') + (sentences.length > maxSentences ? '...' : '');
+
+  // const sliceText = (sentences) => {
+  //   const maxSentences = 1;
+  //   return (
+  //     sentences.slice(0, maxSentences).join(". ") +
+  //     (sentences.length > maxSentences ? "..." : "")
+  //   );
+  // };
+
+  const sliceText = (text) => {
+    const maxCharacters = 100; // Adjust the maximum number of characters as needed
+    return text.length > maxCharacters
+      ? text.slice(0, maxCharacters) + "..."
+      : text;
+  };
+
   const committeeMembers = [
     {
-      imgUrl: "Gift.jpg",
-      email: "giftkopio@gmail.com",
-      name: "Kopio Gift",
+      imgUrl: "Ruth.jpg",
+      email: "ruthmurungi@gmail.com",
+      name: "Murungi Ruth Namayanja",
       gender: "F",
-      tel: "0782363882",
+      tel: "0777 580349",
       title: "President",
       period: "2023-2024",
       description:
-        "She has been greatly resourceful in the rise and development of this organization, leaving behind a great foundation for other upcoming leaders. ",
+        "She is the chief executive officer and spokesperson for the Association on all matters pertaining to the public; and serves as chair of the executive committee. She also appoints the members of all committees in accordance with these bylaws as well as delegates to cooperating organizations to represent the Association.",
     },
     {
-      imgUrl: "emma.jpg",
-      name: "Emmanuella Kaducu Lagen",
-      email: "emmakaducu@gmail.com",
-      gender: "F",
-      tel: "0742799882",
+      imgUrl: "vice.jpg",
+      name: "Agum Edmond Akaki",
+      gender: "M",
+      email: "agumedmond@gmail.com",
+      tel: "0758853882",
       title: "Vice President",
       period: "2023-2024",
       description:
-        "She has also done alot for the association and has been greatly resourceful in the rise and development of this organization. ",
+        "He has been greatly resourceful in the rise and development of this organization, leaving behind a great foundation for other upcoming leaders.",
     },
     {
-      imgUrl: "Robert.jpg",
-      name: "Luwuge Robert",
-      gender: "M",
-      email: "robertluwuge@gmail.com",
-      tel: "0758853882",
-      title: "Secretary",
+      imgUrl: "ninsiima.jpg",
+      email: "ninsiima@gmail.com",
+      name: "Ninsiima Agumisiriza",
+      gender: "F",
+      tel: "0782363882",
+      title: "General Secretary",
       period: "2023-2024",
       description:
-        "He is responsible for all the formal and legal documentation within the organization  as well as spending and saving strategies. ",
+        "She is responsible for all the formal and legal documentation within the organization  as well as spending and saving strategies. ",
     },
     {
-      imgUrl: "triza.jpg",
-      name: "Namitala Theresa Natonda",
-      email: "triza@gmail.com",
+      imgUrl: "editor.jpg",
+      name: "Nuwagaba Victor",
+      email: "leakey@gmail.com",
+      gender: "M",
+      tel: "0742799882",
+      title: "Chief Editor",
+      period: "2023-2024",
+      description:
+        "He is responsible with the general supervision of and final authority in soliciting, accepting, and rejecting all material on technical subjects for publication, have policy oversight and responsibility for editorial content of all technical and peer-reviewed publications; submit an annual report of editorial activities to the executive committee; and, with the approval of the executive committee, appoint volunteer editors as deemed necessary.",
+    },
+
+    {
+      imgUrl: "praise.jpg",
+      name: "Naluzze Pamela Praise",
+      email: "praise@gmail.com",
       gender: "F",
       tel: "0778952182",
       period: "2023-2024",
@@ -68,92 +97,116 @@ export const Committee = () => {
         "She is responsible for all the organization transactions as well as spending and saving strategies. ",
     },
     {
-      imgUrl: "wycliffe.jpg",
-      name: "Atuhairwe Wycliffe",
-      email: "wycliffe@gmail.com",
-      gender: "M",
+      imgUrl: "winnie.jpg",
+      name: "Kisakye Winnie Mutiibwa",
+      email: "winnie@gmail.com",
+      gender: "F",
       tel: "0700009182",
       period: "2023-2024",
-      title: "Year 4 representative",
+      title: "Communications Chair",
       description:
-        "He is responsible for mobilizing and organizing many of the organiztions' big events.",
+        "She is responsible for mobilizing and organizing many of the Associations' big events as well as creating a link between the organization and other external organizations including upholding and mantaining a positive image of the Association. .",
     },
+
     {
-      imgUrl: "ev1.jpg",
-      name: "Kitiibwa Deo",
-      email: "deokitiibwa@gmail.com",
-      gender: "M",
-      period: "2023-2024",
-      title: "Mobilizer",
-      tel: "0700009182",
-      description:
-        "He is greatly involved in the organization of social events ",
-    },
-    {
-      imgUrl: "Gift.jpg",
-      email: "giftkopio@gmail.com",
-      name: "Kopio Gift",
+      imgUrl: "deborah.jpg",
+      email: "deborah@gmail.com",
+      name: "Nabulumba Deborah",
       gender: "F",
       tel: "0782363882",
-      title: "President",
+      title: "Asst. Communications Chair",
       period: "2023-2024",
       description:
-        "She has been greatly resourceful in the rise and development of this organization, leaving behind a great foundation for other upcoming leaders. ",
+        "She assists the Communications Chair in all activities and responsibilities regarding Communication within the Association as well as many other duties whenever need arises.",
     },
+
     {
-      imgUrl: "emma.jpg",
-      name: "Emmanuella Kaducu Lagen",
-      email: "emmakaducu@gmail.com",
+      imgUrl: "tracy.jpg",
+      name: "Nandawula Tracy Judith",
+      email: "tracy@gmail.com",
       gender: "F",
       tel: "0742799882",
-      title: "Vice President",
+      title: "Asst. Communications Chair",
       period: "2023-2024",
       description:
-        "She has also done alot for the association and has been greatly resourceful in the rise and development of this organization. ",
+        "She is greatly involved in the organization of social events as one responsible for the exhibitions and promoting innovations among students. ",
     },
     {
-      imgUrl: "Robert.jpg",
-      name: "Luwuge Robert",
+      imgUrl: "Pauline.jpg",
+      name: "Nalubaale Pauline",
+      email: "pauline@gmail.com",
+      gender: "F",
+      period: "2023-2024",
+      title: "Innovations Chair",
+      tel: "0700009182",
+      description:
+        "She is greatly involved in the organization of social events as one responsible for the exhibitions and promoting innovations among students. ",
+    },
+    {
+      imgUrl: "kelvin.jpg",
+      name: "Wandera Kelvin",
       gender: "M",
       email: "robertluwuge@gmail.com",
       tel: "0758853882",
-      title: "Secretary",
+      title: "Membership chair",
       period: "2023-2024",
       description:
-        "He is responsible for all the formal and legal documentation within the organization  as well as spending and saving strategies. ",
+        "He is responsible for all the formal and legal documentation within the organization  as well as membership involvement of students in the Association as well as the associated campaigns. ",
     },
     {
-      imgUrl: "triza.jpg",
-      name: "Namitala Theresa Natonda",
-      email: "triza@gmail.com",
-      gender: "F",
+      imgUrl: "leakey.jpg",
+      name: "Mbabazi Leakey",
+      email: "leakey@gmail.com",
+      gender: "M",
       tel: "0778952182",
       period: "2023-2024",
-      title: "Treasurer",
+      title: "Programs Chair",
       description:
-        "She is responsible for all the organization transactions as well as spending and saving strategies. ",
+        "He is responsible for all the organization activities and programs as well as spending and saving strategies associated with these activities. ",
     },
     {
-      imgUrl: "wycliffe.jpg",
-      name: "Atuhairwe Wycliffe",
-      email: "wycliffe@gmail.com",
-      gender: "M",
+      imgUrl: "nakuya.jpg",
+      name: "Nakuya Teddy Maria",
+      email: "nakuya@gmail.com",
+      gender: "F",
       tel: "0700009182",
       period: "2023-2024",
-      title: "Year 4 representative",
+      title: "Female Year 1 Representative",
       description:
-        "He is responsible for mobilizing and organizing many of the organiztions' big events.",
+        "She is responsible for mobilizing and organizing Year ones regarding the activities and programs associated with the Association.",
     },
     {
-      imgUrl: "ev1.jpg",
-      name: "Kitiibwa Deo",
-      email: "deokitiibwa@gmail.com",
+      imgUrl: "gilbert.jpg",
+      name: "Oketch Lazzarus Gilbert",
+      email: "gilbert@gmail.com",
       gender: "M",
       period: "2023-2024",
-      title: "Mobilizer",
+      title: "Male Year 1 Representative",
       tel: "0700009182",
       description:
-        "He is greatly involved in the organization of social events ",
+        "He is responsible for mobilizing and organizing Year ones regarding the activities and programs associated with the Association.",
+    },
+    {
+      imgUrl: "year3-rep.jpg",
+      name: "Oketch Lazzarus Gilbert",
+      email: "kopio@gmail.com",
+      gender: "F",
+      period: "2023-2024",
+      title: "Year 3 Representative",
+      tel: "0700009182",
+      description:
+        "She is responsible for mobilizing and organizing Year 3s regarding the activities and programs associated with the Association.",
+    },
+    {
+      imgUrl: "emma.jpg",
+      name: "Munghatihe Emmanuel",
+      email: "emmamunga@gmail.com",
+      gender: "M",
+      period: "2023-2024", 
+      title: "Year 4 Representative",
+      tel: "0700009182",
+      description:
+        "He is responsible for mobilizing and organizing Year 4s regarding the activities and programs associated with the Association.",
     },
   ];
 
@@ -175,7 +228,7 @@ export const Committee = () => {
               <div className={styles["card-content"]}>
                 <h3 className={styles["card-name"]}>{item.name}</h3>
                 <h1 className={styles["card-title"]}>{item.title}</h1>
-                <p>{item.description}</p>
+                <p>{sliceText(item.description)}</p>
 
                 <div>
                   {/* <Link

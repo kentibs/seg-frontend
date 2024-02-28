@@ -17,6 +17,7 @@ import { Register } from "../../components/register/Register";
 import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
 import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
 import { Lifestyle } from "../lifestyle/Lifestyle";
+import { Testimonial } from "../testimonial/Testimonial";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,6 +27,7 @@ export const HomePage = () => {
 
   const images = [
     "group-photo.jpg",
+    "mission.jpg",
     "ladies-group-photo.jpg",
     "ladies-soft-skills.jpg",
     "women-in-energy.jpg",
@@ -146,6 +148,13 @@ export const HomePage = () => {
 
                   <span
                     className={`${styles["dot"]} ${
+                      activeImage === "mission.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("mission.jpg")}
+                  ></span>
+
+                  <span
+                    className={`${styles["dot"]} ${
                       activeImage === "ladies-group-photo.jpg" &&
                       styles["active"]
                     }`}
@@ -195,6 +204,7 @@ export const HomePage = () => {
         <Lifestyle />
         <Events />
         <Committee />
+        <Testimonial />
         <FreqAskedQuestions />
         <Contact />
         <Subscription />

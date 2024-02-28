@@ -163,13 +163,14 @@ body {
   --bg-color-3: hsl(var(--hue-1), 100%, 98%);
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   /* --bg-color-3: #001c3d; */
-  --heading-color: hsl(var(--hue-1), 61%, 24%); 
+  --heading-color: hsl(var(--hue-1), 61%, 24%);
   --heading-color: #0a1172;
   --text-color: hsl(var(--hue-1), 17%, 63%);
 
   overflow-x: hidden;
   background-color: var(--bg-color);
   font-family: "Inter", sans-serif;
+  font-family: "Spartan", sans-serif;
   font-family: "Poppins", sans-serif;
 }
 

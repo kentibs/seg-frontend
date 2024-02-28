@@ -191,6 +191,7 @@ export const Header = ({ scrolled }) => {
                   Services
                 </a>
               </li>
+
               <li>
                 <a
                   href="#events"
@@ -202,6 +203,7 @@ export const Header = ({ scrolled }) => {
                   Events
                 </a>
               </li>
+
               <li>
                 <a
                   href="#contact"
