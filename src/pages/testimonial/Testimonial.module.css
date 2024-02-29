@@ -48,12 +48,20 @@
 .client-details {
   /* background-color: pink; */
 }
-.client-info {
-  /* background-color: green; */
-  width: 100%;
+
+.client-info-sub-container {
+  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+.client-info {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
 }
 
 .client-pic {
@@ -69,17 +77,23 @@
   object-fit: cover;
 }
 
+.testimonial-content {
+  width: 100%;
+}
 .single-testimonial {
   border: 5px solid var(--color-grey-400);
   border-radius: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: max-content;
+  /* height: max-content; */
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3rem 1rem;
+  /* padding: 2rem 1rem; */
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
   z-index: 2;
 }

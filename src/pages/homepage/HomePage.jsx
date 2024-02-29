@@ -17,6 +17,16 @@ import { Register } from "../../components/register/Register";
 import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
 import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
 import { Lifestyle } from "../lifestyle/Lifestyle";
+import {
+  FaUsers,
+  FaBook,
+  FaBriefcase,
+  FaTools,
+  FaUserTie,
+  FaIndustry,
+  FaHandsHelping,
+} from "react-icons/fa";
+
 import { Testimonial } from "../testimonial/Testimonial";
 
 export const HomePage = () => {
@@ -92,10 +102,40 @@ export const HomePage = () => {
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
               {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
               <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
+
               <p className={styles["text"]}>
-                We are AAPG: American Association of Petroleum Geologists, A
-                student chapter at Makerere University Department of Geology and
-                Petroleum studies
+                Welcome to AAPG Muk Chapter- Advancing Geoscience for a
+                Sustainable Future. We are dedicated to:
+                <ul className={styles["hero-list"]}>
+                  <li className={styles["hero-list-item"]}>
+                    <FaUsers className={styles["hero-list-icon"]} /> Connecting
+                    Students & Professionals
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaTools className={styles["hero-list-icon"]} /> Skill
+                    Development Workshops
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaHandsHelping className={styles["hero-list-icon"]} />{" "}
+                    <span> Community Engagement</span>
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaUserTie className={styles["hero-list-icon"]} />{" "}
+                    Internship Opportunities
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaBook className={styles["hero-list-icon"]} /> Knowledge
+                    Sharing
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaBriefcase className={styles["hero-list-icon"]} />{" "}
+                    Networking Events
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaIndustry className={styles["hero-list-icon"]} /> Industry
+                    Insights
+                  </li>
+                </ul>
               </p>
               <div className={styles["cta"]}>
                 <Link

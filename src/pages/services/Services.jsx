@@ -26,6 +26,12 @@ export const Services = () => {
     (state) => state.loginContent.activeLoginContent
   );
 
+  const sliceText = (text) => {
+    const maxCharacters = 110;
+    return text.length > maxCharacters
+      ? text.slice(0, maxCharacters) + "..."
+      : text;
+  };
   const closeReadMoreModal1Handler = () => {
     setIsReadMore1Open(false);
   };
@@ -79,21 +85,21 @@ export const Services = () => {
     const startIncrementing = () => {
       const interval = setInterval(() => {
         setProjects((prevCount) => {
-          if (prevCount < 44) return prevCount + 1;
+          if (prevCount < 1000) return prevCount + 1;
           return prevCount;
         });
 
         setYears((prevCount) => {
-          if (prevCount < 3) return prevCount + 1;
+          if (prevCount < 10) return prevCount + 1;
           return prevCount;
         });
 
         setCompetitions((prevCount) => {
-          if (prevCount < 25) return prevCount + 1;
+          if (prevCount < 250) return prevCount + 1;
           return prevCount;
         });
 
-        if (projects >= 44 && years >= 3 && competitions >= 15) {
+        if (projects >= 1000 && years >= 10 && competitions >= 250) {
           clearInterval(interval);
         }
       }, 100);
@@ -130,7 +136,7 @@ export const Services = () => {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 511.999 511.999"
           xmlSpace="preserve"
-          className={styles["oil-platform"]} 
+          className={styles["oil-platform"]}
         >
           <g>
             <g>
@@ -215,12 +221,13 @@ export const Services = () => {
           <div className={styles["services-info"]}>
             <h3 className={styles["sub-heading"]}>Our Services</h3>
             <h1 className={styles["heading"]}>
-              Networking, <br /> Inspiring the world
+              Networking, <br /> Transforming the world
             </h1>
             <p className={styles["text"]}>
-              We are AAPG: American Association of Petroleum Geologists, A
-              student chapter at Makerere University Department of Geology and
-              Petroleum studies
+              We ensure that students are enlightened as per the Geoscience
+              sector while bridging the gap between Professionals in the sector
+              and students as well as fostering creativity among students
+              bringing all the precious opportunities down to where you are.
             </p>
             <div className={styles["milestones"]} ref={milestonesRef}>
               <div className={styles["ml"]}>
@@ -233,7 +240,7 @@ export const Services = () => {
                 <h2 className={styles["number"]}>
                   <span>{projects}</span>+{/* <span>34</span>+ */}
                 </h2>
-                <h5>Projects</h5>
+                <h5>Events</h5>
               </div>
               <div className={styles["ml"]}>
                 <h2 className={styles["number"]}>
@@ -271,11 +278,11 @@ export const Services = () => {
           <div className={styles["services-grid"]}>
             <div className={styles["srv-card"]}>
               <div className={styles["card-desc"]}>
-                <h3 className={styles["card-name"]}>Brand Identity</h3>
+                <h3 className={styles["card-name"]}>Research</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Minima explicabo laboriosam, sed animi, quia architecto quidem
-                  hic laudantium.
+                  {sliceText(
+                    "We encourage research among our students in various ways including incentives associated with winning various competitions such as essay writing, exhibitions or project development as well as other skills acquired from various softwares such as Reservoir modelling challenges solved by softwares such as Petrel, CMG etc, data collection, preparation and visualization using softwares like ArcGIS, QGIS etc. We also do promote research through various Internship programs and trainings from Professionals as well as Professional lectures."
+                  )}
                 </p>
               </div>
 
@@ -292,23 +299,19 @@ export const Services = () => {
                 onClose={() => closeReadMoreModal1Handler()}
               >
                 <div className={styles["card-desc"]}>
-                  <h3 className={styles["card-name"]}>Brand Identity</h3>
+                  <h3 className={styles["card-name"]}>Research</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima explicabo laboriosam, sed animi, quia architecto
-                    quidem hic laudantium. Minima explicabo laboriosam, sed
-                    animi, quia architecto quidem hic laudantium. Lorem ipsum
-                    dolor sit amet consectetur, adipisicing elit. Minima
-                    explicabo laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Minima explicabo laboriosam, sed animi, quia
-                    architecto quidem hic laudantium. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Minima explicabo laboriosam,
-                    sed animi, quia architecto quidem hic
+                    We encourage research among our students in various ways
+                    including incentives associated with winning various
+                    competitions such as essay writing, exhibitions or project
+                    development as well as other skills acquired from various
+                    softwares such as Reservoir modelling challenges solved by
+                    softwares such as Petrel, CMG etc, data collection,
+                    preparation and visualization using softwares like ArcGIS,
+                    QGIS etc. <br />
+                    We also do promote research through various Internship
+                    programs and trainings from Professionals as well as
+                    Professional lectures.
                   </p>
                 </div>
               </ReadMoreModal>
@@ -316,10 +319,11 @@ export const Services = () => {
 
             <div className={styles["srv-card"]}>
               <div className={styles["card-desc"]}>
-                <h3 className={styles["card-name"]}>Inspiring innovation</h3>
+                <h3 className={styles["card-name"]}>Opportunities</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Minima explicabo laboriosam, sed animi.
+                  {sliceText(
+                    "Owing to the transformative activities and events within the Association as well as the associated exposure of our members, the resultant opportunities are endless especially considering the spiced up student portfolio as well as direct contact with the employers themselves. Therefore, our members are highly previleged with several opportunities such as internship opportunities, scholarship opportunities, job opportunities among others."
+                  )}
                 </p>
               </div>
 
@@ -336,24 +340,16 @@ export const Services = () => {
                 onClose={() => closeReadMoreModal2Handler()}
               >
                 <div className={styles["card-desc"]}>
-                  <h3 className={styles["card-name"]}>Inspiring innovation</h3>
+                  <h3 className={styles["card-name"]}>Opportunities</h3>
                   <p>
-                    Hey Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Minima explicabo laboriosam, sed animi, quia
-                    architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic
+                    Owing to the transformative activities and events within the
+                    Association as well as the associated exposure of our
+                    members, the resultant opportunities are endless especially
+                    considering the spiced up student portfolio as well as
+                    direct contact with the employers themselves. Therefore, our
+                    members are highly privileged with several opportunities
+                    such as internship opportunities, scholarship opportunities,
+                    job opportunities among others.{" "}
                   </p>
                 </div>
               </ReadMoreModal>
@@ -361,11 +357,11 @@ export const Services = () => {
 
             <div className={styles["srv-card"]}>
               <div className={styles["card-desc"]}>
-                <h3 className={styles["card-name"]}>Exploratory activities</h3>
+                <h3 className={styles["card-name"]}>Networking</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Minima explicabo laboriosam, sed animi, quia architecto
-                  quidem.
+                  {sliceText(
+                    "Our members are also privileged with a close relationship with Professionals as well as potential employers from prominent companies such as TotalEnergies, CNOOC, UNOC, BigSolutions Group among others. This as a result links them with the real world implementation of the knowledge they acquire from their lectures as well as a platform to showcase their own skills,talents as well as creativity."
+                  )}
                 </p>
               </div>
               <Link
@@ -381,26 +377,15 @@ export const Services = () => {
                 onClose={() => closeReadMoreModal3Handler()}
               >
                 <div className={styles["card-desc"]}>
-                  <h3 className={styles["card-name"]}>
-                    Exploratory activities
-                  </h3>
+                  <h3 className={styles["card-name"]}>Networking</h3>
                   <p>
-                    Hey3 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Minima explicabo laboriosam, sed animi, quia
-                    architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic
+                    Our members are also privileged with a close relationship
+                    with Professionals as well as potential employers from
+                    prominent companies such as TotalEnergies, CNOOC, UNOC,
+                    BigSolutions Group among others. This as a result links them
+                    with the real world implementation of the knowledge they
+                    acquire from their lectures as well as a platform to
+                    showcase their own skills, talents as well as creativity.
                   </p>
                 </div>
               </ReadMoreModal>
@@ -408,11 +393,11 @@ export const Services = () => {
 
             <div className={styles["srv-card"]}>
               <div className={styles["card-desc"]}>
-                <h3 className={styles["card-name"]}>Job opportunities</h3>
+                <h3 className={styles["card-name"]}>Innovations</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Minima explicabo laboriosam, sed animi, quia architecto quidem
-                  hic laudantium.
+                  {sliceText(
+                    "The Association also highly encourages the practical application of theoretical knowledge in order to solve real world problems. This is done through exhibitions of various projects implemented by students as well as presentations and challenges solved by students including various competitions organized by the Association."
+                  )}
                 </p>
               </div>
               <Link
@@ -428,25 +413,14 @@ export const Services = () => {
                 onClose={() => closeReadMoreModal4Handler()}
               >
                 <div className={styles["card-desc"]}>
-                  <h3 className={styles["card-name"]}>Job opportunities</h3>
+                  <h3 className={styles["card-name"]}>Innovations</h3>
                   <p>
-                    There are many job opportunities waiting for the diligent
-                    and strategic Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic laudantium. Minima explicabo
-                    laboriosam, sed animi, quia architecto quidem hic
-                    laudantium. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Minima explicabo laboriosam, sed animi,
-                    quia architecto quidem hic
+                    The Association also highly encourages the practical
+                    application of theoretical knowledge in order to solve real
+                    world problems. This is done through exhibitions of various
+                    projects implemented by students as well as presentations
+                    and challenges solved by students including various
+                    competitions organized by the Association.
                   </p>
                 </div>
               </ReadMoreModal>

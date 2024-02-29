@@ -43,12 +43,14 @@ export const Testimonial = () => {
               numquam eveniet esse enim inventore distinctio sunt{" "}
             </p>
             <div className={styles["client-info"]}>
-              <div className={styles["client-pic"]}>
-                <img src="Ruth.jpg" className={styles["image"]} />
-              </div>
-              <div className={styles["client-details"]}>
-                <h6>Ruth</h6>
-                <span>President, AAPG</span>
+              <div className={styles["client-info-sub-container"]}>
+                <div className={styles["client-pic"]}>
+                  <img src="Ruth.jpg" className={styles["image"]} />
+                </div>
+                <div className={styles["client-details"]}>
+                  <h6>Ruth</h6>
+                  <span>President, AAPG</span>
+                </div>
               </div>
             </div>
           </div>
@@ -69,6 +71,7 @@ export const Testimonial = () => {
             />
             <FontAwesomeIcon
               icon={faQuoteRight}
+              className={styles["quote-icon"]}
               style={{
                 fontSize: "80px",
                 position: "absolute",
@@ -76,20 +79,22 @@ export const Testimonial = () => {
                 right: "-1rem",
                 zIndex: "4",
               }}
-              className={styles["quote-icon"]}
             />
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Recusandae deserunt quisquam nesciunt voluptatibus voluptatem
               numquam eveniet esse enim inventore distinctio sunt{" "}
             </p>
             <div className={styles["client-info"]}>
-              <div className={styles["client-pic"]}>
-                <img src="Ruth.jpg" className={styles["image"]} />
-              </div>
-              <div className={styles["client-details"]}>
-                <h6>Ruth</h6>
-                <span>President, AAPG</span>
+              <div className={styles["client-info-sub-container"]}>
+                <div className={styles["client-pic"]}>
+                  <img src="Ruth.jpg" className={styles["image"]} />
+                </div>
+                <div className={styles["client-details"]}>
+                  <h6>Ruth</h6>
+                  <span>President, AAPG</span>
+                </div>
               </div>
             </div>
           </div>
@@ -111,6 +116,7 @@ export const Testimonial = () => {
             />
             <FontAwesomeIcon
               icon={faQuoteRight}
+              className={styles["quote-icon"]}
               style={{
                 fontSize: "80px",
                 position: "absolute",
@@ -118,20 +124,22 @@ export const Testimonial = () => {
                 right: "-1rem",
                 zIndex: "4",
               }}
-              className={styles["quote-icon"]}
             />
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Recusandae deserunt quisquam nesciunt voluptatibus voluptatem
               numquam eveniet esse enim inventore distinctio sunt{" "}
             </p>
             <div className={styles["client-info"]}>
-              <div className={styles["client-pic"]}>
-                <img src="Ruth.jpg" className={styles["image"]} />
-              </div>
-              <div className={styles["client-details"]}>
-                <h6>Ruth</h6>
-                <span>President, AAPG</span>
+              <div className={styles["client-info-sub-container"]}>
+                <div className={styles["client-pic"]}>
+                  <img src="Ruth.jpg" className={styles["image"]} />
+                </div>
+                <div className={styles["client-details"]}>
+                  <h6>Ruth</h6>
+                  <span>President, AAPG</span>
+                </div>
               </div>
             </div>
           </div>

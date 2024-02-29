@@ -12,7 +12,7 @@ export const About = () => {
   };
   return (
     <>
-      <section className={styles["about"]} id="about"> 
+      <section className={styles["about"]} id="about">
         {/* <img src="triangle.png" className={styles["triangle"]} alt="" /> */}
         <img src="/oil-drop.png" className={styles["triangle"]} />
 
@@ -254,7 +254,7 @@ export const About = () => {
                   <path d="M356.28,376.31l15.59-15.59l60.68,60.68l-15.59,15.59L356.28,376.31z"></path>
                 </g>
               </svg>
-              <h3>Innovation</h3>
+              <h3>Opportunities</h3>
             </div>
             <div className={styles["about-card"]}>
               <svg
@@ -496,12 +496,15 @@ export const About = () => {
           <div className={styles["about-info"]}>
             <h3 className={styles["sub-heading"]}>About us</h3>
             <h1 className={styles["heading"]}>
-              Networking, <br /> Inspiring the world
+              AAPG student Chapter, <br /> Since 2014
             </h1>
             <p className={styles["text"]}>
-              We are AAPG: American Association of Petroleum Geologists, A
-              student chapter at Makerere University Department of Geology and
-              Petroleum studies
+              We are greatly concerned with advancing the science of geology,
+              particularly in relation to petroleum, natural gas, and mineral
+              resources. Our mission includes promoting a strong relation
+              between students and professionals in the Geosciences sector as
+              well as providing a platform for sharing and accessing the latest
+              and emerging technical and academic knowledge
             </p>
             <div className={styles["cta"]}>
               <Link to="mailto:aapgmuk@gmail.com" className={styles["btn"]}>
