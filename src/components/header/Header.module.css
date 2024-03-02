@@ -284,7 +284,10 @@ header .logo {
     background-color: var(--bg-color-2);
     padding-top: 1rem;
     margin-top: 21rem;
+    height: 100dvh;
     left: 0;
+    margin-top: 0;
+    padding-top: 50dvh;
     /* border-top: 1px solid var(--color-grey-300); */
     z-index: -9;
   }

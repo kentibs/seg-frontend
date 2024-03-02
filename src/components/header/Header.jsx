@@ -75,7 +75,7 @@ export const Header = ({ scrolled }) => {
                 }`}
                 onClick={() => setActiveLink("services")}
               >
-                Services
+                Services 
               </a>
             </li>
             <li>
