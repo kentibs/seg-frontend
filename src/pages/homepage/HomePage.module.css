@@ -349,6 +349,10 @@
   transform: translate(-50%, -50%);
 }
 
+.triangle {
+  display: none;
+}
+
 /* Very large screens (1280px) and below */
 @media only screen and (max-width: 1280px) {
   .main_container {
@@ -569,6 +573,18 @@
   .showcase-image {
     /* display: none; */
   }
+
+  .triangle {
+    display: block;
+    opacity: 0.1;
+    width: 5rem;
+  }
+  .triangle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .container {
     position: relative;
     padding-left: 3rem;

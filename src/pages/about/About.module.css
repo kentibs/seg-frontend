@@ -286,8 +286,8 @@
     display: none;
     width: 95px;
     position: absolute;
-    left: 96%;
-    top: 97%;
+    left: 36%;
+    top: 17%;
     transform: translate(-50%, -50%);
     opacity: 0.18;
     filter: hue-rotate(90deg);

@@ -239,6 +239,10 @@ export const HomePage = () => {
             <img src="/Oil_well_icon.png" className={styles["oil-bg"]} />
           </div>
         </section>
+        <div className={styles["triangle-container"]}>
+          <img src="/oil-drop.png" className={styles["triangle"]} />
+        </div>
+
         <About />
         <Services />
         <Lifestyle />
