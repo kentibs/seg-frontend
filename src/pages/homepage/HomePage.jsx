@@ -104,7 +104,7 @@ export const HomePage = () => {
               <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
 
               <p className={styles["text"]}>
-                Welcome to AAPG Muk Chapter- Advancing Geoscience for a
+                Welcome to AAPG Muk Chapter - Advancing Geoscience for a
                 Sustainable Future. We are dedicated to:
                 <ul className={styles["hero-list"]}>
                   <li className={styles["hero-list-item"]}>
@@ -170,7 +170,7 @@ export const HomePage = () => {
             <div className={styles["group-photo-container"]}>
               <img
                 src={activeImage}
-                alt="President SEG"
+                alt="AAPG lifestyle"
                 className={styles["person"]}
               />
               <a href="#lifestyle" className={styles["learn-more-msg"]}>

@@ -578,10 +578,21 @@
     margin: 0 auto; */
   }
 
+  .learn-more-msg {
+    position: absolute;
+    background-color: #0492c2;
+    background-color: var(--main-color-1);
+    color: #fff;
+    border-radius: 2px;
+    top: 60%;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   .person {
     margin-top: 3rem;
     width: auto;
-    height: 15rem;
+    height: 14rem;
     border-radius: 0.5rem;
   }
 
