@@ -15,7 +15,7 @@ export const Services = () => {
   const [competitions, setCompetitions] = useState(0);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isReadMore1Open, setIsReadMore1Open] = useState(false);
-  const [isReadMore2Open, setIsReadMore2Open] = useState(false);
+  const [isReadMore2Open, setIsReadMore2Open] = useState(false); 
   const [isReadMore3Open, setIsReadMore3Open] = useState(false);
   const [isReadMore4Open, setIsReadMore4Open] = useState(false);
   const [years, setYears] = useState(0);

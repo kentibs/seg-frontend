@@ -496,7 +496,7 @@ export const About = () => {
           <div className={styles["about-info"]}>
             <h3 className={styles["sub-heading"]}>About us</h3>
             <h1 className={styles["heading"]}>
-              AAPG student Chapter, <br /> Since 2014
+              AAPG Muk Chapter, <br /> Since 2014
             </h1>
             <p className={styles["text"]}>
               We are greatly concerned with advancing the science of geology,
