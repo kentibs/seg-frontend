@@ -37,6 +37,7 @@ export const Header = ({ scrolled }) => {
       <nav className={styles["container"]}>
         <span className={styles["logo"]}>
           <img src="/muk-logo.jpg" alt="aapg" className={styles["muk-img"]} />
+          {/* <img src="/100.jpg" alt="aapg" className={styles["muk-img"]} /> */}
           <img src="/aapg-logo.jpg" alt="" className={styles["aapg-img"]} />
         </span>
         <div className={styles["links"]}>
@@ -75,7 +76,7 @@ export const Header = ({ scrolled }) => {
                 }`}
                 onClick={() => setActiveLink("services")}
               >
-                Services 
+                Services
               </a>
             </li>
             <li>

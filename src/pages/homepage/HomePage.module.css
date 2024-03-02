@@ -139,6 +139,8 @@
   font-size: 0.8rem;
   margin: 2rem 0;
   line-height: 2.3;
+  /* background-color: green; */
+  /* width: 100%; */
 }
 .showcase-area .sub-heading {
   /* margin-bottom: 0.7rem; */
@@ -488,6 +490,21 @@
     transform: translate(-50%, -50%);
     z-index: 10000;
   }
+  .text {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin: 2rem 0;
+    line-height: 2.3;
+    /* background-color: green; */
+    /* width: 160%; */
+  }
+
+  .showcase-info .text {
+    /* background-color: green; */
+    width: 90%;
+    /* margin-top: 0rem; */
+    /* animation: showcase-info-flyin 1s linear; */
+  }
 
   .drop-bg {
     display: none;
@@ -693,7 +710,7 @@
 
   .container {
     position: relative;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
     /* position: relative;
     width: 100%;
     max-width: 75rem;
