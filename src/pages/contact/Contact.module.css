@@ -236,6 +236,13 @@ textarea.form-input {
 
 /* Small screens (640px) and below */
 @media only screen and (max-width: 640px) {
+  .contact-form {
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
   /* Styles for small screens go here */
 }
 
