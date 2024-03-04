@@ -14,7 +14,7 @@ export default function LoginModal({ open, children, onClose }) {
         </div>
         <div className={styles["children-container"]}>
           <span className={styles["close-icon"]} onClick={onClose}>
-            <svg 
+            <svg
               fill="none"
               viewBox="0 0 24 24"
               height="1em"

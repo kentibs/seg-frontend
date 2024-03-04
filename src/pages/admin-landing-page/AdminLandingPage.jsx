@@ -4,7 +4,7 @@ import styles from "./AdminLandingPage.module.css";
 import { Link } from "react-router-dom";
 import { About } from "../about/About";
 import { Services } from "../services/Services";
-import { Events } from "../events/Events";
+// import { Events } from "../events/Events";
 import { Committee } from "../committee/Committee";
 import { Contact } from "../contact/Contact";
 import { Subscription } from "../subscription/Subscription";
@@ -17,6 +17,15 @@ import { AdminRegister } from "../../components/adimin-register/AdminRegister";
 import { FreqAskedQuestions } from "../freq-asked-questions/FreqAskedQuestions";
 import { Lifestyle } from "../lifestyle/Lifestyle";
 import { ForgotPassword } from "../../components/forgot-password/ForgotPassword";
+import {
+  FaUsers,
+  FaBook,
+  FaBriefcase,
+  FaTools,
+  FaUserTie,
+  FaIndustry,
+  FaHandsHelping,
+} from "react-icons/fa";
 
 export const AdminLandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -80,20 +89,50 @@ export const AdminLandingPage = () => {
       <Header scrolled={scrolled} />
       <main className={styles["main_container"]}>
         <section className={styles["showcase-area"]} id="home">
-          <img
+          {/* <img
             src="square1.png"
             alt="square shape"
             className={styles["square"]}
-          />
+          /> */}
           <div className={styles["container"]}>
             <div className={styles["showcase-info"]}>
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
               {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
               <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
+
               <p className={styles["text"]}>
-                We are AAPG: American Association of Petroleum Geologists, A
-                student chapter at Makerere University Department of Geology and
-                Petroleum studies
+                Welcome to AAPG Muk Chapter - Advancing Geoscience for a
+                Sustainable Future. We are dedicated to:
+                <ul className={styles["hero-list"]}>
+                  <li className={styles["hero-list-item"]}>
+                    <FaUsers className={styles["hero-list-icon"]} /> Connecting
+                    Students & Professionals
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaTools className={styles["hero-list-icon"]} /> Skill
+                    Development Workshops
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaHandsHelping className={styles["hero-list-icon"]} />{" "}
+                    <span> Community Engagement</span>
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaUserTie className={styles["hero-list-icon"]} />{" "}
+                    Internship Opportunities
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaBook className={styles["hero-list-icon"]} /> Knowledge
+                    Sharing
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaBriefcase className={styles["hero-list-icon"]} />{" "}
+                    Networking Events
+                  </li>
+                  <li className={styles["hero-list-item"]}>
+                    <FaIndustry className={styles["hero-list-icon"]} /> Industry
+                    Insights
+                  </li>
+                </ul>
               </p>
               <div className={styles["cta"]}>
                 <Link
@@ -121,10 +160,14 @@ export const AdminLandingPage = () => {
               </div>
             </div>
 
+            {/* <div className={styles["showcase-image"]}> */}
+            {/* <img src="muk-tower.jpg" className={styles["muk-img"]} /> */}
+
+            {/* <h1 className={styles["seg-muk-img-title"]}>AAPG MUK CHAPTER</h1> */}
             <div className={styles["group-photo-container"]}>
               <img
                 src={activeImage}
-                alt="President SEG"
+                alt="AAPG lifestyle"
                 className={styles["person"]}
               />
               <a href="#lifestyle" className={styles["learn-more-msg"]}>
@@ -138,6 +181,13 @@ export const AdminLandingPage = () => {
                       activeImage === "group-photo.jpg" && styles["active"]
                     }`}
                     onClick={() => handleDotClick("group-photo.jpg")}
+                  ></span>
+
+                  <span
+                    className={`${styles["dot"]} ${
+                      activeImage === "mission.jpg" && styles["active"]
+                    }`}
+                    onClick={() => handleDotClick("mission.jpg")}
                   ></span>
 
                   <span
@@ -179,17 +229,21 @@ export const AdminLandingPage = () => {
                 src="circle1.png"
                 alt="circle dots"
                 className={styles["circle"]}
-              /> */}
+              /> */} 
             <img src="dots.png" alt="circle dots" className={styles["dots"]} />
             {/* </div> */}
             {/* <img src="/oil-drop.png" className={styles["drop-bg"]} /> */}
             <img src="/Oil_well_icon.png" className={styles["oil-bg"]} />
           </div>
         </section>
+        <div className={styles["triangle-container"]}>
+          <img src="/oil-drop.png" className={styles["triangle"]} />
+        </div>
+
         <About />
         <Services />
         <Lifestyle />
-        <Events />
+        {/* <Events /> */}
         <Committee />
         <FreqAskedQuestions />
         <Contact />

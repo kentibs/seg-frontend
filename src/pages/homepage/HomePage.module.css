@@ -36,7 +36,7 @@
   width: 8rem;
   height: auto;
   left: 20%;
-  top: 6%;
+  top: 7%;
   transform: translate(-50%, -50%);
   /* background-color: red; */
   /* z-index: 100; */
@@ -573,7 +573,7 @@
   .showcase-image {
     /* display: none; */
   }
- 
+
   .triangle {
     display: block;
     opacity: 0.1;

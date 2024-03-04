@@ -4,7 +4,7 @@ import styles from "./HomePage.module.css";
 import { Link } from "react-router-dom";
 import { About } from "../about/About";
 import { Services } from "../services/Services";
-import { Events } from "../events/Events";
+// import { Events } from "../events/Events";
 import { Committee } from "../committee/Committee";
 import { Contact } from "../contact/Contact";
 import { Subscription } from "../subscription/Subscription";
@@ -246,7 +246,7 @@ export const HomePage = () => {
         <About />
         <Services />
         <Lifestyle />
-        <Events />
+        {/* <Events /> */}
         <Committee />
         <Testimonial />
         <FreqAskedQuestions />

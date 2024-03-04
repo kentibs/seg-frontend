@@ -90,7 +90,7 @@ export const Header = ({ scrolled }) => {
                 Lifestyle
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#events"
                 className={`${styles["nav-link"]} ${
@@ -100,7 +100,7 @@ export const Header = ({ scrolled }) => {
               >
                 Events
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#committee"
@@ -195,13 +195,13 @@ export const Header = ({ scrolled }) => {
 
               <li>
                 <a
-                  href="#events"
+                  href="#lifestyle"
                   className={`${styles["nav-link"]} ${
-                    activeLink === "events" && styles["active"]
+                    activeLink === "lifestyle" && styles["active"]
                   }`}
-                  onClick={() => setActiveLink("events")}
+                  onClick={() => setActiveLink("lifestyle")}
                 >
-                  Events
+                  Lifestyle
                 </a>
               </li>
 
