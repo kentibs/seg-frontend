@@ -46,6 +46,25 @@
   font-size: 1rem;
 }
 
+.cancel-btn {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-grey-300);
+  transition: 0.3s; 
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+.cancel-btn:hover {
+  background-color: var(--color-grey-300);
+}
+.btn-main-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
 .generate-btn {
   padding: 0.5rem 0.8rem;
   color: var(--color-grey-0);
@@ -57,27 +76,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-.cancel-btn {
-  padding: 0.5rem 0.5rem;
-  border-radius: 5px;
-  background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-300);
-  transition: 0.3s;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  color: #000;
-}
-.cancel-btn:hover {
-  background-color: var(--color-grey-300);
-}
-.btn-main-container {
-  display: flex;
-  justify-content: flex-end;
-}
 .generate-btn:hover {
   color: var(--color-grey-0);
   background-color: #007fff;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
 }
 
 .btn-container {

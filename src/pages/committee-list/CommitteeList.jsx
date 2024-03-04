@@ -199,7 +199,7 @@ export const CommitteeList = () => {
                         <img
                           src={row?.imgUrl}
                           alt=""
-                          className={styles["img-item"]} 
+                          className={styles["img-item"]}
                         />
 
                         <span className={styles["table-item"]}>
