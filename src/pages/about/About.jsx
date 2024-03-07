@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import { IoMdDownload } from "react-icons/io";
+// import { IoMdDownload } from "react-icons/io";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import ReadMoreModal from "../../features/read-more-modal/ReadMoreModal";
+import { useState } from "react";
 
 export const About = () => {
-  const downloadPdf = () => {
-    const pdfUrl = "/seg.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "AAPG_description.pdf";
-    link.click();
+  const [isReadMore2Open, setIsReadMore2Open] = useState(false);
+
+  const closeReadMoreModal2Handler = () => {
+    setIsReadMore2Open(false);
   };
+
+  // const downloadPdf = () => {
+  //   const pdfUrl = "/seg.pdf";
+  //   const link = document.createElement("a");
+  //   link.href = pdfUrl;
+  //   link.download = "AAPG_description.pdf";
+  //   link.click();
+  // };
   return (
     <>
       <section className={styles["about"]} id="about">
@@ -499,14 +508,62 @@ export const About = () => {
               AAPG Muk Chapter, <br /> Since 2014
             </h1>
             <p className={styles["text"]}>
-              We are greatly concerned with advancing the science of geology,
+              {/* We are greatly concerned with advancing the science of geology,
               particularly in relation to petroleum, natural gas, and mineral
               resources. Our mission includes promoting a strong relation
               between students and professionals in the Geosciences sector as
               well as providing a platform for sharing and accessing the latest
-              and emerging technical and academic knowledge
+              and emerging technical and academic knowledge */}
+              Hey there, fellow geoscience enthusiasts! Have you ever wondered
+              how to make the most out of your time at university while
+              preparing for a future in the exciting world of energy and
+              extractives? Look no further than the Association of American
+              Petroleum Geologists- Makerere Students&apos; Chapter! With over
+              150 passionate members and counting, our chapter at Makerere
+              University is the ultimate platform for personal and professional
+              growth. Let&apos;s dive into the amazing journey that awaits you
+              as a member of our vibrant and dynamic community.
             </p>
-            <div className={styles["cta"]}>
+            <Link
+              to=""
+              className={styles["secondary-btn"]}
+              onClick={() => setIsReadMore2Open(true)}
+            >
+              <span>Explore more</span>&nbsp;
+              <RxDoubleArrowRight />
+            </Link>
+            <ReadMoreModal
+              open={isReadMore2Open}
+              onClose={() => closeReadMoreModal2Handler()}
+            >
+              <div className={styles["card-desc"]}>
+                <h3 className={styles["card-name"]}>About Us</h3>
+                <p>
+                  We are greatly concerned with advancing the science of
+                  geology, particularly in relation to petroleum, natural gas,
+                  and mineral resources. Our mission includes promoting a strong
+                  relation between students and professionals in the Geosciences
+                  sector as well as providing a platform for sharing and
+                  accessing the latest and emerging technical and academic
+                  knowledge
+                </p>
+                <br />
+                <p>
+                  <b>Our Vision:</b> To foster scientific research, to advance
+                  the science of geology, to promote technology, and to inspire
+                  high professional conduct
+                </p>
+                <br />
+                <p>
+                  <b>Our Mission:</b> To promote a strong relation between
+                  students and professionals in the Geosciences sector by
+                  providing a platform for sharing and accessing the latest and
+                  technical and academic knowledge.
+                </p>
+              </div>
+            </ReadMoreModal>
+
+            {/* <div className={styles["cta"]}>
               <Link to="mailto:aapgmuk@gmail.com" className={styles["btn"]}>
                 Contact us
               </Link>
@@ -518,7 +575,7 @@ export const About = () => {
                 <IoMdDownload />
                 &nbsp;Download details
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

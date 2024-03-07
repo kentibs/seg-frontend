@@ -28,6 +28,7 @@ import {
 } from "react-icons/fa";
 
 import { Testimonial } from "../testimonial/Testimonial";
+// import { QrCode } from "../qr-code/QrCode";
 
 export const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -254,6 +255,7 @@ export const HomePage = () => {
         <Subscription />
       </main>
       <Footer />
+      {/* <QrCode /> */}
     </div>
   );
 };

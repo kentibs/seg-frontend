@@ -9,7 +9,7 @@ export const Testimonial = () => {
     <section className={styles["testimonial-main-container"]}>
       <div className={styles["header"]}>
         <h3 className={styles["sub-heading"]}>Testimonials</h3>
-        <h1 className={styles["heading"]}>Our Witnesses</h1>
+        <h1 className={styles["heading"]}>Testimonials</h1>
       </div>
       <div className={styles["testimonial-container"]}>
         <div className={styles["testimonial-content"]}>

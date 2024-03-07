@@ -20,132 +20,169 @@ export const Lifestyle = () => {
   const handleShowLess = () => {
     setVisibleItems(6);
   };
+
+  // const removedEvents = [
+  //   {
+  //     imgUrl: "ladiesCapacity.jpg",
+  //     category: "training",
+  //     title: "Capacity building for ladies",
+  //     description:
+  //       "AAPG ladies capacity and soft skills training organized in partnership with SLB Uganda",
+  //   },
+  //   {
+  //     imgUrl: "ladies-soft-skills.jpg",
+  //     category: "training",
+  //     title: "Capacity building for ladies",
+  //     description:
+  //       "AAPG ladies capacity and soft skills training organized in partnership with SLB Uganda",
+  //   },
+  //   {
+  //     imgUrl: "membership2.jpg",
+  //     category: "other",
+  //     title: "Membership",
+  //     description:
+  //       "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
+  //   },
+  //   {
+  //     imgUrl: "exh2.jpg",
+  //     category: "other",
+  //     title: "Exhibition",
+  //     description:
+  //       "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
+  //   },
+  //   {
+  //     imgUrl: "software-training.jpg",
+  //     category: "training",
+  //     title: "Software training",
+  //     description: "GIS software training at Math Building room 115",
+  //   },
+
+  //   {
+  //     imgUrl: "women-in-energy.jpg",
+  //     category: "other",
+  //     title: "Women in energy",
+  //     description: "Women in energy forum",
+  //   },
+
+  //   {
+  //     imgUrl: "conference-visit.jpg",
+  //     category: "other",
+  //     title: "Conference",
+  //     description:
+  //       "Attending the 10th East African Petroleum Conference at Serena Hotel, Kampala",
+  //   },
+  //   {
+  //     imgUrl: "sports3.jpg",
+  //     category: "sports",
+  //     title: "Year 3 team",
+  //     description: "Year 3 sports team",
+  //   },
+  //   {
+  //     imgUrl: "leadership-training.jpg",
+  //     category: "other",
+  //     title: "Leadership training",
+  //     description: "Leadership training",
+  //   },
+  //   {
+  //     imgUrl: "some-leaders.jpg",
+  //     category: "other",
+  //     title: "Some Leaders",
+  //     description: "Some of the AAPG leaders",
+  //   },
+  //   {
+  //     imgUrl: "gis-team.jpg",
+  //     category: "training",
+  //     title: "GIS training members",
+  //     description: "GIS software training at Math Building room 115",
+  //   },
+  //   {
+  //     imgUrl: "cosl1.jpg",
+  //     category: "other",
+  //     title: "Visit to COSL",
+  //     description:
+  //       "It was Tuesday morning when several of our members visited COSL following the Resevoir modelling challenge.",
+  //   },
+  //   {
+  //     imgUrl: "sports-galla.jpg",
+  //     category: "sports",
+  //     title: "Sports galla",
+  //     description: "",
+  //   },
+  //   {
+  //     imgUrl: "group-photo.jpg",
+  //     category: "other",
+  //     title: "Group photo",
+  //     description: "",
+  //   },
+  //   { imgUrl: "ev5.jpg", category: "conference", title: "Certificate Awards" },
+  //   { imgUrl: "orientation.jpg", category: "other", title: "Orientation" },
+  // ];
   const events = [
     {
-      imgUrl: "ladiesCapacity.jpg",
-      category: "training",
-      title: "Ladies capacity",
-      description:
-        "AAPG ladies capacity and soft skills training organized in partnership with SLB Uganda",
-    },
-    {
-      imgUrl: "ladies-soft-skills.jpg",
-      category: "training",
-      title: "Ladies Capacity",
-      description:
-        "AAPG ladies capacity and soft skills training organized in partnership with SLB Uganda",
-    },
-    {
-      imgUrl: "ladies-group-photo.jpg",
-      category: "training",
-      title: "Ladies group photo",
-      description:
-        "Group photo taken on final day of training. AAPG ladies capacity and soft skills training organized in partnership with SLB Uganda",
-    },
-    {
-      imgUrl: "membership.jpg",
+      imgUrl: "certificates.jpg",
       category: "other",
-      title: "Membership",
+      title:
+        "Exciting challenges: quizzes, competitions, and software training",
       description:
-        "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
-    },
-    {
-      imgUrl: "membership2.jpg",
-      category: "other",
-      title: "Membership",
-      description:
-        "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
+        "Ready to put your geoscience knowledge to the test? Our chapter organizes quizzes and competitions that range from theoretical assessments to practical challenges for instance, our Geoscience Trivia Quizzes, Petrel Challenges. The winners of the previous competitions earned opportunities for free training in GIS or Petrel software, sponsored by Big Solutions Group and Slb. Additionally, we partner with companies like Slb (formerly Schlumberger) to provide comprehensive software training sessions, equipping students with valuable skills in Petrel and GIS, as well as practical lessons in geological mapping.",
     },
     {
       imgUrl: "chilling.jpg",
       category: "other",
-      title: "Chilling time",
-      description: "",
-    },
-    {
-      imgUrl: "exh1.jpg",
-      category: "other",
-      title: "Exhibition",
+      title: "Building networks for success",
       description:
-        "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
+        "In today's competitive world, networking is key to unlocking future opportunities. By joining our chapter, you gain access to a vast network of professionals, industry experts, and fellow geoscience enthusiasts. Through guest lectures, career fairs, and networking sessions, you will have the chance to interact with individuals who can offer valuable insights, mentorship, and potential career pathways.",
     },
     {
-      imgUrl: "exh2.jpg",
+      imgUrl: "bulletin.jpg",
       category: "other",
-      title: "Exhibition",
+      title: "Stay informed with the AAPG Weekly Bulletins",
       description:
-        "Membership drive where our committee members put in the time and effort to help students attain AAPG membership.",
+        "Staying updated with the latest trends and developments in the petroleum industry and extractives sector is crucial. That's why our chapter publishes the AAPG-MUK Weekly Bulletin, a comprehensive publication that brings you the latest industry news, technological advancements, global oil and gas prices, and key discoveries. This weekly bulletin also includes a quick quiz section, allowing students to test their knowledge and win exciting AAPG branded prizes.",
     },
     {
-      imgUrl: "software-training.jpg",
+      imgUrl: "lecture-series.jpg",
       category: "training",
-      title: "Software training",
-      description: "GIS software training at Math Building room 115",
-    },
-    {
-      imgUrl: "women-in-energy.jpg",
-      category: "other",
-      title: "Women in energy",
-      description: "Women in energy forum",
+      title: "Bridging the gap through AAPG lecture series",
+      description:
+        "We believe in connecting students with industry professionals to bridge the gap between academia and the professional world. Our special AAPG Lecture Series features renowned speakers like Mr. Dozith Abeinomugisha (Director Midstream, Petroleum Authority of Uganda). These experts share their experiences, insights, and geoscience-centered knowledge, inspiring students to pursue their career goals. Through these engaging sessions, students gain exposure to industry norms, expand their focus, and develop a deeper interest in geology and geosciences.",
     },
     {
       imgUrl: "tilenga-visit.jpg",
       category: "training",
-      title: "Tilenga visit",
-      description: "Visit to Tilega project",
-    },
-    {
-      imgUrl: "conference-visit.jpg",
-      category: "other",
-      title: "Conference",
+      title: "Empowering members for international engagement",
       description:
-        "Attending the 10th East African Petroleum Conference at Serena Hotel, Kampala",
+        "As an AAPG chapter member at Makerere University, you're not just limited to local activities. We are committed to empowering our members to participate in international events organized by AAPG International. These opportunities allow you to connect with geoscientists from around the globe, attend conferences, present research, and explore the latest advancements in the field. The world becomes your stage, and the possibilities are limitless.",
     },
     {
-      imgUrl: "sports3.jpg",
-      category: "sports",
-      title: "Year 3 team",
-      description: "Year 3 sports team",
-    },
-    {
-      imgUrl: "leadership-training.jpg",
-      category: "other",
-      title: "Leadership training",
-      description: "Leadership training",
-    },
-    {
-      imgUrl: "some-leaders.jpg",
-      category: "other",
-      title: "Some Leaders",
-      description: "Some of the AAPG leaders",
-    },
-    {
-      imgUrl: "gis-team.jpg",
+      imgUrl: "ladies-group-photo.jpg",
       category: "training",
-      title: "GIS training members",
-      description: "GIS software training at Math Building room 115",
-    },
-    {
-      imgUrl: "cosl1.jpg",
-      category: "other",
-      title: "Visit to COSL",
+      title: "Empowering women through career guidance and skills development",
       description:
-        "It was Tuesday morning when several of our members visited COSL following the Resevoir modelling challenge.",
+        "We are committed to fostering gender diversity in the industry. Our chapter, in collaboration with Slb organizes the 'Women in Energy' program, featuring seminars where successful women in the industry share their experiences, offer mentorship opportunities, and inspire aspiring female geoscientists. The program also includes a Skills Development Workshop that equips female finalists with essential skills for their job search, including CV preparation, interview etiquette, and workplace decorum.",
     },
     {
-      imgUrl: "sports-galla.jpg",
-      category: "sports",
-      title: "Sports galla",
-      description: "",
-    },
-    {
-      imgUrl: "group-photo.jpg",
+      imgUrl: "membership.jpg",
       category: "other",
-      title: "Group photo",
-      description: "",
+      title: "A Chapter built on collaboration",
+      description:
+        "We believe in the power of collaboration and the strength that comes from working together. We have fostered close ties with various sister societies within the Department of Geology and Petroleum Studies, including the Society of Petroleum Engineers Makerere Students Chapter (SPE Makerere), Society of Exploration Geophysicists Makerere Students Chapter (SEG Makerere), and the Makerere Petroleum and Geology Society (MPGS). This collaborative spirit allows us to create extraordinary opportunities for our members to grow both personally and professionally.",
     },
-    { imgUrl: "ev5.jpg", category: "conference", title: "Certificate Awards" },
-    { imgUrl: "orientation.jpg", category: "other", title: "Orientation" },
+    {
+      imgUrl: "voice-matters.jpg",
+      category: "other",
+      title: "Your Voice, Your Impact",
+      description:
+        "Being part of the AAPG chapter means your voice matters. We value the opinions and ideas of every member and encourage active participation in shaping the direction of our activities. Whether you want to organize an event, present your research, or contribute to the chapter's initiatives, we provide a platform for you to make a real impact and leave a legacy.",
+    },
+
+    {
+      imgUrl: "exh1.jpg",
+      category: "other",
+      title: "Innovation & Creativity",
+      description:
+        "We are committed to fostering creativity and innovation among students encouraging the practical application of the knowledge acquired in class.",
+    },
   ];
 
   const itemsToShow = events.slice(0, visibleItems);
@@ -176,10 +213,10 @@ export const Lifestyle = () => {
         <div className={styles["container"]}>
           <div className={styles["events_header"]}>
             <div className={styles["events_title"]}>
-              <h3 className={styles["sub-heading"]}>AAPG Lifestyle</h3>
-              <h1 className={styles["heading"]}>Latest lifestyle vibes</h1>
+              <h3 className={styles["sub-heading"]}>Activities</h3>
+              <h1 className={styles["heading"]}>Chapter Activities</h1>
             </div>
-            <div className={styles["filter-btns"]}>
+            {/* <div className={styles["filter-btns"]}>
               <button
                 onClick={() => setActiveTab("all")}
                 className={`${styles["filter-btn"]} ${
@@ -204,14 +241,7 @@ export const Lifestyle = () => {
               >
                 Sports
               </button>
-              <button
-                className={`${styles["filter-btn"]} ${
-                  activeTab === "competition" && styles["active-tab"]
-                }`}
-                onClick={() => setActiveTab("competition")}
-              >
-                Competitions
-              </button>
+
               <button
                 className={`${styles["filter-btn"]} ${
                   activeTab === "other" && styles["active-tab"]
@@ -220,7 +250,7 @@ export const Lifestyle = () => {
               >
                 Other
               </button>
-            </div>
+            </div> */}
           </div>
           <div className={styles["events-gallery"]}>
             {activeTab === "all" &&

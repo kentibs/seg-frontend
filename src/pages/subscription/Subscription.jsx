@@ -32,7 +32,7 @@ export const Subscription = () => {
             <h1 className={styles["heading"]}>Get our latest updates</h1>
             <p className={styles["text"]}>
               Subscribe to our newsletter and receive the latest updates, news,
-              and exclusive offers directly to your inbox.
+              weekly bulletins and exclusive offers directly to your inbox.
             </p>
           </div>
           <form className={styles["form"]} onSubmit={handleSubscribeSubmit}>

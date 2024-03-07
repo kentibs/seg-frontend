@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Contact } from "./pages/contact/Contact";
-import { HomePage } from "./pages/homepage/HomePage"; 
+import { HomePage } from "./pages/homepage/HomePage";
 import { AdminLandingPage } from "./pages/admin-landing-page/AdminLandingPage";
 import { Notifications } from "./features/notifications/Notifications";
 import { hideCardNotification } from "./store/actions/notification";
@@ -32,6 +32,7 @@ import { UserDashboard } from "./pages/user-dashboard/UserDashboard";
 import { UserCompetitions } from "./pages/user-competitions/UserCompetitions";
 import { UserProducts } from "./pages/products/UserProducts";
 import { baseUrl } from "./utils/utils";
+// import { QrCode } from "./pages/qr-code/QrCode";
 // import { baseUrl } from "./utils/utils";
 
 export default function App() {
@@ -140,6 +141,7 @@ export default function App() {
                       />
                     )}
                     <HomePage />
+                    {/* <QrCode /> */}
                   </>
                 }
               />

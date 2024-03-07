@@ -15,7 +15,7 @@ export const Services = () => {
   const [competitions, setCompetitions] = useState(0);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isReadMore1Open, setIsReadMore1Open] = useState(false);
-  const [isReadMore2Open, setIsReadMore2Open] = useState(false); 
+  const [isReadMore2Open, setIsReadMore2Open] = useState(false);
   const [isReadMore3Open, setIsReadMore3Open] = useState(false);
   const [isReadMore4Open, setIsReadMore4Open] = useState(false);
   const [years, setYears] = useState(0);
@@ -281,7 +281,7 @@ export const Services = () => {
                 <h3 className={styles["card-name"]}>Research</h3>
                 <p>
                   {sliceText(
-                    "We encourage research among our students in various ways including incentives associated with winning various competitions such as essay writing, exhibitions or project development as well as other skills acquired from various softwares such as Reservoir modelling challenges solved by softwares such as Petrel, CMG etc, data collection, preparation and visualization using softwares like ArcGIS, QGIS etc. We also do promote research through various Internship programs and trainings from Professionals as well as Professional lectures."
+                    "We encourage research among our members in various ways including incentives associated with winning various competitions such as essay writing, exhibitions or project development as well as other skills acquired from various softwares such as Reservoir modelling challenges solved by softwares such as Petrel, CMG etc, data collection, preparation and visualization using softwares like ArcGIS, QGIS etc. We also do promote research through various Internship programs and trainings from Professionals as well as Professional lectures."
                   )}
                 </p>
               </div>
@@ -301,7 +301,7 @@ export const Services = () => {
                 <div className={styles["card-desc"]}>
                   <h3 className={styles["card-name"]}>Research</h3>
                   <p>
-                    We encourage research among our students in various ways
+                    We encourage research among our members in various ways
                     including incentives associated with winning various
                     competitions such as essay writing, exhibitions or project
                     development as well as other skills acquired from various
@@ -322,7 +322,7 @@ export const Services = () => {
                 <h3 className={styles["card-name"]}>Opportunities</h3>
                 <p>
                   {sliceText(
-                    "Owing to the transformative activities and events within the Association as well as the associated exposure of our members, the resultant opportunities are endless especially considering the spiced up student portfolio as well as direct contact with the employers themselves. Therefore, our members are highly previleged with several opportunities such as internship opportunities, scholarship opportunities, job opportunities among others."
+                    "Owing to the transformative activities and events within the Association as well as the associated exposure of our members, the resultant opportunities are endless especially considering the enriched student portfolio as well as direct contact with the employers themselves."
                   )}
                 </p>
               </div>
@@ -345,11 +345,11 @@ export const Services = () => {
                     Owing to the transformative activities and events within the
                     Association as well as the associated exposure of our
                     members, the resultant opportunities are endless especially
-                    considering the spiced up student portfolio as well as
-                    direct contact with the employers themselves. Therefore, our
+                    considering the enriched student portfolio as well as direct
+                    contact with the employers themselves. Therefore, our
                     members are highly privileged with several opportunities
-                    such as internship opportunities, scholarship opportunities,
-                    job opportunities among others.{" "}
+                    such as research grants, scholarship opportunities,
+                    softskills trainings among others.
                   </p>
                 </div>
               </ReadMoreModal>
