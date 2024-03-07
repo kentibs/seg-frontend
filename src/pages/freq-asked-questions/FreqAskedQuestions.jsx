@@ -22,7 +22,7 @@ export const FreqAskedQuestions = () => {
   };
 
   return (
-    <div className={styles["freq-asked-questions-container"]}>
+    <div className={styles["freq-asked-questions-container"]} id="freq">
       <h3 className={styles["sub-heading"]}>FAQs</h3>
       <h1 className={styles["heading"]}>Frequently Asked Questions</h1>
 

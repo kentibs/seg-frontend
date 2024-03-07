@@ -68,7 +68,7 @@ export const Header = ({ scrolled }) => {
                 About
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#services"
                 className={`${styles["nav-link"]} ${
@@ -78,7 +78,7 @@ export const Header = ({ scrolled }) => {
               >
                 Services
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#lifestyle"
@@ -87,7 +87,7 @@ export const Header = ({ scrolled }) => {
                 }`}
                 onClick={() => setActiveLink("lifestyle")}
               >
-                Lifestyle
+                Activities
               </a>
             </li>
             {/* <li>
@@ -109,7 +109,18 @@ export const Header = ({ scrolled }) => {
                 }`}
                 onClick={() => setActiveLink("committee")}
               >
-                Committee
+                Executive Committee
+              </a>
+            </li>
+            <li>
+              <a
+                href="#freq"
+                className={`${styles["nav-link"]} ${
+                  activeLink === "FAQ" && styles["active"]
+                }`}
+                onClick={() => setActiveLink("FAQ")}
+              >
+                FAQ
               </a>
             </li>
             <li>
@@ -201,9 +212,21 @@ export const Header = ({ scrolled }) => {
                   }`}
                   onClick={() => setActiveLink("lifestyle")}
                 >
-                  Lifestyle
+                  Activities
                 </a>
               </li>
+
+              {/* <li>
+                <a
+                  href="#freq"
+                  className={`${styles["nav-link"]} ${
+                    activeLink === "FAQ" && styles["active"]
+                  }`}
+                  onClick={() => setActiveLink("FAQ")}
+                >
+                  FAQ
+                </a>
+              </li> */}
 
               <li>
                 <a
