@@ -1,0 +1,195 @@
+.advisory-committee-container {
+  margin-top: 10rem;
+}
+
+.secondary-btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color-1);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+  border-bottom: 2.5px solid var(--main-color-2);
+  text-decoration: none;
+  border-radius: 0px;
+  padding: 0.15px 0;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+.secondary-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: var(--main-color-1);
+  transition: 0.3s ease-in-out;
+}
+.secondary-btn:hover::before {
+  width: 100%;
+}
+
+.sub-heading {
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-left: 3px solid var(--main-color-2);
+  padding: 0.13rem 0.75rem;
+  margin-bottom: 1rem;
+  /* margin-bottom: 0.7rem; */
+  font-weight: 500;
+  animation: subheading-flyin 1s linear;
+}
+.heading {
+  color: var(--heading-color);
+  font-size: 3rem;
+  /* font-family: "Abril Fatface", cursive; */
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.advisor-img {
+  width: 10rem;
+  height: auto;
+  border-radius: 5px;
+  float: left;
+  margin-right: 1rem;
+}
+
+.card-img {
+  width: 16rem;
+  height: 16rem;
+}
+.card-content {
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  /* background-color: pink; */
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  /* background-color: green; */
+}
+
+.card-img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card-name {
+  color: var(--heading-color);
+}
+
+.card-title {
+  color: var(--heading-color);
+}
+
+.load-more-container {
+  /* background-color: green; */
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  .advisory-committee-container {
+    margin-top: 10rem;
+    padding: 0 1.3rem;
+  }
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+  .committee-container {
+    margin-top: 10rem;
+    padding: 0 1.3rem;
+  }
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  .advisory-committee-container {
+    margin-top: 10rem;
+    padding: 0 1.3rem;
+  }
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  .advisory-committee-container {
+    margin-top: 10rem;
+    padding: 0 1.3rem;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    /* background-color: pink; */
+  }
+
+  .card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    /* background-color: green; */
+  }
+
+  .card-img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .card-name {
+    color: var(--heading-color);
+  }
+
+  .card-title {
+    color: var(--heading-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* Two cards per row on screens up to 768px wide */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* One card per row on screens up to 480px wide */
+  }
+}

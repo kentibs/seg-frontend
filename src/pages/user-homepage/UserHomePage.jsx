@@ -11,7 +11,7 @@ import { UserHeader } from "../../components/user-header/UserHeader";
 
 export const UserHomePage = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [botActive, setBotActive] = useState(false);
+  const [botActive, setBotActive] = useState(false); 
 
   console.log("BOT ACTIVE outside", botActive);
 

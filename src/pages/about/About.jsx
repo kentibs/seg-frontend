@@ -508,13 +508,13 @@ export const About = () => {
               AAPG Muk Chapter, <br /> Since 2014
             </h1>
             <p className={styles["text"]}>
-              {/* We are greatly concerned with advancing the science of geology,
+              We are greatly concerned with advancing the science of geology,
               particularly in relation to petroleum, natural gas, and mineral
               resources. Our mission includes promoting a strong relation
               between students and professionals in the Geosciences sector as
               well as providing a platform for sharing and accessing the latest
-              and emerging technical and academic knowledge */}
-              Hey there, fellow geoscience enthusiasts! Have you ever wondered
+              and emerging technical and academic knowledge
+              {/* Hey there, fellow geoscience enthusiasts! Have you ever wondered
               how to make the most out of your time at university while
               preparing for a future in the exciting world of energy and
               extractives? Look no further than the Association of American
@@ -522,7 +522,7 @@ export const About = () => {
               150 passionate members and counting, our chapter at Makerere
               University is the ultimate platform for personal and professional
               growth. Let&apos;s dive into the amazing journey that awaits you
-              as a member of our vibrant and dynamic community.
+              as a member of our vibrant and dynamic community. */}
             </p>
             <Link
               to=""

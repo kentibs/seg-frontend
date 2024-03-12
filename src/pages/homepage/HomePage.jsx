@@ -26,8 +26,9 @@ import {
   FaIndustry,
   FaHandsHelping,
 } from "react-icons/fa";
+import { AdvisoryCommittee } from "../advisory-committee/AdvisoryCommittee";
 
-import { Testimonial } from "../testimonial/Testimonial";
+// import { Testimonial } from "../testimonial/Testimonial";
 // import { QrCode } from "../qr-code/QrCode";
 
 export const HomePage = () => {
@@ -248,8 +249,9 @@ export const HomePage = () => {
         <Services />
         <Lifestyle />
         {/* <Events /> */}
+        <AdvisoryCommittee />
         <Committee />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <FreqAskedQuestions />
         <Contact />
         <Subscription />

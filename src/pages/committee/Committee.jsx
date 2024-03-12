@@ -49,7 +49,7 @@ export const Committee = () => {
       title: "President",
       period: "2023-2024",
       description:
-        "The Executive Officer and Official Representative for the Association on all matters pertaining to the public. Serves as the Chair of the executive committee and provides stewardship for the team. She also assigns/delegates duties to members of the executive in accordance with the bylaws of the Chapter and ensures the mission and vision of the Association are upheld.",
+        "The Executive Officer and Official Representative for the Association on all matters pertaining to the public. Serves as the Chair of the executive committee and provides stewardship for the team. Also assigns/delegates duties to members of the executive in accordance with the bylaws of the Chapter and ensures the mission and vision of the Association are upheld.",
     },
     {
       imgUrl: "vice.jpg",
@@ -60,7 +60,7 @@ export const Committee = () => {
       title: "Vice President",
       period: "2023-2024",
       description:
-        "Second in command to the President. Oversees the activities of the Association and provides counsel in upholding the by laws.",
+        "Second in command to the President. Oversees the activities of the Association and provides counsel in upholding the by laws. Also in the absence of the president acts as the president and presides over meetings of any committees on behalf of the president such as academics and sports affairs committee, Research and Innovations Committee, IT Committee, accounts committee or any other committee formed by the executive.",
     },
     {
       imgUrl: "ninsiima.jpg",
@@ -71,7 +71,7 @@ export const Committee = () => {
       title: "General Secretary",
       period: "2023-2024",
       description:
-        "Performs all clerical tasks on behalf of the Association. Responsible for tracking progress on all Chapter activities across the academic year. ",
+        "Performs all clerical tasks on behalf of the Association. Responsible for tracking progress on all Chapter activities across the academic year as well as keeping all records and proceedings and General Assembly and Executive Committee. Also assumes responsibilities of the president in absence of both the President and the Vice President and Keeps the register of paid-up members.",
     },
 
     {
@@ -83,7 +83,7 @@ export const Committee = () => {
       period: "2023-2024",
       title: "Treasurer",
       description:
-        "Responsible for all the organization transactions as well as spending and saving strategies. ",
+        "Prepares routine financial accounts/statements and has the responsibility of advising the executive committee of AAPG on financial affairs as well as initiating financial policies and proposing avenues of realizing resources to run AAPG and introduces them to the executive for approval. Is also  in charge of all records of all subscription fees, donations and grants of AAPG and presents records of accounts to the general assembly and the executive committee of AAPG.",
     },
 
     {
@@ -93,9 +93,9 @@ export const Committee = () => {
       gender: "M",
       tel: "0778952182",
       period: "2023-2024",
-      title: "Programs Chair",
+      title: "Programs Chair",
       description:
-        "Responsible for all the organization activities and programs as well as spending and saving strategies associated with these activities. ",
+        "Has the power to call off any pre-arranged function provided it is in the preparatory stage. Also suggests and advises the executive on matters regarding projects the association is undertaking.",
     },
 
     {
@@ -105,9 +105,9 @@ export const Committee = () => {
       gender: "F",
       tel: "0700009182",
       period: "2023-2024",
-      title: "Communications Chair",
+      title: "Communications Chair",
       description:
-        "Responsible for mobilizing and organizing many of the Associations' big events as well as creating a link between the organization and other external organizations including upholding and mantaining a positive image of the Association. .",
+        "Responsible for the official publication of AAPG including collection and dissemination of information on behalf of and for the benefit of the AAPG. Is also responsible for the proper running of the society and is the chief-whip of the general Assembly with the duty to keep peace provided it is reasonably exercised and also acts as the master of ceremonies at any function and related accessions and ensures that all executive members are aware of any information regarding activities of the society.",
     },
     {
       imgUrl: "kelvin.jpg",
@@ -127,10 +127,10 @@ export const Committee = () => {
       email: "pauline@gmail.com",
       gender: "F",
       period: "2023-2024",
-      title: "Innovations Chair",
+      title: "Innovations Chair",
       tel: "0700009182",
       description:
-        "Greatly involved in the organization of social events as one responsible for the exhibitions and promoting innovations among students. ",
+        "Is the chairperson of the Research and innovations Committee and heads the orientation committee for the first-year students. Suggests projects that the association may undertake and presents them to the executive.",
     },
 
     {
@@ -151,7 +151,7 @@ export const Committee = () => {
       name: "Nabulumba Deborah",
       gender: "F",
       tel: "0782363882",
-      title: "Asst. Communications Chair",
+      title: "Asst. Communications Chair",
       period: "2023-2024",
       description:
         "Assists the Communications Chair in all activities and responsibilities regarding Communication within the Association as well as many other duties whenever need arises.",
@@ -163,10 +163,10 @@ export const Committee = () => {
       email: "tracy@gmail.com",
       gender: "F",
       tel: "0742799882",
-      title: "Asst. Communications Chair",
+      title: "Asst. Communications Chair",
       period: "2023-2024",
       description:
-        "Greatly involved in the organization of social events as one responsible for the exhibitions and promoting innovations among students. ",
+        "Assists the Communications Chair in all activities and responsibilities regarding Communication within the Association as well as many other duties whenever need arises.",
     },
     {
       imgUrl: "emma.jpg",
