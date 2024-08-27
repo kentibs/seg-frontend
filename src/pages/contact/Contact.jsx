@@ -38,7 +38,7 @@ export const Contact = () => {
             required
           />
           <input
-            type="text"
+            type="email"
             placeholder="Your email"
             className={styles["form-input"]}
             required

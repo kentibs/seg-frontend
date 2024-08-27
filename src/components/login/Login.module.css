@@ -63,10 +63,10 @@
   font-weight: 500;
 }
 .input_field:focus {
-  border-bottom: 3px solid var(--bg-color-300);
-  border-bottom: 3px solid var(--main-color-1);
   /* border: 3px solid var(--main-color-1); */
+  border-bottom: 3px solid var(--bg-color-300);
   border-bottom: 2px solid var(--main-color-2);
+  border-bottom: 1.5px solid var(--main-color-1);
 }
 .login_btn {
   background-color: var(--bg-color-300);

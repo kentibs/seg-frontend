@@ -16,7 +16,7 @@ export const Login = () => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
-    setShowEyeIcon(!showEyeIcon);
+    setShowEyeIcon(!showEyeIcon); 
   };
 
   const navigate = useNavigate();

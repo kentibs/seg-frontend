@@ -41,6 +41,8 @@
 .input_field:focus {
   border-bottom: 3px solid var(--bg-color-300);
   border-bottom: 2px solid var(--main-color-2);
+  border-bottom: 1.5px solid var(--main-color-1);
+
   /* border-radius: 5px; */
   /* background-color: var(--color-grey-200); */
 }
