@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import styles from "./CommitteeList.module.css";
 import { useState } from "react";
+import ReadMoreCommittee from "../../features/read-more-committee/ReadMoreCommittee";
 
 export const CommitteeList = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -273,7 +274,9 @@ export const CommitteeList = () => {
                             <path d="M6.414 16L16.556 5.858l-1.414-1.414L5 14.586V16h1.414zm.829 2H3v-4.243L14.435 2.322a1 1 0 011.414 0l2.829 2.829a1 1 0 010 1.414L7.243 18zM3 20h18v2H3v-2z" />
                           </svg>
                         </span>
-                        <span className={styles["delete-icon"]}>
+                        <ReadMoreCommittee
+                    openModalElement={
+                      <span className={styles["delete-icon"]}>
                           {" "}
                           <svg
                             viewBox="0 0 1024 1024"
@@ -285,6 +288,23 @@ export const CommitteeList = () => {
                             <path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z" />
                           </svg>
                         </span>
+                    }
+                    // onModalClose={() => {}}
+
+                    // open={isReadMoreOpen}
+                    // onClose={() => closeReadMoreModalHandler()}
+                  >
+                    <div className={styles["delete-warning"]}>
+                      <> 
+                        <p>Are you sure you want to delete this item?</p>
+                        <div className={styles["warning-btns-container"]}>
+                          <button className={styles["cancel-btn"]}>Cancel</button>
+                          <button className={styles["delete-btn"]}>Delete</button>
+                        </div>
+                      </>
+                    </div>
+                  </ReadMoreCommittee>
+                        
                       </span>
                     </TableCell>
                   </TableRow>

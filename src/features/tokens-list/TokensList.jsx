@@ -102,7 +102,7 @@ export const TokensList = () => {
               <TableRow key={index}>
                 <TableCell
                   className={`${styles["tableCells"]} ${
-                    darkMode && styles["darkmode-table"]
+                    darkMode && styles["darkmode-table"] 
                   }`}
                 >
                   <span className={styles["table-item"]}>{row?.token}</span>
@@ -155,12 +155,12 @@ export const TokensList = () => {
                         : styles["fresh"]
                     } `}
                   >
-                    {row?.used ? (
+                    {row?.used ? ( 
                       <p className={styles["used"]}>Used</p>
                     ) : new Date().toLocaleDateString > row?.expiresAt ? (
-                      <p className={styles["expired"]}>Expired</p>
-                    ) : (
                       <p className={styles["fresh"]}>Fresh</p>
+                    ) : (
+                      <p className={styles["expired"]}>Expired</p>
                     )}
                   </span>
                 </TableCell>

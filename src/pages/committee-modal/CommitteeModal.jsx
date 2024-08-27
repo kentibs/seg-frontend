@@ -247,7 +247,7 @@ export const CommitteeModal = ({ setIsCommitteeModalOpen }) => {
               className={styles["cancel-btn"]}
               disabled={isLoading}
               onClick={() => setIsCommitteeModalOpen(false)}
-            >
+            > 
               Cancel
             </button>
             <button

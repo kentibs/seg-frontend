@@ -61,34 +61,34 @@ export default function App() {
     return formattedTime;
   }
   // http://localhost:8080/
-  useEffect(() => {
-    async function signin() {
-      console.log("Loading refresh...");
-      const response = await fetch(`${baseUrl}/api/v1/users/signin`, {
-        method: "POST",
-        body: JSON.stringify({
-          email: "kennedymuhumuza283@gmail.com",
-          password: "kennedy",
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
-      const data = await response.json();
+  // useEffect(() => {
+  //   async function signin() {
+  //     console.log("Loading refresh...");
+  //     const response = await fetch(`${baseUrl}/api/v1/users/signin`, {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         email: "kennedymuhumuza283@gmail.com",
+  //         password: "kennedy",
+  //       }),
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //     });
+  //     const data = await response.json();
 
-      console.log("REFRESH RESPONSE", response);
-      const currentTime = getCurrentTime();
-      console.log(`Time then was: ${currentTime}`);
-      console.log("refresh data", data);
-    }
-    signin();
-    const intervalId = setInterval(() => {
-      signin();
-      console.log("hello");
-    }, 120000);
-    // }, 240000);
-    return () => clearInterval(intervalId);
-  }, []);
+  //     console.log("REFRESH RESPONSE", response);
+  //     const currentTime = getCurrentTime();
+  //     console.log(`Time then was: ${currentTime}`);
+  //     console.log("refresh data", data);
+  //   }
+  //   signin();
+  //   const intervalId = setInterval(() => {
+  //     signin();
+  //     console.log("hello");
+  //   }, 120000);
+  //   // }, 240000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   useEffect(() => {
     const tryLogin = async () => {
