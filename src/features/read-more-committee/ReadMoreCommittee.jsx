@@ -5,7 +5,6 @@ import { useState } from "react";
 // export default function ReadMoreCommittee({ open, children, onClose }) {
 export default function ReadMoreCommittee({ openModalElement, children }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const onOpenHandler = () => setIsOpen(() => true);
   const onCloseHandler = () => setIsOpen(() => false);
   // if (!isOpen) {
@@ -16,8 +15,6 @@ export default function ReadMoreCommittee({ openModalElement, children }) {
   //   props.onModalClose(true);
   // };
   // if (!open) return null;
-  console.log("MODAL OPEN");
-  console.log("IS MODAL OPEN", isOpen);
 
   return (
     <>

@@ -221,6 +221,7 @@ export const forgotPassword = (email) => {
 
     if (!response.ok) {
       const error = await response.json();
+      console.log("forgot password error messaage:", error.message)
       dispatch(
         notificationActions.showCardNotification({
           type: "error",
@@ -232,8 +233,9 @@ export const forgotPassword = (email) => {
       }, [5000]);
       throw new Error(error.message);
     }
-
+    
     const data = await response.json();
+    console.log("forgot password data:", data.message)
     dispatch(
       notificationActions.showCardNotification({
         type: "success",

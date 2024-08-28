@@ -32,6 +32,7 @@ import { UserDashboard } from "./pages/user-dashboard/UserDashboard";
 import { UserCompetitions } from "./pages/user-competitions/UserCompetitions";
 import { UserProducts } from "./pages/products/UserProducts";
 import { baseUrl } from "./utils/utils";
+import ResetPassword from "./pages/reset-password/ResetPassword";
 // import { QrCode } from "./pages/qr-code/QrCode";
 // import { baseUrl } from "./utils/utils";
 
@@ -98,7 +99,7 @@ export default function App() {
 
       const parsedData = JSON.parse(userData);
       if (!userData) {
-        console.log("no data found");
+        // console.log("no data found");
         // navigate("/");
         return <Route path="/" element={<HomePage to="/" replace />} />;
       }
@@ -115,9 +116,9 @@ export default function App() {
     tryLogin();
   }, [dispatch]);
 
-  console.log("redux user", user);
-  console.log("is logged in:", isLoggedIn);
-  console.log("token:", token);
+  // console.log("redux user", user);
+  // console.log("is logged in:", isLoggedIn);
+  // console.log("token:", token);
 
   const closeCardHandler = () => {
     dispatch(hideCardNotification());
@@ -126,6 +127,13 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+        {notification.showCardNotification && (
+          <Notifications
+            type={notification.cardNotificationType}
+            message={notification.cardMessage}
+            onClose={closeCardHandler}
+          />
+        )}
         <Routes>
           {!isLoggedIn && (
             <>
@@ -133,14 +141,16 @@ export default function App() {
                 path="/"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <HomePage />
+                    {/* <QrCode /> */}
+                  </>
+                }
+              />
+              <Route
+                path="/reset-password/:id"
+                element={
+                  <>
+                    <ResetPassword />
                     {/* <QrCode /> */}
                   </>
                 }
@@ -149,13 +159,6 @@ export default function App() {
                 path="/admins"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <AdminLandingPage />
                   </>
                 }
@@ -164,13 +167,6 @@ export default function App() {
                 path="/admin"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <AdminLandingPage />
                   </>
                 }
@@ -179,13 +175,6 @@ export default function App() {
                 path="/committee"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <AdminLandingPage />
                   </>
                 }
@@ -201,13 +190,6 @@ export default function App() {
                 path="/"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <UserHomePage />
                   </>
                 }
@@ -246,13 +228,6 @@ export default function App() {
                 path="/"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
                     <AdminHomePage />
                   </>
                 }
@@ -288,14 +263,6 @@ export default function App() {
                 path="/"
                 element={
                   <>
-                    {notification.showCardNotification && (
-                      <Notifications
-                        type={notification.cardNotificationType}
-                        message={notification.cardMessage}
-                        onClose={closeCardHandler}
-                      />
-                    )}
-
                     <SuperAdminHomePage />
                   </>
                 }

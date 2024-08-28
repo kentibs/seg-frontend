@@ -10,15 +10,15 @@ export const FreqAskedQuestions = () => {
 
   const darkOn = useSelector((state) => state.homeDarkMode.homeDarkMode);
 
-  console.log("Page Active Freq:", activeFreq);
+  // console.log("Page Active Freq:", activeFreq);
 
   const handleFreqClick = (active) => {
-    console.log("Active Freq1:", activeFreq);
+    // console.log("Active Freq1:", activeFreq);
     activeFreq === ""
       ? dispatch(setActiveFreq(active))
       : dispatch(setActiveFreq(""));
-    console.log("clicked");
-    console.log("Active Freq2:", activeFreq);
+    // console.log("clicked");
+    // console.log("Active Freq2:", activeFreq);
   };
 
   return (

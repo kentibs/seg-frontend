@@ -461,9 +461,9 @@ export const CommitteeList = () => {
           </div>
         </div>
       </form>
-                  </ReadMoreCommittee>
+        </ReadMoreCommittee>
                         
-                        <ReadMoreCommittee
+          <ReadMoreCommittee
                     openModalElement={
                       <span className={styles["delete-icon"]}>
                           {" "}

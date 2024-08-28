@@ -49,9 +49,9 @@ export const Services = () => {
     setIsLoginOpen(false);
   };
 
-  console.log("years", years);
-  console.log("conferences", competitions);
-  console.log("projects", projects);
+  // console.log("years", years);
+  // console.log("conferences", competitions);
+  // console.log("projects", projects);
 
   // const downloadPdf = () => {
   //   const pdfUrl = "/seg.pdf";
