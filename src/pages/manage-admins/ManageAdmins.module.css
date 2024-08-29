@@ -83,3 +83,7 @@
   background-color: #000;
   color: var(--color-grey-200);
 }
+
+.table {
+  overflow-x: auto;
+}

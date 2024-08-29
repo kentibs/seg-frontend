@@ -48,7 +48,8 @@ export const Tokens = () => {
         <span className={styles["tokens-header"]}>
           <span>Tokens</span>
           <span className={styles["tokens-desc"]}>
-            These expire in exactly 24 hours
+            Each token is unique and valid only to the specified email. <br />
+            Each generated token will be valid for 24 hours before it expires.
           </span>
         </span>
         <button

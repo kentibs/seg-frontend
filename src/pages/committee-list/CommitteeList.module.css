@@ -90,17 +90,17 @@
   color: var(--color-grey-200);
 }
 
-.warning-btns-container{
+.warning-btns-container {
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
 }
-.cancel-btn{
+.cancel-btn {
   padding: 0.5rem 0.8rem;
   border-radius: 5px;
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-300);
-  transition: 0.3s; 
+  transition: 0.3s;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-family: inherit;
@@ -110,7 +110,7 @@
 .cancel-btn:hover {
   background-color: var(--color-grey-200);
 }
-.delete-btn{
+.delete-btn {
   padding: 0.5rem 0.8rem;
   color: var(--color-grey-0);
   background-color: rgb(224, 32, 32);
@@ -122,12 +122,10 @@
   font-family: inherit;
 }
 
-.delete-btn:hover{
+.delete-btn:hover {
   background-color: rgb(224, 32, 32);
   background-color: rgb(158, 19, 19);
 }
-
-
 
 /* ----------------------------------------------------EDIT FORM STYLES------------------------------------------ */
 .email_container {
@@ -183,7 +181,7 @@
   border-radius: 5px;
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-300);
-  transition: 0.3s; 
+  transition: 0.3s;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   color: #000;
@@ -271,4 +269,8 @@
   /* color: var(--main-color-1); */
   font-family: "Inter", sans-serif;
   font-family: "Poppins", sans-serif;
+}
+
+.table {
+  overflow-x: auto;
 }

@@ -33,6 +33,7 @@
   justify-content: center;
   gap: 0.4rem;
   font-family: "Poppins", sans-serif;
+  max-height: 3rem;
 }
 
 .plus-icon {

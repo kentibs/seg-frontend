@@ -104,41 +104,45 @@ export const HomePage = () => {
               <h3 className={styles["sub-heading"]}>Muk Students Body</h3>
               {/* <h1 className={styles["heading"]}>SEG Muk Chapter</h1> */}
               <h1 className={styles["heading"]}>AAPG Muk Chapter</h1>
-
-              <p className={styles["text"]}>
-                Welcome to AAPG Muk Chapter - Advancing Geoscience for a
-                Sustainable Future. We are dedicated to:
-                <ul className={styles["hero-list"]}>
+              <div>
+                <p className={styles["text"]}>
+                  Welcome to AAPG Muk Chapter - Advancing Geoscience for a
+                  Sustainable Future. We are dedicated to:
+                </p>
+                <ul className={`${styles["hero-list"]} ${styles["text"]}`}>
                   <li className={styles["hero-list-item"]}>
-                    <FaUsers className={styles["hero-list-icon"]} /> Connecting
-                    Students & Professionals
+                    <FaUsers className={styles["hero-list-icon"]} />{" "}
+                    <p>Connecting Students & Professionals</p>
                   </li>
                   <li className={styles["hero-list-item"]}>
-                    <FaTools className={styles["hero-list-icon"]} /> Skill
-                    Development Workshops
+                    <FaTools className={styles["hero-list-icon"]} />{" "}
+                    <p>Skill Development Workshops</p>
                   </li>
                   <li className={styles["hero-list-item"]}>
                     <FaHandsHelping className={styles["hero-list-icon"]} />{" "}
-                    <span> Community Engagement</span>
+                    <span>
+                      {" "}
+                      <p>Community Engagement</p>
+                    </span>
                   </li>
                   <li className={styles["hero-list-item"]}>
                     <FaUserTie className={styles["hero-list-icon"]} />{" "}
-                    Internship Opportunities
+                    <p>Internship Opportunities</p>
                   </li>
                   <li className={styles["hero-list-item"]}>
-                    <FaBook className={styles["hero-list-icon"]} /> Knowledge
-                    Sharing
+                    <FaBook className={styles["hero-list-icon"]} />{" "}
+                    <p>Knowledge Sharing</p>
                   </li>
                   <li className={styles["hero-list-item"]}>
                     <FaBriefcase className={styles["hero-list-icon"]} />{" "}
-                    Networking Events
+                    <p>Networking Events</p>
                   </li>
                   <li className={styles["hero-list-item"]}>
-                    <FaIndustry className={styles["hero-list-icon"]} /> Industry
-                    Insights
+                    <FaIndustry className={styles["hero-list-icon"]} />
+                    <p>Industry Insights</p>
                   </li>
                 </ul>
-              </p>
+              </div>
               <div className={styles["cta"]}>
                 <Link
                   to=""

@@ -17,6 +17,12 @@
 
 .hero-list {
   list-style: none;
+  width: 100%;
+  text-align: justify;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  /* margin: 2rem 0; */
+  line-height: 2.3;
 }
 .text {
   /* background-color: green; */
