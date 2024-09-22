@@ -63,6 +63,15 @@ export const SuperHeader = ({ scrolled }) => {
     if (sideBarState === "off") dispatch(setSideBar("on"));
     // console.log("sideBarState", sideBarState);
   };
+
+  const handleSideBarToggleState = () => {
+    // console.log("sideBarState click", sideBarState);
+
+    if (sideBarState === "") dispatch(setSideBar("offline"));
+    if (sideBarState === "online") dispatch(setSideBar("offline"));
+    if (sideBarState === "offline") dispatch(setSideBar("online"));
+    // console.log("sideBarState", sideBarState);
+  };
   // const location = useLocation();
 
   // let title = "";
@@ -122,10 +131,16 @@ export const SuperHeader = ({ scrolled }) => {
       className={`${styles["header-container"]} ${
         scrolled ? styles["scrolled"] : ""
       } ${sideBarState === "off" && styles["sidebar-on"]} ${
-        darkMode && styles["darkmode"]
-      }`}
+        sideBarState === "offline" && styles["toggle-sidebar-on"]
+      } ${darkMode && styles["darkmode"]}`}
     >
       {/* <span>{title}</span> */}
+      <div className={styles["sidebar-toggle-container"]}>
+        <ListOutlinedIcon
+          className={styles["sidebar-toggle-icon"]}
+          onClick={handleSideBarToggleState}
+        />
+      </div>
       <form className={styles["search-icon-container"]}>
         <input
           type="text"
@@ -186,9 +201,9 @@ export const SuperHeader = ({ scrolled }) => {
           />
           <div className={styles["counter"]}>2</div>
         </div>
-        <div className={styles["item"]}>
+        <div className={styles["sidebar-item-container"]}>
           <ListOutlinedIcon
-            className={styles["icon"]}
+            className={styles["sidebar-item-icon"]}
             onClick={handleSideBarState}
           />
         </div>

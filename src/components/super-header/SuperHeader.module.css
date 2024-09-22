@@ -25,6 +25,10 @@
   /* background-color: green; */
 }
 
+.toggle-sidebar-on {
+  padding: 2rem 2rem;
+  height: 5rem;
+}
 .header-container.darkmode {
   background-color: var(--color-grey-600);
   background-color: #080101;
@@ -101,6 +105,24 @@
   right: 1rem;
 }
 
+.sidebar-item-container {
+  display: flex;
+  align-items: center;
+  /* margin-right: 20px; */
+  position: relative;
+}
+
+.sidebar-toggle-container {
+  display: none;
+}
+.sidebar-item-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-item-icon:hover {
+  color: var(--main-color-1);
+}
 .item {
   display: flex;
   align-items: center;
@@ -140,4 +162,50 @@
   align-items: center;
   gap: 0.2rem;
   cursor: pointer;
+}
+
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 980px) {
+  .sidebar-item-container {
+    display: none;
+  }
+
+  .sidebar-toggle-container {
+    display: flex;
+    align-items: center;
+    /* margin-right: 20px; */
+    position: relative;
+  }
+
+  .sidebar-toggle-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .sidebar-toggle-icon:hover {
+    color: var(--main-color-1);
+  }
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
 }

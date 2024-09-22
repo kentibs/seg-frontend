@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Chat from "../../chat/Chat";
 import { AdminSideBar } from "../../components/admin-sidebar/AdminSideBar";
+import { ToggleAdminSidebar } from "../../components/toggle-admin-sidebar/ToggleAdminSidebar";
 // import { MainSuperContainer } from "../main-super-container/MainSuperContainer";
 
 export const AdminHomePage = () => {
@@ -43,6 +44,9 @@ export const AdminHomePage = () => {
     >
       <SuperHeader scrolled={scrolled} />
       {(sideBarState === "on" || sideBarState === "") && <AdminSideBar />}
+      {(sideBarState === "online" || sideBarState === "") && (
+        <ToggleAdminSidebar />
+      )}
       {/* <MainSuperContainer setScrolled={setScrolled} /> */}
       <main
         className={`${styles["container"]} ${
