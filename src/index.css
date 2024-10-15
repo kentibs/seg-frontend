@@ -177,8 +177,8 @@ body {
 /* --bg-color-3: #001c3d; */
 /* --bg-color-1: #001c3d; */
 * {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 

@@ -13,6 +13,7 @@ import sideBarSlice from "./reducers/sideBar";
 import activeListSlice from "./reducers/activeList";
 import activeFreqSlice from "./reducers/freq";
 import homeDarkModeSlice from "./reducers/homeDarkMode";
+import absoluteSideBarSlice from "./reducers/absoluteSideBar";
 
 const store = configureStore({
   reducer: {
@@ -30,6 +31,7 @@ const store = configureStore({
     activeList: activeListSlice.reducer,
     activeFreq: activeFreqSlice.reducer,
     homeDarkMode: homeDarkModeSlice.reducer,
+    absoluteSideBar: absoluteSideBarSlice.reducer,
   },
 });
 

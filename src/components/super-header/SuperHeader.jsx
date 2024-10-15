@@ -130,9 +130,9 @@ export const SuperHeader = ({ scrolled }) => {
       // className={styles["header-container"]}
       className={`${styles["header-container"]} ${
         scrolled ? styles["scrolled"] : ""
-      } ${sideBarState === "off" && styles["sidebar-on"]} ${
-        sideBarState === "offline" && styles["toggle-sidebar-on"]
-      } ${darkMode && styles["darkmode"]}`}
+      } ${sideBarState === "off" && styles["sidebar-on"]}  ${
+        darkMode && styles["darkmode"]
+      }`}
     >
       {/* <span>{title}</span> */}
       <div className={styles["sidebar-toggle-container"]}>

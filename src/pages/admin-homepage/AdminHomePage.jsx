@@ -1,7 +1,3 @@
-// export const AdminHomePage = () => {
-//   return <div className={styles["main-page-container"]}>AdminHomePage</div>;
-// };
-
 import { Outlet } from "react-router-dom";
 import styles from "./AdminHomePage.module.css";
 import { SuperHeader } from "../../components/super-header/SuperHeader";
@@ -44,9 +40,9 @@ export const AdminHomePage = () => {
     >
       <SuperHeader scrolled={scrolled} />
       {(sideBarState === "on" || sideBarState === "") && <AdminSideBar />}
-      {(sideBarState === "online" || sideBarState === "") && (
+      {/* {(sideBarState === "online" || sideBarState === "") && (
         <ToggleAdminSidebar />
-      )}
+      )} */}
       {/* <MainSuperContainer setScrolled={setScrolled} /> */}
       <main
         className={`${styles["container"]} ${
