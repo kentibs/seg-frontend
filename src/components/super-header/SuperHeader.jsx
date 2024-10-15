@@ -13,6 +13,7 @@ import { setDarkMode } from "../../store/actions/darkMode";
 import { useNavigate } from "react-router-dom";
 import { setActiveList } from "../../store/actions/activeList";
 import { setSideBar } from "../../store/actions/sideBar";
+import { setAbsoluteSideBar } from "../../store/actions/absoluteSideBar";
 import { LogoutDropDown } from "../../features/logout_dropdown/LogoutDropDown";
 // import { useState } from "react";
 // import { useState } from "react";
@@ -26,6 +27,9 @@ export const SuperHeader = ({ scrolled }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const sideBarState = useSelector((state) => state.sideBar.sideBar);
+  const absoluteSideBarState = useSelector(
+    (state) => state.absoluteSideBar.absoluteSideBar
+  );
 
   const user = useSelector((state) => state.auth.user);
   const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -67,9 +71,11 @@ export const SuperHeader = ({ scrolled }) => {
   const handleSideBarToggleState = () => {
     // console.log("sideBarState click", sideBarState);
 
-    if (sideBarState === "") dispatch(setSideBar("offline"));
-    if (sideBarState === "online") dispatch(setSideBar("offline"));
-    if (sideBarState === "offline") dispatch(setSideBar("online"));
+    if (absoluteSideBarState === "") dispatch(setAbsoluteSideBar("online"));
+    if (absoluteSideBarState === "online")
+      dispatch(setAbsoluteSideBar("offline"));
+    if (absoluteSideBarState === "offline")
+      dispatch(setAbsoluteSideBar("online"));
     // console.log("sideBarState", sideBarState);
   };
   // const location = useLocation();

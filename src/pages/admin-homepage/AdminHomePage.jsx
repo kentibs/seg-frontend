@@ -44,7 +44,7 @@ export const AdminHomePage = () => {
     >
       <SuperHeader scrolled={scrolled} />
       {(sideBarState === "on" || sideBarState === "") && <AdminSideBar />}
-      {absoluteSideBarState === "on" && <AdminAbsoluteSideBar />}
+      {absoluteSideBarState === "online" && <AdminAbsoluteSideBar />}
       {/* {(sideBarState === "online" || sideBarState === "") && (
         <ToggleAdminSidebar />
       )} */}
