@@ -1,4 +1,4 @@
-import styles from "./SuperSideBar.module.css";
+import styles from "./AdminAbsoluteSideBar.module.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ForumIcon from "@mui/icons-material/Forum";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
@@ -15,6 +15,22 @@ import { setActiveList } from "../../store/actions/activeList";
 import { setDarkMode } from "../../store/actions/darkMode";
 
 const AdminAbsoluteSideBar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const active = useSelector((state) => state.activeList.activeList);
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
+  const handleClick = (route, activeListOption) => {
+    // setActive(activeListOption);
+    dispatch(setActiveList(activeListOption));
+    navigate(route);
+  };
+
+  const logOutHandler = () => {
+    dispatch(logOut());
+    navigate("/", { replace: true });
+  };
+
   return (
     <aside
       className={`${styles["sidebar-container"]} ${

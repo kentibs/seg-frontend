@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import Chat from "../../chat/Chat";
 import { AdminSideBar } from "../../components/admin-sidebar/AdminSideBar";
 import { ToggleAdminSidebar } from "../../components/toggle-admin-sidebar/ToggleAdminSidebar";
+import AdminAbsoluteSideBar from "../../components/admin-absolute-side-bar/AdminAbsoluteSideBar";
 // import { MainSuperContainer } from "../main-super-container/MainSuperContainer";
 
 export const AdminHomePage = () => {
@@ -19,6 +20,9 @@ export const AdminHomePage = () => {
     setBotActive((prev) => !prev);
   };
   const sideBarState = useSelector((state) => state.sideBar.sideBar);
+  const absoluteSideBarState = useSelector(
+    (state) => state.absoluteSideBar.absoluteSideBar
+  );
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   useEffect(() => {
@@ -40,6 +44,7 @@ export const AdminHomePage = () => {
     >
       <SuperHeader scrolled={scrolled} />
       {(sideBarState === "on" || sideBarState === "") && <AdminSideBar />}
+      {absoluteSideBarState === "on" && <AdminAbsoluteSideBar />}
       {/* {(sideBarState === "online" || sideBarState === "") && (
         <ToggleAdminSidebar />
       )} */}
