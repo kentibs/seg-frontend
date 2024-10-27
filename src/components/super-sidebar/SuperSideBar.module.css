@@ -228,7 +228,7 @@ div.sidebar::-moz-scrollbar-thumb {
 /* Medium screens (768px) and below */
 @media only screen and (max-width: 980px) {
   .sidebar-container {
-    /* display: none; */
+    display: none;
     /* background-color: blue; */
   }
 }
