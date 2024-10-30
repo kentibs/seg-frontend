@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Contact } from "./pages/contact/Contact";
 import { HomePage } from "./pages/homepage/HomePage";
@@ -33,6 +32,7 @@ import { UserCompetitions } from "./pages/user-competitions/UserCompetitions";
 import { UserProducts } from "./pages/products/UserProducts";
 import { baseUrl } from "./utils/utils";
 import ResetPassword from "./pages/reset-password/ResetPassword";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // import { QrCode } from "./pages/qr-code/QrCode";
 // import { baseUrl } from "./utils/utils";
 
@@ -61,6 +61,7 @@ export default function App() {
     const formattedTime = `${hours}:${minutes}:${seconds}`;
     return formattedTime;
   }
+
   // http://localhost:8080/
   // useEffect(() => {
   //   async function signin() {
@@ -195,7 +196,7 @@ export default function App() {
                 }
               >
                 <Route index element={<UserDashboard />} />
-                <Route path="super-dashboard" element={<UserDashboard />} />
+                <Route path="user-dashboard" element={<UserDashboard />} />
                 <Route path="manage-events" element={<ManageEvents />} />
                 <Route
                   path="user-competitions"

@@ -76,7 +76,7 @@ export const UserSideBar = () => {
               className={`${styles["list-option"]} ${
                 active === "dashboard" && styles["active"]
               }`}
-              onClick={() => handleClick("super-dashboard", "dashboard")}
+              onClick={() => handleClick("user-dashboard", "dashboard")}
             >
               {/* <DashboardIcon className={styles["icon"]} /> */}
               <svg
@@ -179,7 +179,7 @@ export const UserSideBar = () => {
             </li>
 
             <p className={styles["title"]}>COMMUNICATION</p>
-            <li
+            {/* <li
               className={`${styles["list-option"]} ${
                 active === "messages" && styles["active"]
               }`}
@@ -187,7 +187,7 @@ export const UserSideBar = () => {
             >
               <ForumIcon className={styles["icon"]} />
               <span>Messages</span>
-            </li>
+            </li> */}
 
             <li
               className={`${styles["list-option"]} ${

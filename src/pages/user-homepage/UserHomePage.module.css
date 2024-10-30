@@ -70,3 +70,37 @@
   top: 90%;
   /* margin-left: 80%; */
 }
+
+/* Very large screens (1280px) and below */
+@media only screen and (max-width: 1280px) {
+  /* Styles for very large screens go here */
+}
+
+/* Large screens (1024px) and below */
+@media only screen and (max-width: 1024px) {
+  /* Styles for large screens go here */
+}
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 980px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 11rem 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh; */
+  }
+}
+
+/* Medium screens (768px) and below */
+@media only screen and (max-width: 768px) {
+}
+
+/* Small screens (640px) and below */
+@media only screen and (max-width: 640px) {
+  /* Styles for small screens go here */
+}
+
+/* Very small screens (480px) and below */
+@media only screen and (max-width: 480px) {
+  /* Styles for very small screens go here */
+}

@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Chat from "../../chat/Chat";
 import { UserSideBar } from "../../components/user-sidebar/UserSideBar";
 import { UserHeader } from "../../components/user-header/UserHeader";
+import UserAbsoluteSideBar from "../user-absolute-side-bar/UserAbsoluteSideBar";
 // import { MainSuperContainer } from "../main-super-container/MainSuperContainer";
 
 export const UserHomePage = () => {
@@ -20,6 +21,9 @@ export const UserHomePage = () => {
     setBotActive((prev) => !prev);
   };
   const sideBarState = useSelector((state) => state.sideBar.sideBar);
+  const absoluteSideBarState = useSelector(
+    (state) => state.absoluteSideBar.absoluteSideBar
+  );
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   useEffect(() => {
@@ -41,6 +45,8 @@ export const UserHomePage = () => {
     >
       <UserHeader scrolled={scrolled} />
       {(sideBarState === "on" || sideBarState === "") && <UserSideBar />}
+      {absoluteSideBarState === "online" && <UserAbsoluteSideBar />}
+
       {/* <MainSuperContainer setScrolled={setScrolled} /> */}
       <main
         className={`${styles["container"]} ${

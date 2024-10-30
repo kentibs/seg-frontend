@@ -172,7 +172,7 @@ const SuperAbsoluteSideBar = () => {
             </li>
 
             <p className={styles["title"]}>COMMUNICATION</p>
-            <li
+            {/* <li
               className={`${styles["list-option"]} ${
                 active === "messages" && styles["active"]
               }`}
@@ -180,7 +180,7 @@ const SuperAbsoluteSideBar = () => {
             >
               <ForumIcon className={styles["icon"]} />
               <span>Messages</span>
-            </li>
+            </li> */}
             <li
               className={`${styles["list-option"]} ${
                 active === "news" && styles["active"]

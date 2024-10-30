@@ -1,13 +1,4 @@
-import styles from "./AdminSideBar.module.css";
-
-// export const AdminSideBar = () => {
-//   return <div className={styles["admin-sidebar-container"]}>AdminSideBar</div>;
-// };
-
-// import { useState } from "react";
-// import { MainNav } from "../main-nav/MainNav";
-// import Chat from "../../chat/Chat";
-
+import styles from "./UserAbsoluteSideBar.module.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ForumIcon from "@mui/icons-material/Forum";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
@@ -16,16 +7,15 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../store/actions/auth";
 import { setActiveList } from "../../store/actions/activeList";
 import { setDarkMode } from "../../store/actions/darkMode";
+import { setAbsoluteSideBar } from "../../store/actions/absoluteSideBar";
+// import { useState } from "react";
 
-export const AdminSideBar = () => {
-  // const [active, setActive] = useState("");
-
+const UserAbsoluteSideBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const active = useSelector((state) => state.activeList.activeList);
@@ -34,6 +24,7 @@ export const AdminSideBar = () => {
   const handleClick = (route, activeListOption) => {
     // setActive(activeListOption);
     dispatch(setActiveList(activeListOption));
+    dispatch(setAbsoluteSideBar("offline"));
     navigate(route);
   };
 
@@ -48,12 +39,6 @@ export const AdminSideBar = () => {
         darkMode && styles["darkmode-sidebar"]
       }`}
     >
-      {/* <div className={styles["seg-logo"]}>
-        <span className={styles["logo-main"]}>AAPG</span>
-        <span className={styles["super-admin-container"]}>
-          <span className={styles["super-admin"]}>Superadmin</span>
-        </span>
-      </div> */}
       <div className={styles["seg-logo"]}>
         <span className={styles["logo-main"]}>
           <img src="/aapg-logo.jpg" alt="" className={styles["aapg"]} />
@@ -66,11 +51,11 @@ export const AdminSideBar = () => {
       {/* <MainNav /> */}
       <div className={styles["sidebar"]}>
         {/* <div className={styles["top"]}>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <span className={styles["logo"]}>lamadmin</span>
-          </Link>
-        </div>
-        <hr /> */}
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <span className={styles["logo"]}>lamadmin</span>
+      </Link>
+    </div>
+    <hr /> */}
         <div className={styles["center"]}>
           <ul className={styles["ul-list-container"]}>
             <p className={styles["title"]}>MAIN</p>
@@ -78,19 +63,19 @@ export const AdminSideBar = () => {
               className={`${styles["list-option"]} ${
                 active === "dashboard" && styles["active"]
               }`}
-              onClick={() => handleClick("super-dashboard", "dashboard")}
+              onClick={() => handleClick("user-dashboard", "dashboard")}
             >
               <DashboardIcon className={styles["icon"]} />
-              <span>Dashboard</span>
+              <span>Home</span>
             </li>
             <p className={styles["title"]}>LISTS</p>
             {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
 
             <li
               className={`${styles["list-option"]} ${
-                active === "users" && styles["active"]
+                active === "competition" && styles["active"]
               }`}
-              onClick={() => handleClick("super-users", "users")}
+              onClick={() => handleClick("user-competitions", "competition")}
             >
               {/* <PersonOutlineIcon className={styles["icon"]} /> */}
               <svg
@@ -109,11 +94,40 @@ export const AdminSideBar = () => {
                   d="M11.5 4a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
                 />
               </svg>
-              <span>Users</span>
+              <span>Competitions</span>
             </li>
             {/* </Link> */}
             {/* <Link to="/products" style={{ textDecoration: "none" }}> */}
             {/* </Link> */}
+            <li
+              className={`${styles["list-option"]} ${
+                active === "products" && styles["active"]
+              }`}
+              onClick={() => handleClick("user-products", "products")}
+            >
+              {/* <CreditCardIcon className={styles["icon"]} /> */}
+              <svg
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                height="1.4em"
+                width="1.4em"
+                className={styles["icon"]}
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 0C3.582 0 0 1.119 0 2.5v2C0 5.881 3.582 7 8 7s8-1.119 8-2.5v-2C16 1.119 12.418 0 8 0z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M8 8.5C3.582 8.5 0 7.381 0 6v3c0 1.381 3.582 2.5 8 2.5s8-1.119 8-2.5V6c0 1.381-3.582 2.5-8 2.5z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M8 13c-4.418 0-8-1.119-8-2.5v3C0 14.881 3.582 16 8 16s8-1.119 8-2.5v-3c0 1.381-3.582 2.5-8 2.5z"
+                />
+              </svg>
+              <span>Products</span>
+            </li>
             <li
               className={`${styles["list-option"]} ${
                 active === "committee" && styles["active"]
@@ -141,7 +155,7 @@ export const AdminSideBar = () => {
                   d="M8 13c-4.418 0-8-1.119-8-2.5v3C0 14.881 3.582 16 8 16s8-1.119 8-2.5v-3c0 1.381-3.582 2.5-8 2.5z"
                 />
               </svg>
-              <span>Committee</span>
+              <span>Committe</span>
             </li>
 
             <p className={styles["title"]}>COMMUNICATION</p>
@@ -154,7 +168,7 @@ export const AdminSideBar = () => {
               <ForumIcon className={styles["icon"]} />
               <span>Messages</span>
             </li> */}
-            <li
+            {/* <li
               className={`${styles["list-option"]} ${
                 active === "news" && styles["active"]
               }`}
@@ -162,7 +176,8 @@ export const AdminSideBar = () => {
             >
               <NewspaperIcon className={styles["icon"]} />
               <span>Newsletter</span>
-            </li>
+            </li> */}
+
             <li
               className={`${styles["list-option"]} ${
                 active === "updates" && styles["active"]
@@ -225,3 +240,5 @@ export const AdminSideBar = () => {
     </aside>
   );
 };
+
+export default UserAbsoluteSideBar;

@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { setActiveList } from "../../store/actions/activeList";
 import { setSideBar } from "../../store/actions/sideBar";
 import { LogoutDropDown } from "../../features/logout_dropdown/LogoutDropDown";
+import { setAbsoluteSideBar } from "../../store/actions/absoluteSideBar";
 // import { useState } from "react";
 // import { useState } from "react";
 // import { DarkModeContext } from "../../context/darkModeContext";
@@ -29,6 +30,9 @@ export const UserHeader = ({ scrolled }) => {
 
   const user = useSelector((state) => state.auth.user);
   const darkMode = useSelector((state) => state.darkMode.darkMode);
+  const absoluteSideBarState = useSelector(
+    (state) => state.absoluteSideBar.absoluteSideBar
+  );
 
   const handleClick = (route, activeListOption) => {
     // setActive(activeListOption);
@@ -50,6 +54,17 @@ export const UserHeader = ({ scrolled }) => {
     // console.log("sideBarState", sideBarState);
   };
 
+  const handleSideBarToggleState = () => {
+    // console.log("sideBarState click", sideBarState);
+
+    if (absoluteSideBarState === "") dispatch(setAbsoluteSideBar("online"));
+    if (absoluteSideBarState === "online")
+      dispatch(setAbsoluteSideBar("offline"));
+    if (absoluteSideBarState === "offline")
+      dispatch(setAbsoluteSideBar("online"));
+    // console.log("sideBarState", sideBarState);
+  };
+
   return (
     <header
       // className={styles["header-container"]}
@@ -59,6 +74,12 @@ export const UserHeader = ({ scrolled }) => {
         darkMode && styles["darkmode"]
       }`}
     >
+      <div className={styles["item-bars-toggle-sidebar"]}>
+        <ListOutlinedIcon
+          className={styles["icon"]}
+          onClick={handleSideBarToggleState}
+        />
+      </div>
       {/* <span>{title}</span> */}
       <form className={styles["search-icon-container"]}>
         <input
@@ -120,7 +141,7 @@ export const UserHeader = ({ scrolled }) => {
           />
           <div className={styles["counter"]}>2</div>
         </div>
-        <div className={styles["item"]}>
+        <div className={styles["item-bars"]}>
           <ListOutlinedIcon
             className={styles["icon"]}
             onClick={handleSideBarState}
