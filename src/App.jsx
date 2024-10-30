@@ -207,7 +207,7 @@ export default function App() {
                 <Route path="messages" element={<Messages />} />
 
                 <Route path="profile" element={<Profile />} />
-                <Route path="super-updates" element={<SuperUpdates />} />
+                <Route path="updates" element={<SuperUpdates />} />
                 <Route path="super-settings" element={<SuperSettings />} />
                 <Route
                   path="super-competitions"

@@ -193,7 +193,7 @@ export const UserSideBar = () => {
               className={`${styles["list-option"]} ${
                 active === "updates" && styles["active"]
               }`}
-              onClick={() => handleClick("super-updates", "updates")}
+              onClick={() => handleClick("updates", "updates")}
             >
               <TipsAndUpdatesIcon className={styles["icon"]} />
               <span>Updates</span>

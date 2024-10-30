@@ -137,7 +137,7 @@ export const UserHeader = ({ scrolled }) => {
         <div className={styles["item"]}>
           <ChatBubbleOutlineOutlinedIcon
             className={styles["icon"]}
-            onClick={() => handleClick("messages", "messages")}
+            onClick={() => handleClick("updates", "updates")}
           />
           <div className={styles["counter"]}>2</div>
         </div>
