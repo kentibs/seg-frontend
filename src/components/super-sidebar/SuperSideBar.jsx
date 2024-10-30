@@ -173,7 +173,7 @@ export const SuperSideBar = () => {
               <span>Tokens</span>
             </li>
             <p className={styles["title"]}>COMMUNICATION</p>
-            <li
+            {/* <li
               className={`${styles["list-option"]} ${
                 active === "messages" && styles["active"]
               }`}
@@ -181,7 +181,7 @@ export const SuperSideBar = () => {
             >
               <ForumIcon className={styles["icon"]} />
               <span>Messages</span>
-            </li>
+            </li> */}
             <li
               className={`${styles["list-option"]} ${
                 active === "news" && styles["active"]
