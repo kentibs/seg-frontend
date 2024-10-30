@@ -35,6 +35,7 @@ export const SuperAdminHomePage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
+
   return (
     <div
       className={`${styles["main-container"]} ${
